@@ -129,6 +129,34 @@
         $this->data['title'] = "Booking";
         $this->data['aside'] = "booking";
 
+        $this->data['categoryList'] =get_result('categories', ['trash'=> 0]);
+        $this->data['subCategoryList'] =get_result('subcategories', ['trash'=> 0]);
+
+        $this->data['divisions'] = get_result('divisions');
+        $this->data['districts'] = get_result('districts');
+        $this->data['upazillas'] = get_result('upazillas');
+
+        $this->data['payment_methods'] = get_result('payment_method', [], 'method as name');
+
+        if(!empty($_POST)) {
+
+            $data = $_POST;
+
+            $data['date'] = date('Y-m-d');
+            $data['booking_no'] = date('ymd') . rand(1000, 9999);
+            $data['user_id'] = $this->session->subscriber_id;
+            $data['user_name'] = $this->session->name;
+
+
+            if (save_data('booking', $data)) {
+                set_msg('success', 'success', 'Booking Successfully Created !');
+                redirect_back();
+            } else {
+                set_msg('warning', 'warning', 'Booking Not Created !');
+                redirect_back();
+            }
+        }
+
         return view('frontend.pages.upanel.booking');
     }
     
@@ -143,6 +171,22 @@
         $this->data['title'] = "Booking List";
         $this->data['aside'] = "booking_list";
 
+        $this->data['bookingList'] = get_result('booking', ['user_id'=>$this->session->subscriber_id, 'trash'=>0]);
+
         return view('frontend.pages.upanel.booking_list');
+    }
+
+    public function serialNo(){
+
+
+        $this->data['title'] = "Booking List";
+        $this->data['aside'] = "booking_list";
+
+        $serial_no = $this->input->get('serialNo');
+
+        $this->data['booking_details'] = get_row('booking', ['booking_no'=>$serial_no, 'trash'=>0]);
+
+
+        return view('frontend.pages.upanel.booking_voucher');
     }
 }

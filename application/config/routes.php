@@ -32,6 +32,7 @@ $route['user-panel/profile']    		= "Frontend/Upanel/UpanelController/profile";
 $route['user-panel/user_image_set']     = "Frontend/Upanel/UpanelController/user_image_set";
 $route['user-panel/booking']            = "Frontend/Upanel/UpanelController/booking";
 $route['user-panel/booking_list']       = "Frontend/Upanel/UpanelController/booking_list";
+$route['user-panel/serialNo']           = "Frontend/Upanel/UpanelController/serialNo";
 $route['user-panel/settings']   		= "Frontend/Upanel/UpanelController/settings";
 
 $route['404_override'] = '';
