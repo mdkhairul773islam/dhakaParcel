@@ -1,0 +1,35 @@
+@media screen and (max-width: 980px){
+	.form-double input[type="text"], .form-double input[type="email"],
+	.form-double input[type="password"],
+	.form-double input[type="url"],
+	.form-double input[type="checkbox"],
+	.form-double input[type="radio"],
+	.form-double input,
+	.form-double select,
+	.form-double textarea {max-width: 100%;}
+}
+
+@media screen and (max-width: 768px) {
+	body {overflow-x: hidden;}
+    .nav-inner-right {
+        position: relative;
+        right: 0;
+        float: right;
+        margin-right: 0;
+    }
+    .dashboard-title {font-size: 22px !important;}
+}
+@media screen and (min-width:768px) {
+    #wrapper {padding-left: 250px;}
+    #wrapper.toggled {padding-left: 0;}
+    #sidebar-wrapper {width: 250px;}
+    #wrapper.toggled #sidebar-wrapper {
+        position: fixed;
+        width: 0;
+    }
+    #page-content-wrapper {position: relative;}
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

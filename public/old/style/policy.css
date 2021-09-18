@@ -1,0 +1,27 @@
+/* policy section start */
+.policy_section {
+    background: #fff;
+    padding: 75px 0;
+}
+.policy_section h3 {
+    font-weight: 600;
+    color: #EA232A;
+}
+.policy_section blockquote {
+    border-left: 4px solid #EA232A;
+    margin: 25px 0 20px;
+    padding-left: 1rem;
+}
+.policy_section a {color: #EA232A;}
+.policy_section ul,
+.policy_section ol {margin: 20px 0;}
+.policy_section ul li,
+.policy_section ol li {
+    margin-right: 15px;
+    line-height: 28px;
+    margin-left: 17px;
+    font-size: 15px;
+}
+.policy_section ul li {list-style-type: disc;}
+.policy_section ol li {list-style-type: decimal;}
+/* policy section end */

@@ -1,0 +1,164 @@
+/* product section start */
+.product_section {
+    background: #FFF;
+    padding: 25px 0;
+}
+.search_area {
+    border: 1px solid rgba(242, 243, 238, .2);
+    background: #001E32;
+    padding: 35px 15px;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.search_area form {
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    width: 100%;
+}
+.search_area form label {font-size: 17px;}
+.search_area .multiple_box {
+    align-items: center;
+    display: flex;
+}
+.search_area .multiple_box span {
+    display: inline-block;
+    margin: 0 8px;
+}
+.search_area .form-group {
+    margin-bottom: 8px;
+    padding: 0 8px;
+    width: 50%;
+}
+.search_area .form-control {
+    border-radius: 2px;
+    border-radius: 0;
+    border: none;
+    height: 42px;
+    padding: 0 8px;
+    min-width: 80px;
+    line-height: 42px;
+}
+.search_area select:focus,
+.search_area input:focus {box-shadow: none;}
+.search_area input[type="submit"] {
+    transition: all 0.2s;
+    background: #EA232A;
+    max-width: 120px;
+    margin: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+.search_area input[type="submit"]:hover {background: #C71319;}
+
+.product_section .product_grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    display: grid;
+    gap: 15px;
+}
+.product_section .product_box {
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+}
+.product_section .product_box .stockout {
+    transform: rotate(-15deg);
+    position: absolute;
+    max-width: 75px;
+    z-index: 99;
+    top: 5px;
+    left: 5px;
+}
+.product_section .product_box:hover {box-shadow: 0 20px 30px 0 rgba(0,0,0,0.05);}
+.product_section .product_gallery {
+    background-image: url('../images/bg_images/placeholder.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 275px;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: relative;
+}
+.product_section .product_gallery .cover {
+    display: inline-block;
+    transition: all .2s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.0);
+}
+.product_section .product_gallery .product_img {display: flex;}
+.product_section .product_gallery img {
+    transition: all .3s;
+    object-fit: cover;
+    min-width: 100%;
+    height: 275px;
+    width: 100%;
+    filter: blur(5px);
+}
+.product_section img.product_one {
+    transform: translate(0%);
+    z-index: 9;
+}
+.product_section img.product_one {transform: translate(0%);}
+.product_section img.product_two {transform: translate(-200%);}
+.product_section .product_box:hover img.product_one {transform: translate(100%);}
+.product_section .product_box:hover img.product_two {transform: translate(-100%);}
+.product_section .product_box:hover .product_title {background: rgba(0, 0, 0, 0.7);}
+.product_section .product_title {
+    align-items: flex-end;
+    transition: all .2s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+}
+.product_section .product_title h5 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 0;
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.product_section .product_title p {
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+}
+.product_section .product_box .contact_btn:hover {background: #C71319;}
+.product_section .product_box .contact_btn {
+    transition: all .2s;
+    background: #EA232A;
+    color: #fff;
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: 6px 15px;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 991px) {
+    .product_section .search_area form {flex-wrap: wrap;}
+}
+@media screen and (max-width: 576px) {
+    .product_section .search_area .form-group {width: 30%;}
+    .product_section .search_area .form-group.carinput {width: 70%;}
+    .product_section .search_area .display_none {display: none;}
+    .search_area input[type="submit"] {max-width: 70px;}
+}
+
+@media screen and (max-width: 500px) {
+    .product_section .product_grid {grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));}
+    .product_section .product_gallery img,
+    .product_section .product_gallery {height: 200px;}
+}
+/* product section end */

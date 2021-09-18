@@ -1,0 +1,206 @@
+
+/* CHIVO FONT */
+@font-face {
+    font-family: 'chivobold';
+    src: url('../fonts/chivo-bold/chivo-bold-webfont.eot');
+    src: url('../fonts/chivo-bold/chivo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chivo-bold/chivo-bold-webfont.woff2') format('woff2'),
+         url('../fonts/chivo-bold/chivo-bold-webfont.woff') format('woff'),
+         url('../fonts/chivo-bold/chivo-bold-webfont.ttf') format('truetype'),
+         url('../fonts/chivo-bold/chivo-bold-webfont.svg#chivobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chivoregular';
+    src: url('../fonts/chivo-regular/chivo-regular-webfont.eot');
+    src: url('../fonts/chivo-regular/chivo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chivo-regular/chivo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/chivo-regular/chivo-regular-webfont.woff') format('woff'),
+         url('../fonts/chivo-regular/chivo-regular-webfont.ttf') format('truetype'),
+         url('../fonts/chivo-regular/chivo-regular-webfont.svg#chivoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*, *::after, *::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+
+.container{
+	display: flex;
+}
+.grid{
+	/* border: 1px solid #000; */
+	padding: 10px;
+}
+.nav-left,
+.aside-left{
+	max-width: 300px;
+	width: 100%;
+}
+.nav-right,
+.aside-right{
+	width: 100%;
+}
+.aside-left,
+.aside-right{
+	height: 100vh;
+}
+.aside-left{
+	background: rgba(51, 51, 51, 0.8);
+}
+
+i.fa-indent{
+	display: none;
+}
+#arrow{
+	cursor: pointer;
+}
+
+section.login{
+    background: url('../img/blue-bg.png') repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-header{
+    width: 100%;
+    height: 120px;
+    background: rgba(78, 164, 231, 1);
+    display: table;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.login-header div{
+    margin-top: 25px;
+    margin-left: 35px;
+}
+
+.login-header div h1{
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'chivobold';
+}
+
+.login-header div h1 span{
+    color: rgba(255, 198, 0, 1)
+}
+
+.login-header div p{
+    font-family: 'chivoregular';
+    color: #fff;
+}
+
+.login-main{
+    width: 100%;
+    height: auto;
+}
+
+.login-main p.div{
+	margin: 70px auto -75px;
+    padding: 10px;
+    width: 100%;
+    max-width: 450px;
+    background: #0F7FD5;
+    border-radius: 4px;
+    border: 2px solid #4EA4E7;
+}
+
+.login-main p.div i{
+    border: 2px solid rgba(255, 198, 0, 1);
+    width: 31px;
+    height: 30px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 4px;
+    color: rgba(255, 198, 0, 1);
+}
+
+.login-main p.div{
+    color: rgba(255, 198, 0, 1);
+    font-family: 'chivoregular';
+}
+
+.login-main form{
+    margin: 10px auto 0;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    background: rgba(15,127,213,1);
+    border-radius: 4px;
+    border: 2px solid #4EA4E7;
+}
+
+.login-main form label{
+    display: block;
+    padding: 8px 34px;
+    color: #fff;
+    font-family: 'chivoregular';
+}
+
+.login-main form label:first-child{
+    margin-top: 20px;
+}
+
+.login-main form input[type="text"],
+.login-main form input[type="password"]{
+    width: 100%;
+    margin: 0px 34px;
+    max-width: 380px;
+    height: 33px;
+    border: 1px solid rgba(15,127,213,1);
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.8);
+    color: rgba(0,0,0,0.7);
+    font-weight: bold;
+}
+
+.login-main form input[type="text"]::-moz-placeholder,
+.login-main form input[type="password"]::-moz-placeholder{
+    color: rgba(0,0,0,0.7);
+    font-weight: normal;
+}
+
+.login-main form input[type="submit"]{
+    background: #0F7FD5;
+    color: #fff;
+    padding: 6px 20px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin: 12px 0 33px 34px;
+    font-size: 16px;
+}
+
+.login-main form input[type="submit"]:hover{
+    background: #fff;
+    color: #0F7FD5;
+    cursor: pointer;
+}
+
+.login-main form a{
+    float: right;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    margin: 20px 34px 0 0;
+}
+
+.login-main form a:hover{
+    color: rgba(255,255,255,1);
+}

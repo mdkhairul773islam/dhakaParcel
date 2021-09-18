@@ -1,0 +1,137 @@
+*,*::before,*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body,.lock-border {
+	background: url('../images/background.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.no-border {border: 0 !important;}
+@media (min-width: 768px) {
+    body, .lock-border {
+        background-position-y: -58px;
+    }
+}
+
+.form-container {display: table;}
+.form-wrapper {
+	height: 100vh;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.login-form {
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	margin: 25px auto;
+	max-width: 500px;
+	width: 100%;
+	padding: 3px;
+}
+.form-border {
+	text-align: center;
+	padding: 20px;
+}
+.login-form,.form-border {
+    background: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.1));
+	border-radius: 5px;
+}
+.l-form-group {
+	border: 1px solid #D0D0D0;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.l-control-label {
+	border-right: 1px solid #D0D0D0;
+	text-align: center;
+	padding: 12px 0;
+    width: 40px;
+	color: #fff;
+}
+.input-holder {
+	width: calc(100% - 40px);
+	display: block;
+}
+.input-holder input {
+	padding-left: 10px;
+	line-height: 44px;
+	font-size: 16px;
+	color: #fff;
+	width: 100%;
+	border: 0;
+	outline: none;
+}
+.l-control-label,
+.input-holder input,
+.l-form-group input[type='submit']:hover {
+	background: rgba(000,000,000,.2);
+	color: #fff;
+}
+.input-holder input::-webkit-input-placeholder {  color: #fff;}
+.input-holder input::-moz-placeholder {  color: #fff;}
+.input-holder,.l-control-label {
+	float: left;
+	margin: 0;
+}
+.lock-border {
+	border-bottom: 1px solid #fff;
+	display: inline-block;
+	position: relative;
+	padding: 8px;
+	top:-65px;
+}
+.lock {
+	background: linear-gradient(transparent,rgba(255,255,255,.8));
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,.3);
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+	font-size: 25px;
+	color: #fff;
+	width: 65px;
+	height: 65px;
+}
+.lock,.lock-border {
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.l-form-group input[type='checkbox']{
+	visibility: hidden;
+}
+.l-form-group input[type='submit']{
+	text-transform: uppercase;
+	background: rgba(255,255,255,.5);
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0px 1px 3px #000;
+}
+.l-text,.r-text{
+	font-weight: normal;
+	color: #fff;
+}
+.l-text {float: left;}
+.r-text {float: right;}
+/*Slide Button style start here*/
+.slide-btn {
+	background: rgba(255,0,0,.5);
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 25px;
+	width: 50px;
+	float: right;
+	position: relative;
+}
+.slide-btn span {
+	border-radius: 50%;
+	cursor: pointer;
+	background: #fff;
+	width: 23px;
+	left: 0;
+	height: 23px;
+	display: block;
+	position: absolute;
+}
+.l-form-group a,.l-form-group p {color: #fff;}

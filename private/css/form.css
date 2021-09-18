@@ -1,0 +1,41 @@
+.form-control {
+	border-radius: 0;
+	box-shadow: none;
+}
+.form-control:focus {box-shadow: none;}
+.btn {
+	padding-right: 15px;
+	border-radius: 0;
+	padding-left: 15px;
+}
+textarea {resize: none;}
+.form-group.required .control-label:after {
+	content: "\26B9";
+	color: #f44;
+	font-size: 15px;
+	position: absolute;
+	top: -2px;
+	right: 5px;
+}
+table.table-input tr td {
+	text-align: center;
+	padding: 0;
+}
+table.table-input tr td input,
+table.table-input tr td select {
+	width: 100%;
+	border: none;
+	padding: 3px;
+}
+table.table-input tr td input:focus,
+table.table-input tr td select:focus {background: #f5f5f5;}
+table.table-even tr:nth-child(even) {background: #f1f1f1;}
+.form-element {
+	border: 1px solid #ccc;
+	padding: 5px 15px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	max-height: 300px;
+}
+.mb-1 {margin-bottom: 10px !important;}

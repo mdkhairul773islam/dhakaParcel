@@ -1,0 +1,95 @@
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled {padding-left: 250px;}
+#sidebar-wrapper {
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 999;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    overflow-x: hidden;
+    margin-left: -250px;
+}
+#wrapper.toggled #sidebar-wrapper {width: 250px;}
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+.sidebar-nav {
+    list-style: none;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-nav li {
+    line-height: 40px;
+    text-indent: 5px;
+}
+.sidebar-nav li a {
+    text-decoration: none;
+    display: block;
+    color: #818181;
+    font-size: 15px;
+    font-weight: bold;
+}
+.sidebar-nav li a i {
+    font-size: 18px;
+    width: 23px;
+}
+.sidebar-nav li a i.fa-male {font-size: 22px;}
+.sidebar-nav li a i.fa-question,
+.sidebar-nav li a i.fa-cog,
+.sidebar-nav li a i.fa-home {font-size: 20px;}
+.sidebar-nav li a i.fa-users,
+.sidebar-nav li a i.fa-image,
+.sidebar-nav li a i.fa-photo {font-size: 17px;}
+.sidebar-nav li:hover {background: unset;}
+.sidebar-nav li:hover a {
+    background: rgba(30, 30, 30, 0.12);
+    text-decoration: none;
+}
+.sidebar-nav li a:hover {background: rgba(30, 30, 30, 0.09) !important;}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 26px;
+    height: 65px;
+    padding: 0 10px
+}
+.sidebar-nav > .sidebar-brand a {color: #00A8FF;}
+.sidebar-nav > .sidebar-brand a:hover {background: none;}
+
+/* new style */
+.sidebar-nav>li.active {background: #f1f1f1;}
+.sidebar-nav>li.active>a {
+    border-bottom: 1px solid #33333322;
+    color: #00A8FF;
+}
+.sidebar-nav li > ul.collapse{
+    display: block;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+.sidebar-nav li > ul.collapse li a{
+    padding-left: 25px;
+    background: #f1f1f1;
+}
+.collapse {overflow: hidden;}

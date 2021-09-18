@@ -1,0 +1,54 @@
+nav.content-fixed-nav ul li.open,
+nav.content-fixed-nav ul li:hover{
+	background: #ccc;
+}
+nav.content-fixed-nav > ul li {width: 55px;}
+.content-fixed-nav span.badge {
+	position: absolute;
+	top: 7px;
+	right: 5px;
+}
+.content-fixed-nav span.badge-messages {background: #46C35F;}
+.content-fixed-nav span.badge-notification {background: #00A8FF;}
+ul.dropdown-menu {
+	border-radius: 0;
+	border-top: 0;
+	top: 97%;
+	padding: 0;
+	width: 100%;
+	min-width: 240px;
+}
+nav.content-fixed-nav ul li > ul.dropdown-menu li {width: 100%;}
+ul.dropdown-menu li:first-child a,
+ul.dropdown-menu li:first-child:hover a {
+	background: #ccc;
+	color: #262626;
+}
+ul.dropdown-menu li:first-child a {cursor: default;}
+nav.content-fixed-nav ul li > ul.dropdown-menu li a {
+	text-align: left;
+	line-height: 40px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+}
+ul li.dropdown-menu-description a {font-size: 18px;}
+ul li.dropdown-menu-description {margin: 0;}
+nav {position: relative;}
+.nav-inner-right {
+	position: fixed;
+	right: 15px;
+}
+.user-menu {
+	vertical-align: middle;
+	line-height: 62px;
+}
+.nav-pic {
+	border: 1px solid #ADB7BE;
+    border-radius: 50%;
+    max-width: 35px;
+    cursor: pointer;
+    height: 35px;
+    width: 100%;
+    object-fit: cover;
+}
+.dropdown-menu .divider {margin: 0;}

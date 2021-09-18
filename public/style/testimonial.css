@@ -1,0 +1,81 @@
+/* testimonial style start */
+.testimonial_section {
+    background: #F2F2F2;
+    padding: 50px 0;
+}
+.testimonial_section .title_div::after {background: #fff;}
+.testimonial_section .article {
+    border: 1px solid #E5E5E5;
+    margin: 25px 0 45px;
+    padding: 15px 25px;
+    background: #FFF;
+    min-height: 175px;
+    position: relative;
+    border-radius: 2px;
+}
+.testimonial_section .article .rating {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    display: flex;
+}
+.testimonial_section .article .rating i {
+    transform: rotate(180deg);
+    font-size: 36px;
+    color: #004AAD;
+}
+.testimonial_section .article .rating::after {
+    background: linear-gradient(to right, #004AAD, 50%, rgba(229, 229, 229, 0.1));
+    display: inline-block;
+    position: absolute;
+    width: 95px;
+    height: 3px;
+    content: '';
+    right: 25px;
+}
+.testimonial_section .article p {font-size: 15px;}
+.testimonial_section .article::before {
+    border-right: 38px solid transparent;
+    border-left: 0px solid transparent;
+    border-top: 38px solid #E5E5E5;
+    position: absolute;
+    bottom: -38px;
+    content: "";
+    left: 41px;
+    z-index: 1;
+}
+.testimonial_section .article::after {
+    border-right: 36px solid transparent;
+    border-left: 0px solid transparent;
+    border-top: 36px solid #FFF;
+    position: absolute;
+    bottom: -36px;
+    content: "";
+    left: 42px;
+    z-index: 1;
+}
+.testimonial_section .author {
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0;
+}
+.testimonial_section .author img {
+    border: 1px solid #E5E5E5;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+}
+.testimonial_section .author figcaption {padding-left: 25px;}
+.testimonial_section .author h5 {
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 18px;
+    font-weight: 600;
+}
+.testimonial_section .author p {
+    font-size: 14px;
+    margin: 0;
+}
+/* testimonial section end */

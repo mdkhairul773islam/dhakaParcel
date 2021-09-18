@@ -1,0 +1,368 @@
+/* user section start */
+.user_section {
+    background-image: url('../images/bg_images/user_bg.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 275px auto;
+    background-color: #F2F2F2;
+    padding: 45px 0;
+    margin-top: 120px;
+}
+.user_section .user_aside {
+    padding: 20px 20px 15px;
+    background: #fff;
+}
+.user_section .user_aside h3 {
+    border-bottom: 1px solid #ccc;
+    line-height: 38px;
+    font-weight: bold;
+    margin: 0 0 15px;
+    padding-bottom: 9px;
+}
+.user_section .user_aside .nav-link.active {
+    background-color: #00347A;
+    color: #fff;
+}
+.user_section .user_aside .nav-link {
+    background: #004AAD;
+    border-radius: 4px;
+    color: #fff;
+    margin: 5px 0;
+}
+.user_section .user_aside .nav-link:hover:hover {background: #00347A;}
+.user_section .user_content .submit_btn,
+.user_section .user_aside .logout_btn {
+    display: inline-block;
+    background: #004AAD;
+    border-radius: 4px;
+    line-height: 38px;
+    font-size: 13px;
+    height: 38px;
+    color: #fff;
+    min-width: 125px;
+    padding: 0 15px;
+    text-align: center;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+.user_section .user_aside .nav-link:hover:hover {background: #00347A;}
+.user_section .submit_btn,
+.user_section .reset_btn,
+.user_section .logout_btn {
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 13px;
+    height: 38px;
+    padding: 0 15px;
+    margin: 5px 0 0;
+    min-width: 100px;
+    text-align: center;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+.user_section .submit_btn,
+.user_section .logout_btn {
+    background: #004AAD;
+    color: #fff;
+}
+.user_section .logout_btn {margin: 20px 0 10px;}
+.user_section .submit_btn:hover,
+.user_section .logout_btn:hover {background: #00347A;}
+.user_section .reset_btn {
+    background: #F7BE00;
+    color: #000;
+}
+.user_section .reset_btn:hover {background: #C49700;}
+
+.user_section .user_content {
+    padding: 25px 20px 10px;
+    background: #fff;
+    width: 100%;
+}
+.user_section .user_content .heading {
+    border-bottom: 1px solid #ccc;
+    padding: 4px 0 4px;
+    margin-bottom: 7px;
+}
+.user_section .user_content .heading h4 {
+    font-weight: 700;
+    font-size: 22px;
+    color: #004AAD;
+}
+.user_section .user_content fieldset {
+    border: 1px solid #004AAD;
+    padding: 5px 12px 0;
+    margin: 8px 0 10px;
+}
+.user_section .user_content fieldset legend {
+    display: inline-block;
+    letter-spacing: 8px;
+    padding: 0 0 0 8px;
+    font-weight: 600;
+    font-size: 15px;
+    width: auto;
+    color: #fff;
+    line-height: 25px;
+    background: #004AAD;
+    text-transform: uppercase;
+}
+.user_section .user_content .table {margin-top: 8px;}
+.user_section .user_content .table td,
+.user_section .user_content .table th {
+    padding: 3px 5px;
+    font-size: 15px;
+}
+.user_section .user_content .table .action_btn {padding: 2px;}
+.user_section .user_content .table .btn {
+    display: inline-block;
+    background: #004AAD;
+    text-align: center;
+    box-shadow: none;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 0;
+    width: 28px;
+    height: 26px;
+    margin: 2px 0;
+    font-size: 13px;
+    line-height: 26px;
+    border-radius: 2px;
+    transition: all .2s;
+}
+.user_section .user_content .table .btn.delete:hover {background: #D92114;}
+.user_section .user_content .table .btn:hover {background: #00347A;}
+.user_section .user_content .table .btn.delete {
+    background: #EC4034;
+    font-size: 12px;
+}
+.user_section .user_content .user_option {
+    margin-right: -8px;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: -8px;
+}
+.user_section .user_content .user_option a:hover {background: #F7F7F7;}
+.user_section .user_content .user_option a {
+    transition: all .2s;
+    min-height: 100px;
+    color: #004AAD;
+    font-weight: 600;
+    padding: 12px;
+    width: 165px;
+    margin: 8px;
+    display: flex;
+    font-size: 17px;
+    flex-wrap: wrap;
+    border-radius: 0;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 0 3px #ddd;
+}
+.user_section .user_content .user_option a i {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.user_section .profile_info .title h5 {
+    font-weight: 500;
+    color: #004AAD;
+    font-size: 21px;
+}
+.user_section .profile_info {
+    background: #F5F7FA;
+    padding: 20px 15px;
+    margin: 20px 0;
+    border: 1px solid #ececec;
+}
+.user_section .password_form h4,
+.user_section .profile_info h4 {
+    margin-bottom: 15px;
+    color: #004AAD;
+    font-size: 21px;
+    font-weight: 500;
+}
+.user_section .header_info {
+    align-items: center;
+    display: flex;
+}
+.user_section .profile_img img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.user_section .profile_img {
+    justify-content: center;
+    border: 1px solid #ddd;
+    align-items: center;
+    border-radius: 50%;
+    min-width: 70px;
+    width: 70px;
+    display: flex;
+    height: 70px;
+    color: #fff;
+    overflow: hidden;
+    margin-right: 12px;
+    position: relative;
+    background: #004AAD;
+}
+.user_section .profile_img input {
+    height: calc(100% + 20px);
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    top: -10px;
+    line-height: 0;
+    cursor: pointer;
+}
+.user_section .profile_img .cover {
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    font-size: 15px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    justify-content: center;
+}
+.user_section .profile_img .cover i {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+.user_section .profile_img:hover .cover i {transform: scale(1.2);}
+.user_section .profile_img:hover .cover {opacity: 1;}
+.user_section .profile_edit {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-bottom: 15px;
+}
+.profile_info .profile_edit h4 {margin: 0;}
+.user_section .profile_edit a {
+    background: rgba(0,74,173, .2);
+    display: inline-block;
+    font-size: 15px;
+    color: #004AAD;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+.user_section .profile_edit a i {
+    vertical-align: middle;
+    display: inline-block;
+}
+.user_section .profile_edit a:focus,
+.user_section .profile_edit a:hover {background: rgba(0,74,173, .3);}
+.user_section .profile_info ul {margin-bottom: 0;}
+.user_section .profile_info p {margin: 0;}
+.user_section .profile_info ul li {
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    padding: 10px 0;
+}
+.user_section .profile_info ul strong {
+    display: inline-block;
+    min-width: 85px;
+    font-weight: 700;
+}
+.user_section .profile_info ul li:last-child {border-bottom: none;}
+.user_section .password_form {
+    border: 1px solid #ececec;
+    padding: 25px 15px 15px;
+    margin: 20px 0;
+    background: #f5f7fa;
+}
+.user_section .modal-content {border-radius: 0;}
+.user_section .modal-dialog {padding: 0 15px;}
+.user_section .modal-title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #004AAD;
+}
+.user_section .modal-header button {opacity: 1 !important;}
+.user_section .modal-header button:focus {outline: none;}
+.user_section .modal-header button span {
+    display: inline-block;
+    line-height: 24px;
+    font-size: 15px;
+    height: 26px;
+    color: #fff;
+    width: 26px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    background: rgba(0,74,173, .7);
+}
+.user_section .modal-header button span:focus,
+.user_section .modal-header button span:hover {
+	background: rgba(0,74,173, .9);
+}
+.user_section .modal-body {padding: 15px 20px;}
+.user_section .user_content input[type=password],
+.user_section .user_content input[type=email],
+.user_section .user_content input[type=text],
+.user_section .user_content select {
+    border-color: #ddd;
+    line-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    color: #000;
+}
+.user_section .alert-dismissible {padding-right: 1.25rem;}
+.user_section .alert p {margin-bottom: 5px;}
+.user_section .alert {
+    box-shadow: 0 0 3px #ddd;
+    margin-top: 15px;
+    border-radius: 0;
+}
+.user_section .alert-dismissible .close {
+    padding: .60rem 1.25rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.user_section .alert h4 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+    font-weight: 700;
+}
+.user_section .user_content textarea {
+    border-color: #ddd;
+    box-shadow: none;
+    border-radius: 0;
+    color: #000;
+}
+.user_section .user_content input[type=password]:focus,
+.user_section .user_content input[type=email]:focus,
+.user_section .user_content input[type=text]:focus,
+.user_section .user_content textarea:focus,
+.user_section .user_content select:focus {
+    border-color: rgba(0,74,173, 0.5);
+    box-shadow: none;
+}
+@media screen and (max-width: 576px) {
+    .user_section .user_content .user_option a {
+        font-size: 15px;
+        width: 137px;
+    }
+    .user_section .user_content fieldset legend {
+        padding: 0 1px 0 5px;
+        letter-spacing: 4px;
+    }
+}
+/* user section end */

@@ -1,0 +1,206 @@
+/* user section start */
+.user_section {
+    background-image: url('../images/bg_images/user_bg.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 275px auto;
+    background-color: #F2F2F2;
+    padding: 75px 0;
+}
+.user_section .user_aside {
+    padding: 20px 20px 15px;
+    background: #fff;
+}
+.user_section .user_aside h3 {
+    border-bottom: 1px solid #ccc;
+    line-height: 38px;
+    font-weight: bold;
+    margin: 0 0 15px;
+    padding-bottom: 9px;
+}
+.user_section .user_aside .nav-link.active {
+    background-color: #C71319;
+    color: #fff;
+}
+.user_section .user_aside .nav-link {
+    background: #EA232A;
+    border-radius: 4px;
+    color: #fff;
+    margin: 5px 0;
+}
+.user_section .user_aside .nav-link:hover:hover {background: #C71319;}
+.user_section .user_content .user_title {
+    margin-bottom: 17px;
+    font-weight: 600;
+}
+.user_section .user_content .submit_btn,
+.user_section .user_aside .logout_btn {
+    display: inline-block;
+    background: #EA232A;
+    border-radius: 4px;
+    line-height: 38px;
+    font-size: 13px;
+    height: 38px;
+    color: #fff;
+    min-width: 125px;
+    padding: 0 15px;
+    text-align: center;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+.user_section .user_aside .logout_btn {margin: 20px 0 10px;}
+.user_section .user_content .submit_btn:hover,
+.user_section .user_aside .logout_btn:hover {background: #C71319;}
+
+.user_section .user_content {
+    padding: 25px 20px 10px;
+    background: #fff;
+    width: 100%;
+    min-height: 420px;
+}
+.user_section .user_content input[type=email],
+.user_section .user_content input[type=text],
+.user_section .user_content select {
+    border-color: #ddd;
+    line-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    color: #000;
+}
+.user_section .user_content input[type=email]:focus,
+.user_section .user_content input[type=text]:focus,
+.user_section .user_content select:focus {
+    border-color: rgba(0,153,118, 0.5);
+    box-shadow: none;
+}
+.user_section .user_content .table tr th:first-child,
+.user_section .user_content .table tr td:first-child {
+    padding-left: 0;
+}
+.user_section .user_content .table tr th:last-child,
+.user_section .user_content .table tr td:last-child {
+    padding-right: 0;
+}
+/* user section end */
+
+
+/* order style start */
+.user_content .order-btn {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 3px 12px;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 56px;
+    text-align: center;
+    display: inline-block;
+}
+.user_content .product_view {background: #000;}
+.user_content .product_view:hover {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #000;
+}
+
+.user_content .product_cancle {background: #ff0000;}
+.user_content .product_cancle:hover {
+    border: 1px solid #ddd;
+    background: none;
+    color: #000;
+}
+.user_content p.order_notice {
+    font-size: 16px;
+    color: #585858;
+    margin-top: 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.user_content p.order_notice span {
+    padding: 0 5px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 600;
+}
+.user_content .order_view h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.user_content  tr:hover .list_title {font-weight: 600;}
+.user_content .list_title {
+    text-transform: capitalize;
+    transition: all .2s;
+    white-space: nowrap;
+    font-size: 17px;
+    color: #001E32;
+    width: 100%;
+    overflow: hidden;
+    max-width: 245px;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+.user_content td span.stock {
+    white-space: nowrap;
+    color: #669900;
+}
+.user_content .table img {
+    object-fit: cover;
+    width: 45px;
+    height: 45px;
+}
+
+
+/* dashboard style start */
+.user_content .deshboard_title {
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 8px;
+    padding-bottom: 12px;
+}
+.user_content .deshboard_title a {color: #EA232A;}
+.user_content .deshboard_title a:hover {color: #005CC8 !important;}
+.user_content .dash_box {
+    text-align: center;
+    position: relative;
+    padding: 30px 0;
+    color: #000;
+    overflow: hidden;
+    transition: 0.3s;
+    margin: 0 0 15px;
+    box-shadow: 0 0 3px #ddd;
+}
+.user_content .dash_box:hover {background: #F7F7F7;}
+.user_content .profile_dashbosrd {
+    grid-template-columns: auto auto auto auto;
+    display: grid;
+    grid-column-gap: 15px;
+}
+.user_content .dash_box i {
+    transition: 0.3s;
+    font-size: 28px;
+}
+.user_content .dash_box h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.user_content .dash_box:hover i {color: #EA232A;}
+.user_content .not_found {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    min-height: 265px;
+    align-items: center;
+}
+.user_content .found_content {
+    text-align: center;
+    opacity: .5;
+}
+.user_content .not_found img {max-width: 80px;}
+.user_content .not_found h5 {
+    font-size: 16px;
+    margin-top: 15px;
+}

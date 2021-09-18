@@ -1,0 +1,90 @@
+/* contact section start */
+.contact_section {
+    padding: 45px 0 30px;
+    background: #fff;
+}
+.contact_section .contact_info .address,
+.contact_section .contact_info article {margin-bottom: 35px;}
+.contact_section .contact_info h2 {
+    margin: 0 0 12px;
+    color: #000;
+    font-weight: 600;
+}
+.contact_section .contact_info p,
+.contact_section .contact_info a {margin-bottom: 5px;}
+.contact_section .contact_info a {color: #000;}
+.contact_section .contact_info a:hover {color: #EA232A;}
+
+
+.contact_section h4 {margin: 20px 0 12px;}
+.contact_section .form-group {overflow: hidden;}
+.contact_section .required label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.contact_section .required label:after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+.contact_section .request_form h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.contact_section .request_form input[type=email],
+.contact_section .request_form input[type=text],
+.contact_section .request_form input[type=date],
+.contact_section .request_form input[type=file],
+.contact_section .request_form select {
+    border-color: #ddd;
+    line-height: 38px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    height: 38px;
+    color: #000;
+}
+.contact_section .request_form input[type=text]:focus,
+.contact_section .request_form input[type=email]:focus,
+.contact_section .request_form input[type=date]:focus,
+.contact_section .request_form input[type=file]:focus,
+.contact_section .request_form select:focus {
+    border-color: rgba(234, 35, 42, 0.5);
+    box-shadow: none;
+}
+.contact_section .request_form input[type=file] {
+    line-height: 30px !important;
+    padding: 0 !important;
+}
+.contact_section .request_form textarea {
+    border-color: #ddd;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    resize: vertical;
+}
+.contact_section .request_form textarea:focus {
+    border-color: rgba(234, 35, 42, 0.5);
+    box-shadow: none;
+}
+.contact_section .request_form button[type=submit] {
+    padding: 12px 20px 10px;
+    transition: all 0.2s;
+    background: #EA232A;
+    border-radius: 0;
+    color: #FFF;
+    border: none;
+    font-size: 14px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.contact_section .request_form button[type=submit]:hover,
+.contact_section .request_form button[type=submit]:focus {
+    background: #C71319;
+    box-shadow: none;
+    outline: none;
+}
+/* contact section end */

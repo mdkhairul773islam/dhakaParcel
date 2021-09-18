@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* IE10+ VIEWPORT FIX */
+@-ms-viewport{width:device-width;}
+@viewport{width:device-width;}
+
+/*Kindle and iPad landscape · width: 1024px*/
+@media screen and (max-width: 1200px){}
+
+/*Kindle and iPad landscape · width: 1024px*/
+@media screen and (max-width: 1024px){}
+
+/*custom landscape mode · width: 1024px*/
+@media screen and (max-width: 960px){}
+
+/*iPad portrait · width: 768px */
+@media screen and (max-width: 768px){}
+
+/* 
+ Android (Nexus 4) and Android (Nexus 4) landscape · width: 600px
+ Kindle portrait · width: 600px
+ */
+@media screen and (max-width: 600px){}
+
+/* iPhone 5 landscape · width: 568px*/
+@media screen and (max-width: 568px){}
+
+/* iPhone 3+4 landscape · width: 480px*/
+@media screen and (max-width: 480px){
+	.login-main form,
+	.login-main div{
+		max-width: 300px;
+	}
+	.login-main form input[type="text"],
+	.login-main form input[type="password"] {
+		max-width: 230px;
+	}
+	.login-main form a{
+		float: none;
+		margin: 0;
+	}
+}
+
+/*Android (Nexus 4) portrait · width: 384px*/
+@media screen and (max-width: 384px){}
+
+/*
+ Crappy Android landscape · width: 320px 
+ iPhone 5 portrait · width: 320px
+ iPhone 3+4 portrait · width: 320px
+ */
+@media screen and (max-width: 320px){}
+
+/* Crappy Android portrait · width: 240px */
+@media screen and (max-width: 240px){}

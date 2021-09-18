@@ -1,0 +1,130 @@
+/* checkout section start */
+.checkout_section {
+    background: #F2F2F2;
+    padding: 45px 0;
+}
+.checkout_section .notice_board {
+    border-left: 4px solid #EA232A;
+    padding: 20px 20px 10px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.checkout_section .notice_board .notic p {margin-bottom: 8px;}
+.checkout_section .notice_board .notic {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA232A;
+}
+.checkout_section .checkout_form {
+    padding: 20px 20px 15px;
+    background: #fff;
+}
+.checkout_section .checkout_form input[type=email],
+.checkout_section .checkout_form input[type=text],
+.checkout_section .checkout_form select {
+    border-color: #ddd;
+    line-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    color: #000;
+}
+.checkout_section .form-group .dropdown-menu {z-index: 9999;}
+.checkout_section .bootstrap-select>.dropdown-toggle {
+    border-color: #ddd;
+    line-height: 36px;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    color: #000;
+    padding: 0 12px;
+}
+#co_address {
+    border-color: #ddd;
+    line-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+    color: #000;
+}
+.checkout_section .checkout_form input[type=email]:focus,
+.checkout_section .checkout_form input[type=text]:focus,
+.checkout_section .checkout_form select:focus,
+#co_address:focus {
+    border-color: rgba(234,35,42, 0.5);
+    box-shadow: none !important;
+}
+.checkout_section .subtotal_box {
+    display: inline-block;
+    text-align: right;
+    background: #fff;
+    width: 100%;
+}
+.checkout_section .subtotal_table {
+    text-align: left;
+    margin-top: 12px;
+    font-size: 15px;
+}
+.checkout_section .subtotal_table select.form-control,
+.checkout_section .subtotal_table input[type=text] {
+    line-height: 30px;
+    box-shadow: none;
+    height: 30px;
+    float: right;
+    padding: 0 8px;
+    font-size: 15px;
+    max-width: 147px;
+}
+.checkout_section .subtotal_table td,
+.checkout_section .subtotal_table th {
+    padding: 5px 12px;
+    border: none;
+}
+.checkout_section .subtotal_table th:last-child,
+.checkout_section .subtotal_table td:last-child {text-align: right;}
+.checkout_section .checkout_btn {
+    padding: 0 12px 2px;
+    text-align: right;
+}
+.checkout_section .checkout_btn .btn {
+    border-radius: 0;
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #FFF;
+    padding: 7px 13px;
+    background: #EA232A;
+    transition: all 0.2s;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.checkout_section .checkout_btn .btn:hover {background: #C71319;}
+/* checkout section end */
+
+
+
+.loading {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    color: aliceblue;
+}
+.loading span {
+    min-width: 250px;
+    height: 55px;
+    text-align: center;
+    background: #69656594;
+    padding: 5px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading span i {
+    font-size: 32px;
+}
