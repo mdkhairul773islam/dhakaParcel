@@ -29,17 +29,17 @@
                                 <th>Booking Status</th>
                                 <th>Action</th>
                             </tr>
-                            <?php foreach ($bookingList as $key => $booking)?>
+                            <?php foreach ($bookingList as $key => $booking){ ?>
                             <tr>
-                                <td><?php echo $key; ?></td>
+                                <td><?php echo $key+1; ?></td>
                                 <td><?php echo $booking->booking_no; ?></td>
                                 <td><?php echo ucfirst($booking->booking_status); ?></td>
                                 <td class="action_btn">
                                     <a href="<?php echo site_url('user-panel/serialNo?serialNo='.$booking->booking_no); ?>" class="btn"><i class="fas fa-eye"></i></a>
-                                    <a href="" class="btn delete"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="<?php echo site_url('user-panel/delete?serialNo='.$booking->booking_no); ?>" class="btn delete"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
-
+                            <?php } ?>
                         </table>
                         <?php } else{ ?>
                             <h4 class="my-2" style="color: #EF0606">Soory, You haven't booked yet!</h4>

@@ -21,7 +21,7 @@
                                     <!--This Code are not Deleted-->
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select name="category_id" class="form-control">
+                                            <select name="category_id" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Category</option>
                                                 <?php foreach ($categoryList as $category){ ?>
                                                     <option value="<?= $category->id ?>"><?= $category->category ?></option>

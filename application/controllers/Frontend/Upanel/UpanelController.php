@@ -189,4 +189,21 @@
 
         return view('frontend.pages.upanel.booking_voucher');
     }
+
+    public function delete(){
+
+
+        $this->data['title'] = "Booking List";
+        $this->data['aside'] = "booking_list";
+
+        $serial_no = $this->input->get('serialNo');
+
+        if (save_data('booking', ['trash'=>1], ['booking_no'=>$serial_no])) {
+            set_msg('success', 'success', 'Booking Successfully Deleted !');
+            redirect('user-panel/booking', 'refresh');
+        } else {
+            set_msg('warning', 'warning', 'Booking Not Deleted !');
+            redirect('user-panel/booking', 'refresh');
+        }
+    }
 }
