@@ -147,6 +147,28 @@
             $data['user_id'] = $this->session->subscriber_id;
             $data['user_name'] = $this->session->name;
 
+            $message = "Hi, Your Booking was successfully submitted.";
+
+            $from_valid_mobile =  $this->validate_mobile($_POST['from_mobile']);
+            $to_valid_mobile =  $this->validate_mobile($_POST['to_mobile']);
+
+            if(!empty($_POST['from_mobile'])){
+                if($from_valid_mobile) {
+                    send_sms($_POST['from_mobile'], $message);
+                    set_msg('success', 'success', 'Your Booking was successfully submitted !');
+                }
+            }else{
+                set_msg('success', 'success', 'Sms Not Sent!');
+            }
+
+            if(!empty($_POST['to_mobile'])){
+                if($to_valid_mobile) {
+                    send_sms($_POST['to_mobile'], $message);
+                    set_msg('success', 'success', 'Your Booking was successfully submitted !');
+                }
+            }else{
+                set_msg('success', 'success', 'Sms Not Sent!');
+            }
 
             if (save_data('booking', $data)) {
                 set_msg('success', 'success', 'Booking Successfully Created !');
@@ -205,5 +227,10 @@
             set_msg('warning', 'warning', 'Booking Not Deleted !');
             redirect('user-panel/booking', 'refresh');
         }
+    }
+
+    private function validate_mobile($mobile)
+    {
+        return preg_match('/^[0-9]{11}+$/', $mobile);
     }
 }

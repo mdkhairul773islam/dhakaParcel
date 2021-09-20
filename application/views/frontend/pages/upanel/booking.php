@@ -21,7 +21,7 @@
                                     <!--This Code are not Deleted-->
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select name="category_id" class="form-control selectpicker" data-live-search="true">
+                                            <select name="category_id" class="form-control selectpicker" data-live-search="true" required>
                                                 <option value="" selected disabled>Category</option>
                                                 <?php foreach ($categoryList as $category){ ?>
                                                     <option value="<?= $category->id ?>"><?= $category->category ?></option>
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select name="subcategory_id" class="form-control">
+                                            <select name="subcategory_id" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Sub Category</option>
                                                 <?php foreach ($subCategoryList as $sub){ ?>
                                                     <option value="<?= $sub->id ?>"><?= $sub->subcategory ?></option>
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <textarea name="description" rows="3" class="form-control"
+                                            <textarea name="description" rows="3" class="form-control" required
                                                       placeholder="Description"></textarea>
                                         </div>
                                     </div>
@@ -52,13 +52,13 @@
                                     <fieldset>
                                         <legend>From</legend>
                                         <div class="form-group">
-                                            <input type="text" name="from_name" class="form-control" placeholder="Full Name">
+                                            <input type="text" name="from_name" class="form-control" placeholder="Full Name" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="from_mobile" class="form-control" placeholder="Mobile">
+                                            <input type="tel" name="from_mobile" pattern="[0-9]{11}"  class="form-control" placeholder="Mobile" required>
                                         </div>
                                         <div class="form-group">
-                                            <select name="from_division" class="form-control">
+                                            <select name="from_division" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select Division</option>
                                                 <?php
                                                     foreach ($divisions as $division){
@@ -68,7 +68,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select name="from_districts" class="form-control">
+                                            <select name="from_districts" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select District</option>
                                                 <?php
                                                 foreach ($districts as $district){
@@ -78,7 +78,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select name="from_upazila" class="form-control">
+                                            <select name="from_upazila" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select Upzila</option>
                                                 <?php
                                                 foreach ($upazillas as $upazilla){
@@ -97,13 +97,13 @@
                                     <fieldset>
                                         <legend>To</legend>
                                         <div class="form-group">
-                                            <input type="text" name="to_name" class="form-control" placeholder="Full Name">
+                                            <input type="text" name="to_name" class="form-control" placeholder="Full Name" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="to_mobile" class="form-control" placeholder="Mobile">
+                                            <input type="tel" name="to_mobile" pattern="[0-9]{11}" class="form-control" placeholder="Mobile" required>
                                         </div>
                                         <div class="form-group">
-                                            <select name="to_division" class="form-control">
+                                            <select name="to_division" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select Division</option>
                                                 <?php
                                                 foreach ($divisions as $division){
@@ -113,7 +113,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select name="to_zila" class="form-control">
+                                            <select name="to_zila" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select District</option>
                                                 <?php
                                                 foreach ($districts as $district){
@@ -123,7 +123,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select name="to_upazila" class="form-control">
+                                            <select name="to_upazila" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select Upzila</option>
                                                 <?php
                                                 foreach ($upazillas as $upazilla){
@@ -145,7 +145,7 @@
                                 <div class="form-row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select name="payment" class="form-control">
+                                            <select name="payment" class="form-control selectpicker" data-live-search="true" required>
                                                 <option value="" selected disabled>Payment Method</option>
                                                 <?php
                                                     foreach ($payment_methods as $method){
@@ -157,12 +157,12 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="trx_number" placeholder="TRX Number">
+                                            <input type="text" class="form-control" name="trx_number" placeholder="TRX Number" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="trx_mobile" placeholder="TRX Mobile No">
+                                            <input type="text" class="form-control" name="trx_mobile" placeholder="TRX Mobile No" required>
                                         </div>
                                     </div>
                                 </div>

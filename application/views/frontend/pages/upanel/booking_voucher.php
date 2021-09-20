@@ -1,14 +1,16 @@
 <!-- include css -->
-<link rel="stylesheet" href="<?=site_url('public/style/user.css')?>">
+<link rel="stylesheet" href="<?= site_url('public/style/user.css') ?>">
 <style>
     .customer_info {
         flex-wrap: wrap;
         display: flex;
     }
+
     .customer_info li strong {
         display: inline-block;
         min-width: 85px;
     }
+
     .customer_info li {
         min-width: 245px;
         width: 33.3333%;
@@ -54,12 +56,10 @@
                     <fieldset>
                         <legend>Product Details</legend>
                         <ul class="customer_info">
-                            <pre>
-                                <?php
-                                   $category = get_name('categories', 'category', ['id'=>$booking_details->category_id]);
-                                   $sub_category = get_name('subcategories', 'subcategory', ['id'=>$booking_details->subcategory_id])
-                                ?>
-                            </pre>
+                            <?php
+                            $category = get_name('categories', 'category', ['id' => $booking_details->category_id]);
+                            $sub_category = get_name('subcategories', 'subcategory', ['id' => $booking_details->subcategory_id])
+                            ?>
                             <li><strong>Category</strong> : <?= $category ?></li>
                             <li><strong>Sub Category</strong> : <?= $sub_category ?></li>
                         </ul>
@@ -70,7 +70,7 @@
                                 <legend>From</legend>
                                 <ul class="customer_info">
                                     <li><strong>Full Name</strong> : <?= $booking_details->from_name ?></li>
-                                    <li><strong>MObile</strong> : <?= $booking_details->from_mobile ?></li>
+                                    <li><strong>Mobile</strong> : <?= $booking_details->from_mobile ?></li>
                                     <li><strong>Addre</strong> : <?= $booking_details->from_address ?></li>
                                     <li><strong>Division</strong> : <?= $booking_details->from_division ?></li>
                                     <li><strong>District</strong> : <?= $booking_details->from_districts ?></li>
