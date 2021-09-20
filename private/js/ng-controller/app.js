@@ -13,6 +13,48 @@ app.filter('removeUnderScore', function() {
 });
 
 
+//SMS Controller
+app.controller("CustomSMSCtrl", ["$scope", "$log", function($scope, $log){
+    $scope.msgContant = "";
+    $scope.totalChar = 0;
+    $scope.msgSize = 1;
+
+    $scope.$watch(function(){
+        var charLength = $scope.msgContant.length,
+            message = $scope.msgContant,
+            messLen = 0;
+
+        var english = /^[~!@#$%^&*(){},.:/-_=+A-Za-z0-9 ]*$/;
+
+        if (english.test(message)){
+            if( charLength <= 160){ messLen = 1; }
+            else if( charLength <= 306){ messLen = 2; }
+            else if( charLength <= 459){ messLen = 3; }
+            else if( charLength <= 612){ messLen = 4; }
+            else if( charLength <= 765){ messLen = 5; }
+            else if( charLength <= 918){ messLen = 6; }
+            else if( charLength <= 1071){ messLen = 7; }
+            else if( charLength <= 1080){ messLen = 8; }
+            else { messLen = "Equal to an MMS!"; }
+
+        }else{
+            if( charLength <= 63){ messLen = 1; }
+            else if( charLength <= 126){ messLen = 2; }
+            else if( charLength <= 189){ messLen = 3; }
+            else if( charLength <= 252){ messLen = 4; }
+            else if( charLength <= 315){ messLen = 5; }
+            else if( charLength <= 378){ messLen = 6; }
+            else if( charLength <= 441){ messLen = 7; }
+            else if( charLength <= 504){ messLen = 8; }
+            else { messLen = "Equal to an MMS!"; }
+        }
+
+        $scope.totalChar = charLength;
+        $scope.msgSize = messLen;
+    });
+}]);
+
+
 app.filter('textToLower', function() {
     return function(input) {
         return input.replace(/_/gi, " ").toLowerCase();
@@ -76,9 +118,9 @@ window.makeFormData=(object)=>{
     if(typeof object == 'object'){
         for(const key in object){
             if(typeof object[key] == 'object'){
-                formdata.append(key, JSON.stringify(object[key]));                
+                formdata.append(key, JSON.stringify(object[key]));
             }else{
-                formdata.append(key, object[key]);                
+                formdata.append(key, object[key]);
             }
         }
     }
@@ -100,9 +142,9 @@ app.value('$axios', axiosRequest);
 async function http(url, data) {
     var responsedata = null;
     await axios.post(url, data)
-    .then(response=>{
-        responsedata = response
-    })
-    .catch(err=>console.log(err));
+        .then(response=>{
+            responsedata = response
+        })
+        .catch(err=>console.log(err));
     return responsedata;
 }
