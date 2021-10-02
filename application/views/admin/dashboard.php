@@ -4,7 +4,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="dashboard_header_wrapper">
-            <h1 class="title">Deshboard</h1>
+            <h1 class="title">
+                <?php 
+                    if($this->session->userdata['privilege']=='super' || $this->session->userdata['privilege']=='president'){
+                        echo "Super";
+                    }elseif($this->session->userdata['privilege']=='admin'){
+                        echo "Agent";
+                    }elseif($this->session->userdata['privilege']=='user'){
+                        echo "Delivery Man";
+                    }else{
+                        echo "";
+                    }
+                ?>
+                Deshboard
+            </h1>
         </div>
     </div>
 </div>

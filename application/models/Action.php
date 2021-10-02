@@ -420,6 +420,16 @@ class Action extends Lab_Model {
 
 */
 
+    // like Query      
+     public function readLikeAfter($table,$match_column,$matchElement){
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->like($match_column,$matchElement, 'after');
+        $query = $this->db->get();
+        
+        return $query->result();
+    }
+
  // retrieve from database
     public function showbyClass($table, $where = array()){
         $this->_table_name = $table;

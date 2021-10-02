@@ -7,37 +7,49 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panal-header-title pull-left">
-                    <h1>View All Profile</h1>
+                    <h1>All Profile</h1>
                 </div>
             </div>
 
             <div class="panel-body">
-                <?php
-                    if ($profiles != NULL) {
-                ?>
+                
                 <form action="" method="POST">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <select name="select" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                                <select name="privilege" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
                                     <option value="" selected disable>Select Type</option>
+                                     <option value="super">Super Admin</option>
+                                     <option value="admin">Agent</option>
+                                     <option value="user">Deliveryman</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <select name="select" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
-                                    <option selected disable>Select Zone</option>
+                                <?php 
+                                    $zones = get_result('upazilas', [], 'name', '', 'name', 'ASC');
+                                ?>
+                                <select name="zone" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                                    <option selected disable value="">Select Zone</option>
+                                    <?php 
+                                         foreach($zones as $key => $zone){
+                                    ?>
+                                    <option value="<?php echo $zone->name; ?>"><?php echo $zone->name; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="submit" class="btn btn-info" value="Search">
+                                <input type="submit" name="show" class="btn btn-info" value="Search">
                             </div>
                         </div>
                     </div>
                 </form>
+                <?php
+                    if ($profiles != NULL) {
+                ?>
                 <hr>
                 <table class="table table-bordered">
                     <tr>
@@ -55,7 +67,19 @@
                         <td style="width: 55px; padding: 2px;"><img src="<?php echo site_url($value->image); ?>" alt="" style="width: 55px; height: 55px;"></td>
                         <td><?php echo filter($value->name); ?></td>
                         <td><?php echo $value->username; ?></td>
-                        <td><?php echo filter($value->privilege); ?></td>
+                        <td>
+                            <?php 
+                                if($value->privilege=='super'){
+                                    echo "Super";
+                                }elseif($value->privilege=='admin'){
+                                    echo "Agent";
+                                }elseif($value->privilege=='user'){
+                                    echo "Delivery Man";
+                                }else{
+                                    echo "";
+                                }
+                            ?>
+                        </td>
                         <td style="width: 160px;">
                             <a class="btn btn-info" href="<?php echo site_url("settings/showProfile?id=" . $value->id); ?>">
                                 <i class="fa fa-eye"></i>

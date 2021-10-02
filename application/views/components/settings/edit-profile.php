@@ -71,8 +71,36 @@
                             <select name="privilege" class="form-control">
                                 <option value="">-- Select --</option>
                                 <option value="super" <?php if($profile[0]->privilege=='super'){echo "selected"; } ?> >Super Admin</option>
-                                <option value="admin" <?php if($profile[0]->privilege=='admin'){echo "selected"; } ?> >Admin</option>
-                                <option value="user" <?php if($profile[0]->privilege=='user'){echo "selected"; } ?> >User</option>
+                                <option value="admin" <?php if($profile[0]->privilege=='admin'){echo "selected"; } ?> >Agent</option>
+                                <option value="user" <?php if($profile[0]->privilege=='user'){echo "selected"; } ?> >Delivery Man</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                     <div class="form-group">
+                        <label for="" class="col-md-3 control-label">Zone<span class="req">*</span></label>
+                        <div class="col-md-7">
+                            <?php 
+                                $zone_list = get_result('upazilas', '', 'name', '', 'name', 'ASC');
+                                $get_user_zone_list = get_result('user_zones', ['user_id'=> $profile[0]->id], 'zone', '', 'zone', 'ASC');
+                                
+                                $user_zone = [];
+                                foreach($get_user_zone_list as $zone){
+                                    $user_zone[] = $zone->zone;
+                                }
+                            ?>
+                            <select name="zone[]" class="form-control selectpicker" data-live-search="true" multiple>
+                                <option value="" selected disabled>Select Zone</option>
+                                <?php 
+                                    $zone_list_zone = [];
+                                    foreach($zone_list as $key => $row){
+                                ?>
+                                    <option
+                                    <?php 
+                                        echo (in_array($row->name, $user_zone) ? 'selected' : '');    
+                                    ?> 
+                                    value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
+                                <?php }?>
                             </select>
                         </div>
                     </div>

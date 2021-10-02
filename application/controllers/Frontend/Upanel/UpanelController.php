@@ -134,7 +134,8 @@
 
         $this->data['divisions'] = get_result('divisions');
         $this->data['districts'] = get_result('districts');
-        $this->data['upazillas'] = get_result('upazillas');
+        $this->data['upazillas'] = get_result('upazilas');
+        $this->data['agnet_set_upazila'] = get_result('user_zones', '', '', 'zone', 'zone', 'ASC');
 
         $this->data['payment_methods'] = get_result('payment_method', [], 'method as name');
 
@@ -180,6 +181,18 @@
         }
 
         return view('frontend.pages.upanel.booking');
+    }
+    
+    
+    public function payment_method_info_get(){
+        
+        $data = [];
+        if(!empty($_POST['method'])){
+            
+            $where = ['method' => $_POST['method']];
+            $data = get_result('payment_method', $where);
+        }
+        echo  json_encode($data);
     }
     
     /*

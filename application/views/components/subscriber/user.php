@@ -1,8 +1,7 @@
 <style>
-    .action_td .btn {padding: 2px 8px !important;}
     .action_td {
         vertical-align: middle !important;
-        padding: 0 8px !important;
+        padding: 2px 8px !important;
     }
 </style>
 
@@ -19,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="search[username]" placeholder="Username">
+                                <input type="text" class="form-control" name="search[subscriber_id]" placeholder="ID Number">
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -43,14 +42,18 @@
                         <th style="width: 140px;">ID Number</th>
                         <th>Name</th>
                         <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Address</th>
                         <th width="60" class="text-right">Action</th>
                     </tr>
                     <?php if(!empty($subscribers)) foreach($subscribers as $key=>$row){ ?>
                     <tr>
-                        <td><?=(++$key)?></td>
+                        <td class="text-center"><?=(++$key)?></td>
                         <td><?= (!empty($user_data->subscriber_id) ? $user_data->subscriber_id: '')?></td>
                         <td><?=($row->name)?></td>
                         <td><?=($row->mobile)?></td>
+                        <td><?=($row->email)?></td>
+                        <td><?=($row->address)?></td>
                         <td class="text-right action_td" width="120">
                             <?php if($action_menus){
                                 foreach($action_menus as $action_menu){

@@ -10,22 +10,71 @@
         $this->data['meta_keyword'] = 'Booking List';
         $this->data['meta_title'] = 'Dhaka courier ltd';
         $this->data['meta_description'] = 'dhakacourierltd';
-
+        $this->data['zone_list'] = NULL;
+        
+        $this->data['zone_list'] = get_result('user_zones', '', '', 'zone', 'zone', 'ASC');
+        $this->data['agent_list'] = get_result('users', '', '', 'name', 'name', 'ASC');
+        
         $where = [];
+        
         if (!empty($_POST['booking_no'])) {
-            $where['booking_no'] = $_POST['booking_no'];
+            $where['booking.booking_no'] = $_POST['booking_no'];
         }
         if (!empty($_POST['from_name'])) {
-            $where['from_name'] = $_POST['from_name'];
+            $where['booking.from_name'] = $_POST['from_name'];
         }
         if (!empty($_POST['from_mobile'])) {
-            $where['from_mobile'] = $_POST['from_mobile'];
+            $where['booking.from_mobile'] = $_POST['from_mobile'];
         }
         if (!empty($_POST['booking_status'])) {
-            $where['booking_status'] = $_POST['booking_status'];
+            $where['booking.booking_status'] = $_POST['booking_status'];
         }
+        if (!empty($_POST['zone'])) {
+            $where['booking.to_upazila'] = $_POST['zone'];
+        }
+        if (!empty($_POST['agent_name'])) {
+            $where['users.name'] = $_POST['agent_name'];
+        }
+        
+        if(!empty($_POST['date'])){
+            
+            foreach($_POST['date'] as $key => $val) {
+                
+                if($val != null && $key == 'from') {
+                    $where['booking.date >='] = $val;
+                }
+    
+                if($val != null && $key == 'to') {
+                    $where['booking.date <='] = $val;
+                }
+            }
+        }
+        
 
-        $this->data['bookingList'] = get_result('booking', $where);
+        
+        if($this->session->userdata['privilege']=='super' || $this->session->userdata['privilege']=='president'){
+            
+            $tableFrom="booking";
+            $tableTo=["user_zones", "users"];
+            $joinCond=["booking.to_upazila=user_zones.zone", "user_zones.user_id=users.id", "booking.to_upazila=user_zones.zone"];
+            
+            $this->data['bookingList'] = get_join($tableFrom,$tableTo, $joinCond, $where,['booking.*', 'user_zones.zone as agent_zone_name', 'users.name as agent_name', 'users.username as agent_username'],'booking.booking_no');
+        }
+        
+        if($this->session->userdata['privilege']=='admin'){
+            
+            $user_id = $this->session->userdata('user_id');
+            
+            $tableFrom="booking";
+            $tableTo=["user_zones", "users"];
+            $joinCond=["booking.to_upazila=user_zones.zone", "user_zones.user_id=users.id", "booking.to_upazila=user_zones.zone"];
+            
+            $where['users.id'] = $user_id;
+            
+            $this->data['bookingList'] = get_join($tableFrom,$tableTo, $joinCond, $where,['booking.*', 'user_zones.zone as agent_zone_name', 'users.name as agent_name', 'users.username as agent_username']);
+        }
+        //dd($this->data['bookingList']);
+        
 
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);

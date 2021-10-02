@@ -53,6 +53,19 @@ class EditProfile extends Admin_Controller {
                 unlink($img);
             }
         }
+        
+         if(!empty($_POST['zone'])){
+             
+             delete_data('user_zones', ['user_id'=>$id]);
+             
+            foreach($_POST['zone'] as $keyZone => $zone){
+                $zoneData = [
+                    'user_id' => $id,
+                    'zone'    => $zone
+                ];
+                save_data('user_zones',$zoneData);
+            }
+        }
 
         if(update('users', $data, $where)){
             set_msg('success','success','Profile Updated Successfully');

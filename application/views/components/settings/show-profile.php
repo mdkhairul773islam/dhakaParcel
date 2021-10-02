@@ -7,9 +7,15 @@
                   <h1>
                      <?php
                        if($profile[0]->privilege == "super"){
-                         echo ucwords($profile[0]->privilege)." Admin Profile";
+                         //echo ucwords($profile[0]->privilege)." Admin Profile";
+                         echo "Super Admin Profile";
+                       }elseif($profile[0]->privilege == "admin"){
+                         //echo ucwords($profile[0]->privilege)." Profile";
+                         echo "Agnet Profile";
+                       }elseif($profile[0]->privilege == "user"){
+                          echo "Delivery Man Profile"; 
                        }else{
-                         echo ucwords($profile[0]->privilege)." Profile";
+                           echo "";
                        }
                        ?>
                   </h1>
@@ -82,12 +88,21 @@
                                 <div class="col-sm-6 col-xs-12">
                                     <label class="control-label col-xs-5">Privilege</label>
                                     <div class="col-xs-7">
-                                        <p><?php echo $profile[0]->privilege; ?></p>
+                                        <p>
+                                            <?php 
+                                                if($profile[0]->privilege=='super'){
+                                                    echo "Super";
+                                                }elseif($profile[0]->privilege=='admin'){
+                                                    echo "Agent";
+                                                }elseif($profile[0]->privilege=='user'){
+                                                    echo "Delivery Man";
+                                                }else{
+                                                    echo "";
+                                                }
+                                            ?>
+                                        </p>
                                     </div>
                                 </div>
-
-                                
-
                             </div>
                         </div>
 

@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Edit Product</h1>
+                    <h1>Edit Testimonial</h1>
                 </div>
             </div>
             <div class="panel-body">
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <label class="control-label"> Description <span class="req">*</span></label>
+                                    <label class="control-label">Description <span class="req">*</span></label>
                                     <div class="form-group">
                                         <textarea  name="description" rows="5" placeholder="Enter Description..." class="form-control" ><?php echo isset($testimonial[0]->description) ? $testimonial[0]->description : ''; ?></textarea>
                                     </div>

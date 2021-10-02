@@ -87,6 +87,24 @@
                             </select>
                         </div>
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="" class="col-md-3 control-label">Zone<span class="req">*</span></label>
+                        <div class="col-md-7">
+                            <?php 
+                                $zone_list = get_result('upazilas', '', '', '', 'name', 'ASC');
+                                
+                            ?>
+                            <select name="zone[]" class="form-control selectpicker" data-live-search="true" multiple>
+                                <option value="" selected disabled>Select Zone</option>
+                                <?php 
+                                    foreach($zone_list as $key => $row){
+                                ?>
+                                    <option value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>

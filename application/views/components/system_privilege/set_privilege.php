@@ -158,13 +158,26 @@
                                     <table class="tabel">
                                         <tr>
                                             <th>Name</th>
-                                            <th>:</th>
-                                            <td><?php echo $user_value->name; ?></td>
+                                            <th> : </th>
+                                            <td> &nbsp; <?php echo $user_value->name; ?></td>
                                         </tr>
                                         <tr>
                                             <th>Type</th>
-                                            <th>:</th>
-                                            <td><?php echo $user_value->privilege; ?></td>
+                                            <th>: </th>
+                                            <td> &nbsp;
+                                               <!-- <?php // echo $user_value->privilege; ?>-->
+                                                <?php 
+                                                    if($user_value->privilege=='super'){
+                                                        echo "Super";
+                                                    }elseif($user_value->privilege=='admin'){
+                                                        echo "Agent";
+                                                    }elseif($user_value->privilege=='user'){
+                                                        echo "Delivery Man";
+                                                    }else{
+                                                        echo "";
+                                                    }
+                                                ?>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>

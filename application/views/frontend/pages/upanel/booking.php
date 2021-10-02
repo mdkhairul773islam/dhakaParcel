@@ -126,9 +126,9 @@
                                             <select name="to_upazila" class="form-control selectpicker" data-live-search="true">
                                                 <option value="" selected disabled>Select Upzila</option>
                                                 <?php
-                                                foreach ($upazillas as $upazilla){
+                                                foreach ($agnet_set_upazila as $upazilla){
                                                     ?>
-                                                    <option value="<?= $upazilla->name; ?>"><?= $upazilla->name; ?></option>
+                                                    <option value="<?= $upazilla->zone; ?>"><?= $upazilla->zone; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -145,7 +145,7 @@
                                 <div class="form-row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select name="payment" class="form-control selectpicker" data-live-search="true" required>
+                                            <select name="payment" id="payment_method" onchange="updateStatus()" class="form-control selectpicker" data-live-search="true" required>
                                                 <option value="" selected disabled>Payment Method</option>
                                                 <?php
                                                     foreach ($payment_methods as $method){
@@ -155,6 +155,14 @@
                                             </select>
                                         </div>
                                     </div>
+                                    
+                                    
+                                    <div class="col-sm-6 d-none" id="method_display_info">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="get_method_number" readonly>
+                                        </div>
+                                    </div>
+                                    
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="trx_number" placeholder="TRX Number" required>
@@ -179,3 +187,43 @@
     </div>
 </section>
 <!-- profile section end -->
+<script>
+
+    function updateStatus(){
+     $("#method_display_info").addClass('d-none');
+        $("#type").val();
+        $("#get_method_number").val();
+        
+        var method = $('#payment_method').val();
+            
+        $.ajax({
+          method: "POST",
+          url: "<?php echo site_url('user-panel/booking/payment_method_info_get'); ?>",
+          data: { method: method }
+        })
+         .done(function( response ) {
+            if(response){
+                
+                var method_info = JSON.parse(response);
+                
+                function capitalizeFirstLetter(string) {
+                  return string.charAt(0).toUpperCase() + string.slice(1);
+                }
+                
+                var method_number_type = method_info[0].number+" - "+ capitalizeFirstLetter(method_info[0].type);
+                
+                $("#get_method").text(method_info[0].method);
+                $("#get_method_number").val(method_number_type);
+                $("#method_display_info").removeClass('d-none');
+                
+                //toastr.success('Loan status successfully updated.', 'Success')
+                
+            }else{
+                $("#method_display_info").addClass('d-none');
+                //toastr.error('Some thing wrong check again.', 'Error')
+            }
+            
+          });
+    }
+
+</script>

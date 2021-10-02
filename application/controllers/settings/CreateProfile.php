@@ -60,12 +60,26 @@ class CreateProfile extends Admin_Controller {
                         'privilege' => $this->input->post('privilege'),
                         'image'     => 'public/profiles/'.$file
                     );
-
-                    if(save('users',$insert)){
+                    
+                    $user_id = save_data('users',$insert, [], true);
+                    
+                    if(!empty($user_id)){
+                            if(!empty($_POST['zone'])){
+                                
+                                foreach($_POST['zone'] as $keyZone => $zone){
+                                    $zoneData = [
+                                        'user_id' => $user_id,
+                                        'zone'    => $zone
+                                    ];
+                                    save_data('user_zones',$zoneData);
+                                }
+                            }
+                            
                         set_msg('success','success','Profile Successfully Created.');
                     }else{
                         set_msg('warning','warning','Profile Not Created.');
                     }
+                    
                     redirect('settings/createProfile');
                 }
             }

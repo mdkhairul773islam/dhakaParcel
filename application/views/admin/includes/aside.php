@@ -41,7 +41,7 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-nav">
         <h3 class="sidebar-brand <?php if($this->data['width'] == 'full-width') {echo 'sidebar-slide';} ?>">
-			<a style="font-size: 23px !important;" href="<?php echo site_url('admin'); ?>">Dhaka Courier Ltd</a>
+			<a style="font-size: 23px !important;" href="<?php echo site_url('admin/dashboard'); ?>">Dhaka Courier Ltd</a>
 		</h3>
     </div>
     <nav class="aside-nav">

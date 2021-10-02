@@ -23,17 +23,18 @@ $route['logout']   			    = "Frontend/Auth/AuthController/logout";
 $route['forgot']   			    = "Frontend/Auth/AuthController/forgot";
 $route['registration']   		= "Frontend/Auth/AuthController/registration";
 
-$route['resend_verification_code']		= "Frontend/Auth/AuthController/resend_verification_code";
-$route['forgot']						= "Frontend/Auth/AuthController/forgot_password";
+$route['resend_verification_code']		            = "Frontend/Auth/AuthController/resend_verification_code";
+$route['forgot']						            = "Frontend/Auth/AuthController/forgot_password";
 
-$route['user-panel/dashboard']  		= "Frontend/Upanel/UpanelController";
-$route['user-panel/user_info_set']  	= "Frontend/Upanel/UpanelController/user_info_set";
-$route['user-panel/profile']    		= "Frontend/Upanel/UpanelController/profile";
-$route['user-panel/user_image_set']     = "Frontend/Upanel/UpanelController/user_image_set";
-$route['user-panel/booking']            = "Frontend/Upanel/UpanelController/booking";
-$route['user-panel/booking_list']       = "Frontend/Upanel/UpanelController/booking_list";
-$route['user-panel/serialNo']           = "Frontend/Upanel/UpanelController/serialNo";
-$route['user-panel/delete']             = "Frontend/Upanel/UpanelController/delete";
-$route['user-panel/settings']   		= "Frontend/Upanel/UpanelController/settings";
+$route['user-panel/dashboard']  		            = "Frontend/Upanel/UpanelController";
+$route['user-panel/user_info_set']  	            = "Frontend/Upanel/UpanelController/user_info_set";
+$route['user-panel/profile']    		            = "Frontend/Upanel/UpanelController/profile";
+$route['user-panel/user_image_set']                 = "Frontend/Upanel/UpanelController/user_image_set";
+$route['user-panel/booking']                        = "Frontend/Upanel/UpanelController/booking";
+$route['user-panel/booking/payment_method_info_get']= "Frontend/Upanel/UpanelController/payment_method_info_get";
+$route['user-panel/booking_list']                   = "Frontend/Upanel/UpanelController/booking_list";
+$route['user-panel/serialNo']                       = "Frontend/Upanel/UpanelController/serialNo";
+$route['user-panel/delete']                         = "Frontend/Upanel/UpanelController/delete";
+$route['user-panel/settings']   		                  = "Frontend/Upanel/UpanelController/settings";
 
 $route['404_override'] = '';

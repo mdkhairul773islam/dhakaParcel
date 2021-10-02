@@ -323,6 +323,7 @@
     height: 40px;
     color: #000;
 }
+.form-group .bootstrap-select {border: 1px solid #ddd;}
 .user_section .alert-dismissible {padding-right: 1.25rem;}
 .user_section .alert p {margin-bottom: 5px;}
 .user_section .alert {
@@ -352,6 +353,10 @@
 .user_section .user_content input[type=text]:focus,
 .user_section .user_content textarea:focus,
 .user_section .user_content select:focus {
+    border-color: rgba(0,74,173, 0.5);
+    box-shadow: none;
+}
+.form-control:focus {
     border-color: rgba(0,74,173, 0.5);
     box-shadow: none;
 }
