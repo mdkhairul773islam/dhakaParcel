@@ -77,8 +77,8 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 
 	'database' => 'wwwdhakacourierl_db',
-	'username' => 'wwwdhakacourierl_db', //wwwdhakacourierl_db
-	'password' => 'PhHhPZC4I=nS', //PhHhPZC4I=nS
+	'username' => 'root', //wwwdhakacourierl_db
+	'password' => '', //PhHhPZC4I=nS
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
