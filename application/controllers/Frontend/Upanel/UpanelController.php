@@ -183,7 +183,7 @@
         return view('frontend.pages.upanel.booking');
     }
     
-    
+    //get all payment method infromation
     public function payment_method_info_get(){
         
         $data = [];
@@ -191,6 +191,18 @@
             
             $where = ['method' => $_POST['method']];
             $data = get_result('payment_method', $where);
+        }
+        echo  json_encode($data);
+    }
+
+
+    public function get_agent_zone_wise(){
+        
+        $data = [];
+        if(!empty($_POST['zone'])){
+            
+            $where = ['zone' => $_POST['zone']];
+            $data = get_result('user_zones', $where, ['user_id as agent_id']);
         }
         echo  json_encode($data);
     }

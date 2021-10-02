@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
 
 <div class="container-fluid">
     <div class="row">
@@ -30,7 +31,8 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Zone <span class="req">*</span></label>
                     <div class="col-md-5">
-                        <select name="zone" class="selectpicker form-control" required data-show-subtext="true" data-live-search="true">
+                        <select name="zone" class="selectpicker form-control" required data-show-subtext="true"
+                            data-live-search="true">
                             <option value="" selected disabled>Select Zone</option>
                             <option value="">Zone One</option>
                             <option value="">Zone Two</option>
@@ -41,14 +43,15 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Agente Name <span class="req">*</span></label>
                     <div class="col-md-5">
-                        <select name="agent_name" class="selectpicker form-control" required data-show-subtext="true" data-live-search="true">
+                        <select name="agent_name" class="selectpicker form-control" required data-show-subtext="true"
+                            data-live-search="true">
                             <option value="" selected disabled>Select Agente</option>
                             <option value="">Agente One</option>
                             <option value="">Agente Two</option>
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-md-3 control-label">Balance (TK) <span class="req">*</span></label>
                     <div class="col-md-3">
@@ -62,7 +65,8 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Transaction Type <span class="req">*</span></label>
                     <div class="col-md-5">
-                        <select name="payment_type" ng-init="transactionBy = 'cash'" ng-model="transactionBy" class="form-control" required>
+                        <select name="payment_type" ng-init="transactionBy = 'cash'" ng-model="transactionBy"
+                            class="form-control" required>
                             <option value="" selected disabled>&nbsp;</option>
                             <option value="cash">Cash</option>
                             <option value="cheque">Cheque</option>
@@ -75,24 +79,24 @@
                 </div>
 
                 <!-- for selecting cheque -->
-				<div ng-if="transactionBy == 'cheque'">
-					<div class="form-group">
-	                    <label class="col-md-3 control-label">Bank name <span class="req">*</span></label>
+                <div ng-if="transactionBy == 'cheque'">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Bank name <span class="req">*</span></label>
 
-	                    <div class="col-md-5">
-							<input type="text" name="meta[bankname]" class="form-control">
-	                    </div>
-	                </div>
+                        <div class="col-md-5">
+                            <input type="text" name="meta[bankname]" class="form-control">
+                        </div>
+                    </div>
 
-					<div class="form-group">
-	                    <label class="col-md-3 control-label">
-							Branch name <span class="req">*</span>
-						</label>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">
+                            Branch name <span class="req">*</span>
+                        </label>
 
-	                    <div class="col-md-5">
-							<input type="text" name="meta[branchname]" class="form-control">
-	                    </div>
-	                </div>
+                        <div class="col-md-5">
+                            <input type="text" name="meta[branchname]" class="form-control">
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label class="col-md-3 control-label">
@@ -104,33 +108,35 @@
                         </div>
                     </div>
 
-					<div class="form-group">
-	                    <label class="col-md-3 control-label">
-							Cheque No. <span class="req">*</span>
-						</label>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">
+                            Cheque No. <span class="req">*</span>
+                        </label>
 
-	                    <div class="col-md-5">
-							<input type="text" name="meta[chequeno]" class="form-control">
-	                    </div>
-	                </div>
+                        <div class="col-md-5">
+                            <input type="text" name="meta[chequeno]" class="form-control">
+                        </div>
+                    </div>
 
-					<div class="form-group">
-	                    <label class="col-md-3 control-label">
-							Pass Date <span class="req">*</span>
-						</label>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">
+                            Pass Date <span class="req">*</span>
+                        </label>
 
-	                    <div class="col-md-5">
-                            <input type="text" name="meta[passdate]" placeholder="YYYY-MM-DD" class="form-control" value="<?php echo date("Y-m-d"); ?>">
-							<input type="hidden" name="meta[status]" value="pending">
-	                    </div>
-	                </div>
-				</div>
+                        <div class="col-md-5">
+                            <input type="text" name="meta[passdate]" placeholder="YYYY-MM-DD" class="form-control"
+                                value="<?php echo date("Y-m-d"); ?>">
+                            <input type="hidden" name="meta[status]" value="pending">
+                        </div>
+                    </div>
+                </div>
                 <!-- cheque option end  -->
 
                 <div class="form-group">
                     <label class="col-md-3 control-label">Payment (TK) <span class="req">*</span></label>
                     <div class="col-md-5 {{class_meassure}}">
-                        <input type="number" name="payment" ng-model="payment" placeholder="0.00" class="form-control" step="any" min="0" required>
+                        <input type="number" name="payment" ng-model="payment" placeholder="0.00" class="form-control"
+                            step="any" min="0" required>
                     </div>
                 </div>
 
@@ -140,7 +146,8 @@
                     </label>
 
                     <div class="col-md-3">
-                        <input type="number" name="totalBalance" ng-value="getTotalFn()" placeholder="0.00" class="form-control" step="any" readonly>
+                        <input type="number" name="totalBalance" ng-value="getTotalFn()" placeholder="0.00"
+                            class="form-control" step="any" readonly>
                     </div>
 
                     <div class="col-md-2">
@@ -169,10 +176,10 @@
 </div>
 
 <script type="text/javascript">
-    $('#datetimepicker').datetimepicker({
-        format: 'YYYY-MM-DD',
-        useCurrent: false
-    });
+$('#datetimepicker').datetimepicker({
+    format: 'YYYY-MM-DD',
+    useCurrent: false
+});
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>

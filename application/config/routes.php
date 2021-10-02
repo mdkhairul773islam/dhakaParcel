@@ -33,8 +33,9 @@ $route['user-panel/user_image_set']                 = "Frontend/Upanel/UpanelCon
 $route['user-panel/booking']                        = "Frontend/Upanel/UpanelController/booking";
 $route['user-panel/booking/payment_method_info_get']= "Frontend/Upanel/UpanelController/payment_method_info_get";
 $route['user-panel/booking_list']                   = "Frontend/Upanel/UpanelController/booking_list";
+$route['user-panel/get_agent_zone_wise']            = "Frontend/Upanel/UpanelController/get_agent_zone_wise";
 $route['user-panel/serialNo']                       = "Frontend/Upanel/UpanelController/serialNo";
 $route['user-panel/delete']                         = "Frontend/Upanel/UpanelController/delete";
-$route['user-panel/settings']   		                  = "Frontend/Upanel/UpanelController/settings";
+$route['user-panel/settings']   		            = "Frontend/Upanel/UpanelController/settings";
 
 $route['404_override'] = '';
