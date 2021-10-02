@@ -139,12 +139,15 @@
 
         $this->data['payment_methods'] = get_result('payment_method', [], 'method as name');
 
+        $booking_no = '';
+
         if(!empty($_POST)) {
 
             $data = $_POST;
+            unset($data['agent_id']);
 
             $data['date'] = date('Y-m-d');
-            $data['booking_no'] = date('ymd') . rand(1000, 9999);
+            $booking_no =  $data['booking_no'] = date('ymd') . rand(1000, 9999);
             $data['user_id'] = $this->session->subscriber_id;
             $data['user_name'] = $this->session->name;
 
@@ -172,6 +175,21 @@
             }
 
             if (save_data('booking', $data)) {
+                // I have submitted the information of which agent will be under this record. 
+               
+                if(!empty($_POST['agent_id'])){
+
+                    foreach($_POST['agent_id'] as $key => $agent){
+                        $agentData = [
+                            'agent_id'          => $agent,
+                            'date'              =>date('Y-m-d'),
+                            'booking_no'        => $booking_no,
+                            'booking_user_id'   => $this->session->subscriber_id
+                        ];
+                        save_data('booking_agent_records',$agentData);
+                    }
+                }
+                
                 set_msg('success', 'success', 'Booking Successfully Created !');
                 redirect_back();
             } else {
@@ -238,14 +256,15 @@
     }
 
     public function delete(){
-
-
+        
         $this->data['title'] = "Booking List";
         $this->data['aside'] = "booking_list";
 
         $serial_no = $this->input->get('serialNo');
 
         if (save_data('booking', ['trash'=>1], ['booking_no'=>$serial_no])) {
+            save_data('booking_agent_records', ['trash'=>1], ['booking_no'=>$serial_no]);
+            
             set_msg('success', 'success', 'Booking Successfully Deleted !');
             redirect('user-panel/booking', 'refresh');
         } else {

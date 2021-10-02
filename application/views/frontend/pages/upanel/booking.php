@@ -221,7 +221,7 @@ function toUpazilaFn() {
                 $("#agentList").append(
                     $('<input />', {
                         type: 'hidden',
-                        name: 'agent_id',
+                        name: 'agent_id[]',
                         value: dataAgent.agent_id,
                         required: true
                     })
