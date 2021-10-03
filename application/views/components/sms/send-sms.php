@@ -34,30 +34,29 @@ p span .sms {
                         <div class="col-md-5 col-sm-6">
                             <label class="control-label">Person Type</label>
                             <div class="form-group">
-                                <select name="customer_id" id="customer_id" class="form-control selectpicker"
+                                <select name="person_number_type" ng-model="personNumberType"
+                                    ng-change="getAllMobileFn(personNumberType)" class="form-control selectpicker"
                                     data-show-subtext="true" data-live-search="true" required>
-                                    <option selected disable>Select Customer</option>
+                                    <option value="" disabled selected>Select Type</option>
                                     <option value="admin">Agent</option>
                                     <option value="user">Delivery Man</option>
-                                    <option value="custommer_from">Custommer From</option>
-                                    <option value="custommer_to">Custommer To</option>
+                                    <option value="custommer_to">Custommer</option>
+                                    <!-- <option value="custommer_from">Custommer From</option> -->
                                 </select>
                             </div>
                         </div>
 
-                        <div class="col-md-2 col-sm-6">
+                        <!--  <div class="col-md-2 col-sm-6">
                             <div class="form-group horizantal_button">
                                 <input type="submit" value="Show" name="show" class="btn btn-primary">
                             </div>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
             <div class="panel-footer">&nbsp;</div>
         </div>
 
-
-        <?php if($customers != null){ ?>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panal-header-title pull-left">
@@ -74,29 +73,34 @@ p span .sms {
                         </li>
                     </ol>
                 </blockquote>
-                <form action="<?php echo site_url('sms/sendSms/send_sms');?>" method="post">
+                <form action="<?php echo site_url('sms/sendSms/send_sms');?>" method="post" ng-cloak>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <label class="control-label">Mobile No <span class="req">*</span></label>
                             <div class="form-group">
                                 <div class="form-element" style="height: 215px;">
+                                    <p ng-if="preloder===true">Loding........</p>
+
                                     <table class="table">
                                         <tr>
+                                            <th ng-show="allMobileNumbers[0].booking_no">Booking .No</th>
                                             <th>Name</th>
                                             <th>Mobile</th>
                                         </tr>
-                                        <?php foreach ($customers as $key => $value) { ?>
-                                        <tr>
-                                            <td><?php echo ucfirst($value->from_name); ?></td>
+
+                                        <tr ng-repeat="item in allMobileNumbers">
+                                            <td ng-show="allMobileNumbers[0].booking_no"> {{ item.booking_no }}</td>
+                                            <td> {{ item.name }}</td>
                                             <td>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" name="mobile[]"
-                                                            value="<?php echo $value->from_mobile; ?>"
-                                                            checked /><?php echo $value->from_mobile; ?></label>
+                                                    <label>
+                                                        <input type="checkbox" ng-value="item.mobile" name="mobile[]"
+                                                            checked />
+                                                        {{ item.mobile }}
+                                                    </label>
                                                 </div>
                                             </td>
                                         </tr>
-                                        <?php } ?>
                                     </table>
                                 </div>
                             </div>
@@ -133,13 +137,12 @@ p span .sms {
             </div>
             <div class="panel-footer">&nbsp;</div>
         </div>
-        <?php } ?>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 <script>
 $(document).ready(function() {
-    $('input[name="type"]').on('change', function(event) {
+    $(' input[name="type" ]').on('change', function(event) {
         if ($(this).val() == "member") {
             $('#member_name').slideDown();
         } else {
@@ -147,7 +150,6 @@ $(document).ready(function() {
         }
     });
 });
-
 $(function() {
     $('.selectpicker').selectpicker();
 });

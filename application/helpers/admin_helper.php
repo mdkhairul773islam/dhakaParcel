@@ -537,4 +537,3 @@ if(!function_exists('crop')){
         }
     }
 }
-

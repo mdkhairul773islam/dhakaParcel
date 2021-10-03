@@ -173,10 +173,8 @@ class SendSms extends Admin_Controller
     }
     
     public function send_sms() {
-        $this->data['meta_title'] = 'SMS';
+        $this->data['meta_title'] = 'Custom Mobile SMS';
 
-        
-        
         if ($_POST && isset($_POST['sendSms'])) {
             
             $mobile_no  = explode(",", $this->input->post('mobiles'));
@@ -207,9 +205,7 @@ class SendSms extends Admin_Controller
 
             redirect("sms/sendSms/send_sms", "refresh");
         }
-        
-        $this->data['customers'] = read('booking');
-        
+    
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);
         $this->load->view('admin/includes/headermenu', $this->data);
