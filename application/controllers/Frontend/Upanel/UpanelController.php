@@ -189,7 +189,6 @@
                         save_data('booking_agent_records',$agentData);
                     }
                 }
-                
                 set_msg('success', 'success', 'Booking Successfully Created !');
                 redirect_back();
             } else {

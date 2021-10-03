@@ -174,11 +174,11 @@ class SendSms extends Admin_Controller
     
     public function send_sms() {
         $this->data['meta_title'] = 'SMS';
+
         
-        $where = ['trash'=>0];
-        $this->data['customers_f'] = read('booking', $where);
         
         if ($_POST && isset($_POST['sendSms'])) {
+            
             $mobile_no  = explode(",", $this->input->post('mobiles'));
             $content    = $this->input->post('message').config_item('regards');
             
@@ -208,11 +208,7 @@ class SendSms extends Admin_Controller
             redirect("sms/sendSms/send_sms", "refresh");
         }
         
-        else if(isset($_POST['show'])){
-            $where['id'] = $_POST['customer_id'];
-        }
-
-        $this->data['customers'] = read('booking', $where);
+        $this->data['customers'] = read('booking');
         
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);

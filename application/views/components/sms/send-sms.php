@@ -1,21 +1,26 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
 <style>
-    .right{
-        display: inline-block;
-        float: right;
+.right {
+    display: inline-block;
+    float: right;
+}
+
+p span .sms {
+    border: 1px solid transparent;
+    width: 40px;
+}
+
+@media screen and (min-width: 992px) {
+    .horizantal_button {
+        margin-top: 25px;
     }
-    p span .sms{
-        border: 1px solid transparent;
-        width: 40px;
-    }
-    @media screen and (min-width: 992px) {
-        .horizantal_button {margin-top: 25px;}
-    }
+}
 </style>
 
 <div class="container-fluid" ng-controller="CustomSMSCtrl">
     <div class="row">
-       <?php msg(); ?>
+        <?php msg(); ?>
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
@@ -24,15 +29,18 @@
             </div>
             <div class="panel-body">
                 <div class="row">
+
                     <form action="<?php echo site_url('sms/sendSms/send_sms')?>" method="post">
                         <div class="col-md-5 col-sm-6">
-                            <label class="control-label">Customer</label>
+                            <label class="control-label">Person Type</label>
                             <div class="form-group">
-                                <select name="customer_id" id="customer_id" class="form-control selectpicker" data-show-subtext="true" data-live-search="true" required>
+                                <select name="customer_id" id="customer_id" class="form-control selectpicker"
+                                    data-show-subtext="true" data-live-search="true" required>
                                     <option selected disable>Select Customer</option>
-                                    <?php if($customers_f) foreach($customers_f as $key=>$value){ ?>
-                                    <option value="<?php echo $value->id?>"><?=$value->from_name." - ".$value->booking_no; ?></option>
-                                    <?php } ?>
+                                    <option value="admin">Agent</option>
+                                    <option value="user">Delivery Man</option>
+                                    <option value="custommer_from">Custommer From</option>
+                                    <option value="custommer_to">Custommer To</option>
                                 </select>
                             </div>
                         </div>
@@ -53,14 +61,17 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panal-header-title pull-left">
-                    <h1>Moble No And SMS</h1>
+                    <h1>Mobile No And SMS</h1>
                 </div>
             </div>
             <div class="panel-body">
                 <blockquote class="form-head">
                     <ol style="font-size: 14px;">
                         <li>Select Mobile No And Click To <mark>Send</mark> Button</li>
-                        <li>Total SMS:  <strong><?php echo $total_sms; ?> </strong>  &nbsp; Total Sent SMS: <strong><?php echo $sent_sms; ?></strong> &nbsp;  Remaining SMS: <strong><?php echo $total_sms-$sent_sms; ?></strong></li>
+                        <li>Total SMS: <strong><?php echo $total_sms; ?> </strong> &nbsp; Total Sent SMS:
+                            <strong><?php echo $sent_sms; ?></strong> &nbsp; Remaining SMS:
+                            <strong><?php echo $total_sms-$sent_sms; ?></strong>
+                        </li>
                     </ol>
                 </blockquote>
                 <form action="<?php echo site_url('sms/sendSms/send_sms');?>" method="post">
@@ -79,7 +90,9 @@
                                             <td><?php echo ucfirst($value->from_name); ?></td>
                                             <td>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" name="mobile[]" value="<?php echo $value->from_mobile; ?>" checked /><?php echo $value->from_mobile; ?></label>
+                                                    <label><input type="checkbox" name="mobile[]"
+                                                            value="<?php echo $value->from_mobile; ?>"
+                                                            checked /><?php echo $value->from_mobile; ?></label>
                                                 </div>
                                             </td>
                                         </tr>
@@ -91,18 +104,21 @@
                         <div class="col-md-6 col-sm-6">
                             <label class="control-label">Message <span class="req">*</span></label>
                             <div class="form-group">
-                                <textarea name="message" ng-model="msgContant" class="form-control" cols="30" rows="10" placeholder="Type your message....." required></textarea>
+                                <textarea name="message" ng-model="msgContant" class="form-control" cols="30" rows="10"
+                                    placeholder="Type your message....." required></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="clearfix">
                                 <p class="right">
                                     <span><strong>Total Letter: </strong>
-                                        <input name="total_characters" ng-model="totalChar" class="sms text-right" type="text" >
+                                        <input name="total_characters" ng-model="totalChar" class="sms text-right"
+                                            type="text">
                                     </span>
                                     &nbsp;
                                     <span><strong>Total Messsage: </strong>
-                                        <input class="sms text-right" name="total_messages" ng-model="msgSize" type="text" >
+                                        <input class="sms text-right" name="total_messages" ng-model="msgSize"
+                                            type="text">
                                     </span>
                                 </p>
                             </div>
@@ -122,18 +138,17 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $('input[name="type"]').on('change', function(event) {
-            if($(this).val()=="member"){
-                $('#member_name').slideDown();
-            }else{
-                $('#member_name').slideUp();
-            }
-        });
+$(document).ready(function() {
+    $('input[name="type"]').on('change', function(event) {
+        if ($(this).val() == "member") {
+            $('#member_name').slideDown();
+        } else {
+            $('#member_name').slideUp();
+        }
     });
+});
 
-    $(function(){
-        $('.selectpicker').selectpicker();
-    });
+$(function() {
+    $('.selectpicker').selectpicker();
+});
 </script>
-
