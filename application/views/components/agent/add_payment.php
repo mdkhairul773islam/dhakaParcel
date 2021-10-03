@@ -1,7 +1,7 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="agnetInfoCtrl">
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
@@ -29,25 +29,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Zone <span class="req">*</span></label>
-                    <div class="col-md-5">
-                        <select name="zone" class="selectpicker form-control" required data-show-subtext="true"
-                            data-live-search="true">
-                            <option value="" selected disabled>Select Zone</option>
-                            <option value="">Zone One</option>
-                            <option value="">Zone Two</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
                     <label class="col-md-3 control-label">Agente Name <span class="req">*</span></label>
                     <div class="col-md-5">
-                        <select name="agent_name" class="selectpicker form-control" required data-show-subtext="true"
-                            data-live-search="true">
+                        <select ng-model="agent_id" ng-change="agentInfoFn(agent_id)" name="agent_name"
+                            class="selectpicker form-control" required data-show-subtext="true" data-live-search="true">
                             <option value="" selected disabled>Select Agente</option>
-                            <option value="">Agente One</option>
-                            <option value="">Agente Two</option>
+                            <?php 
+                                foreach($agent_list as $agent){
+                            ?>
+                            <option value="<?= $agent->id ?>"><?= ucfirst($agent->agnet_name).' - '.$agent->mobile; ?>
+                            </option>
+                            <?php }?>
                         </select>
                     </div>
                 </div>
@@ -174,12 +166,51 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 
 <script type="text/javascript">
 $('#datetimepicker').datetimepicker({
     format: 'YYYY-MM-DD',
     useCurrent: false
 });
-</script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+app.controller("agnetInfoCtrl", [
+    "$scope",
+    "$log",
+    "$http",
+    function($scope, $log, $http) {
+
+
+        $scope.agentBalances = [];
+
+        $scope.agentInfoFn = (agentId) => {
+
+            alert("OKKK");
+
+
+            var where = {
+                table: "agent_transactions",
+                cond: {
+                    'agent_id': agentId,
+                    'trash': 0
+                },
+                select: [],
+            };
+            $http({
+                method: "POST",
+                url: angularUrl + "result",
+                data: where,
+            }).success(function(response) {
+                $scope.preloder = true;
+                if (response.length > 0) {
+                    $scope.agentBalances = response;
+                } else {
+                    $scope.agentBalances = [];
+                }
+                //console.log($scope.agentBalances);
+            });
+        };
+    },
+]);
+</script>

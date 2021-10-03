@@ -21,6 +21,10 @@
             $this->data['meta_title'] = '';
             $this->data['meta_description'] = '';
 
+
+            $this->data['agent_list'] = get_result('users', ['privilege'=>'admin'], ['name as agnet_name', 'id', 'privilege', 'mobile'], '', 'name', 'ASC');
+
+            
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
