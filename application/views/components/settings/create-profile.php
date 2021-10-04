@@ -16,16 +16,18 @@
 
             <div class="panel-body no-padding">
 
-            <div class="no-title">&nbsp;</div>
+                <div class="no-title">&nbsp;</div>
                 <!-- left side -->
                 <aside class="col-md-3">
-                    <img id="img-view" src="<?php echo site_url("private/images/pic-male.png"); ?>" alt="Photo not found!" class="img-responsive img-thumbnail" style="width: 100%;">
+                    <img id="img-view" src="<?php echo site_url("private/images/pic-male.png"); ?>"
+                        alt="Photo not found!" class="img-responsive img-thumbnail" style="width: 100%;">
 
                     <div class="profile-upload">
-                        <label class="btn btn-primary" style="display: block;" for="img-input"><i class="fa fa-cloud-upload"></i> Upload</label>
+                        <label class="btn btn-primary" style="display: block;" for="img-input"><i
+                                class="fa fa-cloud-upload"></i> Upload</label>
                         <input type="file" name="image" required id="img-input" style="display: none;">
                     </div>
-                    <br/>
+                    <br />
                 </aside>
 
                 <div class="col-md-9">
@@ -87,7 +89,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="" class="col-md-3 control-label">Zone<span class="req">*</span></label>
                         <div class="col-md-7">
@@ -97,10 +99,11 @@
                             ?>
                             <select name="zone[]" class="form-control selectpicker" data-live-search="true" multiple>
                                 <option value="" selected disabled>Select Zone</option>
+                                <option value="">None</option>
                                 <?php 
                                     foreach($zone_list as $key => $row){
                                 ?>
-                                    <option value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
+                                <option value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
                                 <?php }?>
                             </select>
                         </div>
@@ -125,19 +128,23 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        var reader  = new FileReader();
+$(document).ready(function() {
+    var reader = new FileReader();
 
-        $("#img-input").change(function(ev) {
-            var file = ev.target.files[0];
+    $("#img-input").change(function(ev) {
+        var file = ev.target.files[0];
 
-            if(file) { reader.readAsDataURL(file); }
+        if (file) {
+            reader.readAsDataURL(file);
+        }
 
-            $(reader).load(function() {
-                var imgURL = reader.result;
+        $(reader).load(function() {
+            var imgURL = reader.result;
 
-                $("#img-view").attr({ src: imgURL });
+            $("#img-view").attr({
+                src: imgURL
             });
         });
     });
+});
 </script>

@@ -150,6 +150,7 @@
             $booking_no =  $data['booking_no'] = date('ymd') . rand(1000, 9999);
             $data['user_id'] = $this->session->subscriber_id;
             $data['user_name'] = $this->session->name;
+            $data['service_charge'] = 120;
 
             $message = "Hi, Your Booking was successfully submitted.";
 

@@ -1,8 +1,33 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
 
+<style>
+.payment_img {
+    text-align: center;
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.payment_img img {
+    border-radius: 25px / 100px;
+    border: 1px solid #00A8FF;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) {
+    .payment_img {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        width: 100%;
+    }
+}
+</style>
 <div class="container-fluid" ng-controller="agnetInfoCtrl">
-    <div class="row">
+    <div class="row" ng-cloak>
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
@@ -16,14 +41,25 @@
                     $attr = array("class"=>"form-horizontal");
                     echo form_open('', $attr);
                 ?>
+                <?php 
+                    echo msg();
+                ?>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Date <span class="req">*</span></label>
                     <div class="col-md-5">
                         <div class="input-group date" id="datetimepicker">
-                            <input type="text" name="created_at" class="form-control" placeholder="YYYY-MM-DD" required>
+                            <input type="text" name="date" value="<?= date('Y-m-d'); ?>" class="form-control"
+                                placeholder="YYYY-MM-DD" required>
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="payment_img">
+                            <img ng-src="<?php echo site_url('') ?>{{agentInformation[0].agent_image}}" alt="">
+                            <p><strong>Name :</strong> <span>{{agentInformation[0].agent_name}}</span></p>
+                            <p><strong>Mobile :</strong> <span>{{agentInformation[0].agent_mobile}}</span></p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +67,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Agente Name <span class="req">*</span></label>
                     <div class="col-md-5">
-                        <select ng-model="agent_id" ng-change="agentInfoFn(agent_id)" name="agent_name"
+                        <select ng-model="agent_id" ng-change="agentInfoFn(agent_id);" name="agent_id"
                             class="selectpicker form-control" required data-show-subtext="true" data-live-search="true">
                             <option value="" selected disabled>Select Agente</option>
                             <?php 
@@ -46,11 +82,15 @@
 
                 <div class="form-group">
                     <label class="col-md-3 control-label">Balance (TK) <span class="req">*</span></label>
-                    <div class="col-md-3">
-                        <input type="number" name="balance" ng-model="balance" class="form-control" step="any" readonly>
+                    <div class="col-md-5">
+                        <input type="number" ng-model="totalCommisionBalance" class="form-control" step="any" readonly>
                     </div>
-                    <div class="col-md-2">
-                        <input type="text" name="sign" ng-model="sign" class="form-control" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Total Paid Amount (TK) <span class="req">*</span></label>
+                    <div class="col-md-5">
+                        <input type="number" ng-model="totalPaidAmount" class="form-control" step="any" readonly>
                     </div>
                 </div>
 
@@ -76,7 +116,7 @@
                         <label class="col-md-3 control-label">Bank name <span class="req">*</span></label>
 
                         <div class="col-md-5">
-                            <input type="text" name="meta[bankname]" class="form-control">
+                            <input type="text" name="bankname" class="form-control">
                         </div>
                     </div>
 
@@ -86,7 +126,7 @@
                         </label>
 
                         <div class="col-md-5">
-                            <input type="text" name="meta[branchname]" class="form-control">
+                            <input type="text" name="branchname" class="form-control">
                         </div>
                     </div>
 
@@ -96,7 +136,7 @@
                         </label>
 
                         <div class="col-md-5">
-                            <input type="text" name="meta[account_no]" class="form-control">
+                            <input type="text" name="account_no" class="form-control">
                         </div>
                     </div>
 
@@ -106,7 +146,7 @@
                         </label>
 
                         <div class="col-md-5">
-                            <input type="text" name="meta[chequeno]" class="form-control">
+                            <input type="text" name="chequeno" class="form-control">
                         </div>
                     </div>
 
@@ -116,9 +156,8 @@
                         </label>
 
                         <div class="col-md-5">
-                            <input type="text" name="meta[passdate]" placeholder="YYYY-MM-DD" class="form-control"
+                            <input type="text" name="passdate" placeholder="YYYY-MM-DD" class="form-control"
                                 value="<?php echo date("Y-m-d"); ?>">
-                            <input type="hidden" name="meta[status]" value="pending">
                         </div>
                     </div>
                 </div>
@@ -126,9 +165,9 @@
 
                 <div class="form-group">
                     <label class="col-md-3 control-label">Payment (TK) <span class="req">*</span></label>
-                    <div class="col-md-5 {{class_meassure}}">
-                        <input type="number" name="payment" ng-model="payment" placeholder="0.00" class="form-control"
-                            step="any" min="0" required>
+                    <div class="col-md-5">
+                        <input type="number" name="payment" ng-model="paymentAmount" class="form-control" step="any"
+                            min="0" required>
                     </div>
                 </div>
 
@@ -137,13 +176,9 @@
                         Total Balance (TK) <span class="req">*</span>
                     </label>
 
-                    <div class="col-md-3">
-                        <input type="number" name="totalBalance" ng-value="getTotalFn()" placeholder="0.00"
+                    <div class="col-md-5">
+                        <input type="number" ng-model="totalCommisionBalance-totalPaidAmount-paymentAmount"
                             class="form-control" step="any" readonly>
-                    </div>
-
-                    <div class="col-md-2">
-                        <input type="text" name="csign" ng-model="csign" class="form-control" readonly>
                     </div>
                 </div>
 
@@ -181,13 +216,57 @@ app.controller("agnetInfoCtrl", [
     "$http",
     function($scope, $log, $http) {
 
+        $scope.agentInformation = [];
 
-        $scope.agentBalances = [];
+        $scope.totalCommisionBalance = 0;
+        $scope.totalPaidAmount = 0;
+        $scope.paymentAmount = 0.0;
 
         $scope.agentInfoFn = (agentId) => {
 
-            alert("OKKK");
+            var bookingWhere = {
+                tableFrom: 'booking',
+                tableTo: ['booking_agent_records', 'users'],
+                joinCond: ['booking.booking_no=booking_agent_records.booking_no',
+                    'booking_agent_records.agent_id=users.id'
+                ],
+                cond: {
+                    'booking.trash': 0,
+                    'booking_agent_records.agent_id': agentId,
+                    //'users.privilege': 'admin'
+                },
+                select: ['booking.booking_no', 'booking.service_charge',
+                    'booking_agent_records.booking_no as agent_recived_booking_no',
+                    'booking_agent_records.agent_id', 'users.name as agent_name',
+                    'users.image as agent_image', 'users.mobile as agent_mobile'
+                ]
+            }
 
+
+            $http({
+                method: "POST",
+                url: angularUrl + "join",
+                data: bookingWhere,
+
+            }).success(function(bookingResponse) {
+
+                if (bookingResponse.length > 0) {
+                    $scope.agentInformation = bookingResponse;
+
+                    var commission = 0;
+                    var totalCommision = 0;
+                    angular.forEach(bookingResponse, function(row, key) {
+                        commission = parseFloat(parseFloat(row.service_charge) * 25 / 100);
+                        totalCommision += commission;
+                    });
+
+                    $scope.totalCommisionBalance = totalCommision;
+
+                } else {
+                    $scope.agentInformation = [];
+                    $scope.totalCommisionBalance = 0;
+                }
+            });
 
             var where = {
                 table: "agent_transactions",
@@ -195,20 +274,26 @@ app.controller("agnetInfoCtrl", [
                     'agent_id': agentId,
                     'trash': 0
                 },
-                select: [],
+                select: ['agent_transactions.agent_id', 'agent_transactions.debit as amount'],
             };
             $http({
                 method: "POST",
                 url: angularUrl + "result",
                 data: where,
             }).success(function(response) {
-                $scope.preloder = true;
+
                 if (response.length > 0) {
-                    $scope.agentBalances = response;
+                    var totalDebit = 0;
+                    angular.forEach(response, function(row, key) {
+                        totalDebit += parseFloat(row.amount);
+                    });
+
+                    $scope.totalPaidAmount = totalDebit;
+
                 } else {
-                    $scope.agentBalances = [];
+                    $scope.totalPaidAmount = 0;
                 }
-                //console.log($scope.agentBalances);
+
             });
         };
     },

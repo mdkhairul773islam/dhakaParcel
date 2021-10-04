@@ -22,6 +22,24 @@
             $this->data['meta_description'] = '';
 
 
+            if(!empty($_POST)){
+                unset($_POST['save']);
+
+                $data = $_POST;
+                unset($data['payment']);
+
+                $data['debit'] = $_POST['payment'];
+
+                if(save_data('agent_transactions', $data)){
+                    set_msg('success', 'Payment Successfully Created !', 'Payment Successfully Created !');
+                    redirect_back();
+                }else{
+                    set_msg('warning', 'Payment Not Created !', 'Payment Not Created !');
+                    redirect_back();
+                }
+            }
+
+
             $this->data['agent_list'] = get_result('users', ['privilege'=>'admin'], ['name as agnet_name', 'id', 'privilege', 'mobile'], '', 'name', 'ASC');
 
             

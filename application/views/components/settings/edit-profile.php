@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-    <?php
+        <?php
         msg();
         $attribute = array('class' => 'form-horizontal');
         echo form_open_multipart('settings/editProfile?id='.$this->input->get('id'), $attribute);
@@ -15,19 +15,21 @@
 
             <div class="panel-body">
 
-            <h2 style="padding: 0 15px; margin: 15px 0;">
-                Profile: <strong><?php echo $profile[0]->name; ?></strong>
-            </h2>
-            <br>
+                <h2 style="padding: 0 15px; margin: 15px 0;">
+                    Profile: <strong><?php echo $profile[0]->name; ?></strong>
+                </h2>
+                <br>
 
                 <!-- left side -->
                 <aside class="col-md-3">
-                    <img id="img-view" src="<?php echo site_url($profile[0]->image); ?>" alt="Photo not found!" class="img-responsive img-thumbnail" style="width: 100%;">
+                    <img id="img-view" src="<?php echo site_url($profile[0]->image); ?>" alt="Photo not found!"
+                        class="img-responsive img-thumbnail" style="width: 100%;">
 
                     <div class="profile-upload">
-                        <label class="btn btn-primary" style="display: block;" for="img-input"><i class="fa fa-cloud-upload"></i> Upload</label>
+                        <label class="btn btn-primary" style="display: block;" for="img-input"><i
+                                class="fa fa-cloud-upload"></i> Upload</label>
                         <input type="file" name="image" id="img-input" style="display: none;">
-                    </div> <br/>
+                    </div> <br />
 
                 </aside>
 
@@ -37,47 +39,54 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 col-xs-12 control-label">Name </label>
                         <div class="col-sm-7 col-xs-10">
-                            <input type="text" name="f_name" class="form-control"  value="<?php echo $profile[0]->name; ?>">
+                            <input type="text" name="f_name" class="form-control"
+                                value="<?php echo $profile[0]->name; ?>">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="col-sm-3 col-xs-12 control-label">Mobile Number </label>
                         <div class="col-sm-7 col-xs-10">
-                            <input type="text" name="mobile" value="<?php echo $profile[0]->mobile; ?>" class="form-control">
+                            <input type="text" name="mobile" value="<?php echo $profile[0]->mobile; ?>"
+                                class="form-control">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="col-sm-3 col-xs-12 control-label">Email</label>
                         <div class="col-sm-7 col-xs-10">
-                            <input type="email" name="email" value="<?php echo $profile[0]->email; ?>" class="form-control">
+                            <input type="email" name="email" value="<?php echo $profile[0]->email; ?>"
+                                class="form-control">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="col-sm-3 col-xs-12 control-label">User Name </label>
                         <div class="col-sm-7 col-xs-10">
-                            <input type="text" name="username" value="<?php echo $profile[0]->username; ?>" readonly class="form-control" placeholder="username">
+                            <input type="text" name="username" value="<?php echo $profile[0]->username; ?>" readonly
+                                class="form-control" placeholder="username">
                         </div>
 
                     </div>
 
-                   
+
 
                     <div class="form-group">
                         <label for="" class="col-md-3 control-label">Privilege</label>
                         <div class="col-md-7">
                             <select name="privilege" class="form-control">
                                 <option value="">-- Select --</option>
-                                <option value="super" <?php if($profile[0]->privilege=='super'){echo "selected"; } ?> >Super Admin</option>
-                                <option value="admin" <?php if($profile[0]->privilege=='admin'){echo "selected"; } ?> >Agent</option>
-                                <option value="user" <?php if($profile[0]->privilege=='user'){echo "selected"; } ?> >Delivery Man</option>
+                                <option value="super" <?php if($profile[0]->privilege=='super'){echo "selected"; } ?>>
+                                    Super Admin</option>
+                                <option value="admin" <?php if($profile[0]->privilege=='admin'){echo "selected"; } ?>>
+                                    Agent</option>
+                                <option value="user" <?php if($profile[0]->privilege=='user'){echo "selected"; } ?>>
+                                    Delivery Man</option>
                             </select>
                         </div>
                     </div>
-                    
-                     <div class="form-group">
+
+                    <div class="form-group">
                         <label for="" class="col-md-3 control-label">Zone<span class="req">*</span></label>
                         <div class="col-md-7">
                             <?php 
@@ -91,15 +100,14 @@
                             ?>
                             <select name="zone[]" class="form-control selectpicker" data-live-search="true" multiple>
                                 <option value="" selected disabled>Select Zone</option>
+                                <option value="">None</option>
                                 <?php 
                                     $zone_list_zone = [];
                                     foreach($zone_list as $key => $row){
                                 ?>
-                                    <option
-                                    <?php 
+                                <option <?php 
                                         echo (in_array($row->name, $user_zone) ? 'selected' : '');    
-                                    ?> 
-                                    value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
+                                    ?> value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
                                 <?php }?>
                             </select>
                         </div>
@@ -126,20 +134,20 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function() {
+$(document).ready(function() {
 
-        var reader  = new FileReader();
-        $("#img-input").change(function(ev) {
-            var file=ev.target.files[0];
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-            $(reader).load(function() {
-                var imgURL=reader.result;
-                $("#img-view").attr({
-                    src: imgURL
-                });
+    var reader = new FileReader();
+    $("#img-input").change(function(ev) {
+        var file = ev.target.files[0];
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+        $(reader).load(function() {
+            var imgURL = reader.result;
+            $("#img-view").attr({
+                src: imgURL
             });
         });
     });
+});
 </script>
