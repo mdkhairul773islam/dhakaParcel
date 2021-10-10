@@ -90,7 +90,24 @@
                         <label for="" class="col-md-3 control-label">Zone<span class="req">*</span></label>
                         <div class="col-md-7">
                             <?php 
-                                $zone_list = get_result('upazilas', '', 'name', '', 'name', 'ASC');
+
+                                $zone_list = get_result('upazilas', '', 'name as zone', '', 'name', 'ASC');
+                                $alredy_zone_has_list = get_result('user_zones', '', 'zone','zone');
+
+                                $zone = [];
+                                foreach($alredy_zone_has_list as $row){
+                                    $zone [] = $row->zone;
+                                }
+                                $filter_zone = [];
+                                foreach($zone_list as $row){
+                                    $filter_zone [] = $row->zone;
+                                }
+                                foreach($zone as $zone_name){
+                                    unset($filter_zone[array_search($zone_name, $filter_zone)]);
+                                }
+
+
+                                $zone_list_orginal = get_result('upazilas', '', 'name', '', 'name', 'ASC');
                                 $get_user_zone_list = get_result('user_zones', ['user_id'=> $profile[0]->id], 'zone', '', 'zone', 'ASC');
                                 
                                 $user_zone = [];
@@ -101,13 +118,20 @@
                             <select name="zone[]" class="form-control selectpicker" data-live-search="true" multiple>
                                 <option value="" selected disabled>Select Zone</option>
                                 <option value="">None</option>
-                                <?php 
+                                <?php
                                     $zone_list_zone = [];
-                                    foreach($zone_list as $key => $row){
+                                    foreach($zone_list_orginal as $key => $row){
+                                        if(in_array($row->name, $user_zone)){
                                 ?>
                                 <option <?php 
                                         echo (in_array($row->name, $user_zone) ? 'selected' : '');    
                                     ?> value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
+                                <?php } }?>
+
+                                <?php 
+                                    foreach($filter_zone as $key => $zone){
+                                ?>
+                                <option value="<?php echo $zone; ?>"><?php echo $zone; ?></option>
                                 <?php }?>
                             </select>
                         </div>
