@@ -108,7 +108,6 @@
                                 foreach($zone as $zone_name){
                                     unset($filter_zone[array_search($zone_name, $filter_zone)]);
                                 }
-                                
                             ?>
                             <select name="zone[]" class="form-control selectpicker" data-live-search="true" multiple>
                                 <option value="" selected disabled>Select Zone</option>
