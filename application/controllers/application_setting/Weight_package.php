@@ -1,4 +1,4 @@
-<?php class Parcel_list extends Admin_Controller{
+<?php class Weight_package extends Admin_Controller{
         public function __construct(){
             parent::__construct();
         }
@@ -12,7 +12,7 @@
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
             $this->load->view('admin/includes/nav', $this->data);
-            $this->load->view('components/parcel_list/index', $this->data);
+            $this->load->view('components/application_setting/weight_package/index', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
 
@@ -25,7 +25,7 @@
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
             $this->load->view('admin/includes/nav', $this->data);
-            $this->load->view('components/parcel_list/add', $this->data);
+            $this->load->view('components/application_setting/weight_package/add', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
 
@@ -38,7 +38,7 @@
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
             $this->load->view('admin/includes/nav', $this->data);
-            $this->load->view('components/parcel_list/show', $this->data);
+            $this->load->view('components/application_setting/weight_package/show', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
 
@@ -51,7 +51,7 @@
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
             $this->load->view('admin/includes/nav', $this->data);
-            $this->load->view('components/parcel_list/edit', $this->data);
+            $this->load->view('components/application_setting/weight_package/edit', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
     }

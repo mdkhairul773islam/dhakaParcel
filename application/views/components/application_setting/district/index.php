@@ -3,8 +3,13 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Parcels List</h1>
+                    <h1>Districts List</h1>
                 </div>
+                <a href="<?= get_url('/application_setting/district/add'); ?>" class="pull-right btn btn-success m-0"
+                    style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i>
+                    Add District
+                </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
@@ -13,27 +18,21 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Invoice</th>
-                                <th>Customer Name</th>
-                                <th>Customer Contact</th>
-                                <th>Customer Address</th>
-                                <th>Districk</th>
-                                <th>Area</th>
-                                <th>Total Charge</th>
+                                <th>Name</th>
+                                <th>Service Area</th>
+                                <th>Home Delivery</th>
+                                <th>Lock Down Service</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>01</td>
                                 <td>D-120</td>
                                 <td>Amin</td>
                                 <td>Shami@gmail.com</td>
                                 <td>Imtiaz</td>
-                                <td>Abdullah</td>
-                                <td>Dhaka</td>
-                                <td>Dhaka</td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>

@@ -3,8 +3,13 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Parcels List</h1>
+                    <h1>Riders List</h1>
                 </div>
+                <a href="<?= get_url('/team/rider/add'); ?>" class="pull-right btn btn-success m-0"
+                    style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i>
+                    Add Rider
+                </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
@@ -13,13 +18,13 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Invoice</th>
-                                <th>Customer Name</th>
-                                <th>Customer Contact</th>
-                                <th>Customer Address</th>
-                                <th>Districk</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Branch</th>
                                 <th>Area</th>
-                                <th>Total Charge</th>
+                                <th>Upazila</th>
+                                <th>District</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>

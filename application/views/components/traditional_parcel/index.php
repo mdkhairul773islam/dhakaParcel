@@ -3,8 +3,13 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Parcels List</h1>
+                    <h1>Branche List</h1>
                 </div>
+                <a href="<?= get_url('/team/branch/add'); ?>" class="pull-right btn btn-success m-0"
+                    style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i>
+                    Add Branch
+                </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
@@ -13,13 +18,12 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Invoice</th>
-                                <th>Customer Name</th>
-                                <th>Customer Contact</th>
-                                <th>Customer Address</th>
-                                <th>Districk</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Upazila</th>
+                                <th>Distric</th>
                                 <th>Area</th>
-                                <th>Total Charge</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -27,12 +31,11 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>D-120</td>
+                                <td>Khairul Islam 1</td>
                                 <td>Amin</td>
-                                <td>Shami@gmail.com</td>
+                                <td>Shami</td>
                                 <td>Imtiaz</td>
                                 <td>Abdullah</td>
-                                <td>Dhaka</td>
                                 <td>Dhaka</td>
                                 <td>
                                     <a href="#" class="text-success">
