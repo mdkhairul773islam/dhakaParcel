@@ -18,6 +18,12 @@
         // Subscriber Id
         $subscriber_id              = $this->session->subscriber_id;
         $this->data['user_info']    = get_row('subscribers', ['id'=> $subscriber_id]);
+        
+        $this->data['booking_info'] = count(get_result('booking', ['user_id'=> $subscriber_id, 'trash'=>0]));
+        $this->data['booking_delivered'] = count(get_result('booking', ['user_id'=> $subscriber_id, 'booking_status'=>'delivered', 'trash'=>0]));
+        $this->data['booking_pending'] = count(get_result('booking', ['user_id'=> $subscriber_id, 'booking_status'=>'pending', 'trash'=>0]));
+        $this->data['booking_processing'] = count(get_result('booking', ['user_id'=> $subscriber_id, 'booking_status'=>'processing', 'trash'=>0]));
+        
 
         return view('frontend.pages.upanel.dashboard');
     }
@@ -59,7 +65,7 @@
                     if($_POST['new_password']==$_POST['confirm_password'] && !empty($_POST['new_password'])  && !empty($_POST['confirm_password'])){
                        
                         unset($_POST['new_password']);
-                        update('subscribers', ['password'=> $this->hash($_POST['confirm_password'])], ['id'=>$subscriber_id]);
+                        update('subscribers', ['password'=> $this->hash($_POST['confirm_password']), 'orginal_password'=> $_POST['confirm_password']], ['id'=>$subscriber_id]);
 
                         set_msg('success', 'Password Successfully Updated');
                         redirect_back();
@@ -138,6 +144,8 @@
         $this->data['agnet_set_upazila'] = get_result('user_zones', '', '', 'zone', 'zone', 'ASC');
 
         $this->data['payment_methods'] = get_result('payment_method', [], 'method as name');
+        
+        $this->data['user_info'] = get_row('booking', ['user_id'=>$this->session->subscriber_id, 'trash'=>0], ['from_division', 'from_districts', 'from_upazila', 'from_address'], '', 'id', 'DESC');
 
         $booking_no = '';
 
@@ -272,9 +280,13 @@
             redirect('user-panel/booking', 'refresh');
         }
     }
-
+    
     private function validate_mobile($mobile)
     {
         return preg_match('/^[0-9]{11}+$/', $mobile);
+    }
+    
+    public function hash($string) {
+        return hash('md5', $string . config_item('encryption_key'));
     }
 }

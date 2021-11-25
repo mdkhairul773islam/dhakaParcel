@@ -9,10 +9,14 @@ $route['admin']  				= "access/users/login";
 $route['user']   				= "access/subscriber/login";
 
 $route['about']   			    = "Frontend/HomeController/about_us";
+$route['sister_concern']        = "Frontend/HomeController/sister_concern";
 $route['services']              = "Frontend/HomeController/services";
 $route['testimonial']    	    = "Frontend/HomeController/testimonial";
 $route['news']    	            = "Frontend/HomeController/news";
 $route['contact']   			= "Frontend/HomeController/contact";
+$route['get_password']   		= "Frontend/HomeController/get_password";
+$route['password_message']      = "Frontend/HomeController/password_message";
+$route['rider_or_agent_registration']      = "Frontend/HomeController/rider_or_agent_registration";
 
 $route['page/(:any)']			= "Frontend/HomeController/pages/$1";
 
@@ -25,7 +29,7 @@ $route['registration']   		= "Frontend/Auth/AuthController/registration";
 
 $route['resend_verification_code']		            = "Frontend/Auth/AuthController/resend_verification_code";
 $route['forgot']						            = "Frontend/Auth/AuthController/forgot_password";
-
+   
 $route['user-panel/dashboard']  		            = "Frontend/Upanel/UpanelController";
 $route['user-panel/user_info_set']  	            = "Frontend/Upanel/UpanelController/user_info_set";
 $route['user-panel/profile']    		            = "Frontend/Upanel/UpanelController/profile";

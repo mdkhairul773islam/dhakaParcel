@@ -19,12 +19,13 @@ class HomeController extends Frontend_Controller {
      * *********************
     */
     public function index() {
-    	$this->data['title']        = "Home";
-    	$this->data['slider']       = readTable("sliders", ['status'=>1, 'is_offer'=>0]);
-        $this->data['about']        = read('about');
-        $this->data['services']     = read('services', [], [], 6);
-        $this->data['testimonial']  = read('testimonial', [], [], 6);
-        $this->data['blogs']        = readTable('blog', [], ['limit'=>18, 'orderBy'=>['id', 'DESC']]);
+        $this->data['title']       = "Home";
+        $this->data['slider']      = readTable("sliders", ['status'=>1, 'is_offer'=>0]);
+        $this->data['about']       = read('about');
+        $this->data['services']    = read('services', [], [], 6);
+        $this->data['testimonial'] = read('testimonial', [], [], 6);
+        $this->data['sister']      = readTable('sister_concern', [], ['limit'=>4, 'orderBy'=> ['id', 'DESC']]);
+        $this->data['blogs']       = readTable('blog', [], ['limit'=>18, 'orderBy'=>['id', 'DESC']]);
 
         return view('frontend.pages.index');
     }
@@ -43,6 +44,13 @@ class HomeController extends Frontend_Controller {
         return view('frontend.pages.about_us');
     }
 
+    public function sister_concern() {
+        $this->data['title']  = "Sister Concern";
+        $this->data['sister'] = readTable('sister_concern', [], ['limit'=>4, 'orderBy'=> ['id', 'DESC']]);
+
+        return view('frontend.pages.sister_concern');
+    }
+    
     public function services() {
         $this->data['title']        = "Services";
     	$this->data['services']     = read('services');
@@ -136,4 +144,49 @@ class HomeController extends Frontend_Controller {
 
         return view('frontend.pages.pages');
     }
+    
+    
+    
+    // Subscriber password get and send 
+    
+    public function get_password() {
+        
+           if(!empty($_POST['mobile_no'])){
+               
+               $get_password = get_row('subscribers', ['mobile'=>$this->input->post('mobile_no'), 'status'=> 'active'], ['name', 'orginal_password as password', 'username', 'mobile'], '', 'id', 'DESC');
+           
+                if(!empty($get_password)){
+                    $message = "Dear, ". $get_password->name." Thank You For Requesting. Your username is: ".$get_password->username." and Password: ".$get_password->password." Regards: Dhaka Parcel & Courier Ltd.";
+                    send_sms($get_password->mobile, $message);
+                    
+                    redirect('/Frontend/HomeController/password_message/'.base64_encode($get_password->mobile));
+                }else{
+                   redirect('/Frontend/HomeController/password_message/'.base64_encode($this->input->post('mobile_no')));
+               }
+           }
+           
+        
+    }
+    
+    public function password_message($mobile) {
+        
+        $this->data['get_password'] = get_row('subscribers', ['mobile'=>base64_decode($mobile), 'status'=> 'active'], ['name', 'orginal_password as password', 'username', 'mobile'], '', 'id', 'DESC');
+        
+        return view('frontend.auth.password_request');
+    }
+    
+    public function rider_or_agent_registration(){
+        
+        if(!empty($_POST)){
+            $data = $_POST;
+            $data['date'] = date('Y-m-d');
+            
+            save('rider_or_agent_registration', $data);
+            
+            set_msg('success', 'Successfully Subscribed');
+            redirect('/', 'refresh');
+        }
+        
+    }
+    
 }

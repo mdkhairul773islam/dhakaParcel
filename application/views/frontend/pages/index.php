@@ -42,6 +42,45 @@
 
 
 
+<!-- work process start -->
+<section class="word_process">
+    <div class="container">
+        <div class="process_content">
+            <div class="process_box">
+                <div class="icon">
+                    <!--<i class="far fa-calendar-check"></i>-->
+                    <img src="<?php echo site_url('public/images/icon/01.png');?>" alt="">
+                </div>
+                <h4>Booking</h4>
+            </div>
+            <div class="process_box">
+                <div class="icon">
+                    <!--<i class="fas fa-box-open"></i>-->
+                    <img src="<?php echo site_url('public/images/icon/02.png');?>" alt="">
+                </div>
+                <h4>Packing</h4>
+            </div>
+            <div class="process_box">
+                <div class="icon">
+                    <!--<i class="fas fa-shipping-fast"></i>-->
+                    <img src="<?php echo site_url('public/images/icon/03.png');?>" alt="">
+                </div>
+                <h4>Transportation</h4>
+            </div>
+            <div class="process_box">
+                <div class="icon">
+                    <!--<i class="fab fa-audible"></i>-->
+                    <img src="<?php echo site_url('public/images/icon/04.png');?>" alt="">
+                </div>
+                <h4>Delivery</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- work process end -->
+
+
+
 <!-- story section start -->
 <section class="story_section">
     <div class="container">
@@ -80,6 +119,36 @@
     </div>
 </section>
 <!-- story section end -->
+
+
+
+<!-- sister section start -->
+<section class="sister_section">
+    <div class="container">
+        <div class="title_div">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4">
+                    <h2>Sister Concern</h2>
+                    <a class="show_more" href="<?=site_url('sister_concern')?>" >All Sister Concern</a>
+                </div>
+                <div class="col-xl-9 col-lg-8">
+                    <p>We are a team of people just like you! <strong>We realized there was a need for reliable social media services from a trustworthy company</strong>, and we have come to fill that spot. We love the services we provide and we use them every day.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <?php foreach($sister as $key => $value) { ?>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="<?=$value->url?>" target="_blank" class="sister_content">
+                    <img src="<?php echo site_url($value->path); ?>" alt="...">
+                    <h4><?php echo $value->title; ?></h4>
+                </a>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+<!-- sister section end -->
 
 
 
@@ -158,16 +227,104 @@
 
 
 
-<!-- booking section start -->
-<section class="booking_section">
+<!-- rider section start -->
+<section class="rider_section">
     <div class="cover">
         <div class="container">
-            <h2>Fast and Friendly Services</h2>
-            <a href="<?=site_url('user-panel/booking')?>">Booking Now</a>
+            <h2>Want to be an Agent's Or Rider ?</h2>
+            <a href="#" data-toggle="modal" data-target="#registration">Registration Now</a>
         </div>
     </div>
 </section>
-<!-- booking section end -->
+<!-- rider section end -->
+
+
+
+<!-- registration modal start -->
+<div class="modal registration_modal fade" id="registration">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Rider Or Agent Registration</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="registration_form">
+                    <p>Please fill up all the required files</p>
+                    <form action="<?= site_url('/rider_or_agent_registration'); ?>" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name *" required>
+                            </div>
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            </div>
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <input type="text" name="phone" class="form-control" placeholder="Phone *" required>
+                            </div>
+                            <!--<div class="form-group col-lg-4 col-sm-6">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>Division *</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>Gender *</option>
+                                    <option value="">Mael</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>District *</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>Upazila *</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4 col-sm-6">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>Zone *</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Mymensingh</option>
+                                    <option value="">Dhaka</option>
+                                </select>
+                            </div>-->
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- registration modal end -->
 
 
 

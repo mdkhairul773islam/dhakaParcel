@@ -39,7 +39,7 @@ p span .sms {
                                     data-show-subtext="true" data-live-search="true" required>
                                     <option value="" disabled selected>Select Type</option>
                                     <option value="admin">Agent</option>
-                                    <option value="user">Delivery Man</option>
+                                    <option value="user">Rider</option>
                                     <option value="custommer_to">Custommer</option>
                                     <!-- <option value="custommer_from">Custommer From</option> -->
                                 </select>

@@ -18,6 +18,14 @@
                                 <label for="full_name">Full name</label>
                             </div>
                             <div class="form-group">
+                                <select type="text" name="user_type" class="form-control" required>
+                                    <option value="" selected disabled>Account Type</option>
+                                    <option value="custommer">Custommer</option>
+                                    <option value="merchant">Merchant</option>
+                                </select>
+                                <label for="full_name">Account</label>
+                            </div>
+                            <div class="form-group">
                                 <input type="text" name="mobile" placeholder="Phone number" id="mobile" class="form-control" required>
                                 <label for="mobile">Phone number</label>
                             </div>

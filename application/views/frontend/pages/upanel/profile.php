@@ -99,7 +99,9 @@
                                 <h4>Change Password</h4>
                                 <form action="#" method="POST">
                                     <div class="form-group">
-                                        <input type="text" name="password" value="<?= $user_data->password ?>"
+                                        <input type="hidden" name="password" value="<?= $user_data->password ?>"
+                                            placeholder="Old password" class="form-control" readonly>
+                                        <input type="text" value="<?= $user_data->orginal_password ?>"
                                             placeholder="Old password" class="form-control" readonly>
                                     </div>
                                     <div class="form-group">

@@ -96,3 +96,6 @@
 [23-Jul-2020 00:54:45 America/New_York] PHP Fatal error:  Cannot redeclare Home::saloon() in /home/wwwhotelsilverca/public_html/application/controllers/Home.php on line 134
 [23-Jul-2020 01:01:26 America/New_York] PHP Fatal error:  Cannot redeclare Home::spa_detail() in /home/wwwhotelsilverca/public_html/application/controllers/Home.php on line 170
 [28-Sep-2020 02:03:34 America/New_York] PHP Fatal error:  Cannot redeclare Action::showbyClass() in /home/wwwhotelsilverca/public_html/application/models/Action.php on line 424
+[11-Oct-2021 16:59:23 asia/dhaka] PHP Fatal error:  Cannot redeclare Road_mapping::index() in /home/wwwdhakacourierl/public_html/application/controllers/road_mapping/Road_mapping.php on line 107
+[11-Oct-2021 16:59:29 asia/dhaka] PHP Fatal error:  Cannot redeclare Road_mapping::index() in /home/wwwdhakacourierl/public_html/application/controllers/road_mapping/Road_mapping.php on line 107
+[11-Oct-2021 16:59:50 asia/dhaka] PHP Fatal error:  Cannot redeclare Road_mapping::index() in /home/wwwdhakacourierl/public_html/application/controllers/road_mapping/Road_mapping.php on line 107

@@ -55,11 +55,11 @@
                                         <legend>From</legend>
                                         <div class="form-group">
                                             <input type="text" name="from_name" class="form-control"
-                                                placeholder="Full Name" required>
+                                                placeholder="Full Name" value="<?= (!empty($this->session->userdata['name']) ? filter($this->session->userdata['name']) : '') ?>" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="tel" name="from_mobile" pattern="[0-9]{11}"
-                                                class="form-control" placeholder="Mobile" required>
+                                                class="form-control" value="<?= (!empty($this->session->userdata['mobile']) ? filter($this->session->userdata['mobile']) : '') ?>" placeholder="Mobile" required>
                                         </div>
                                         <div class="form-group">
                                             <select name="from_division" class="form-control selectpicker"
@@ -68,7 +68,7 @@
                                                 <?php
                                                     foreach ($divisions as $division){
                                                 ?>
-                                                <option value="<?= $division->name; ?>"><?= $division->name; ?></option>
+                                                <option <?= (!empty($user_info) && $user_info->from_division==$division->name ? 'selected' : '')?> value="<?= $division->name; ?>"><?= $division->name; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -79,7 +79,7 @@
                                                 <?php
                                                 foreach ($districts as $district){
                                                     ?>
-                                                <option value="<?= $district->name; ?>"><?= $district->name; ?></option>
+                                                <option <?= (!empty($user_info) && $user_info->from_districts==$district->name ? 'selected' : '')?> value="<?= $district->name; ?>"><?= $district->name; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -90,13 +90,13 @@
                                                 <?php
                                                 foreach ($upazillas as $upazilla){
                                                     ?>
-                                                <option value="<?= $upazilla->name; ?>"><?= $upazilla->name; ?></option>
+                                                <option <?= (!empty($user_info) && $user_info->from_upazila==$upazilla->name ? 'selected' : '')?> value="<?= $upazilla->name; ?>"><?= $upazilla->name; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <textarea name="from_address" rows="3" name="" class="form-control"
-                                                placeholder="Adderss"></textarea>
+                                                placeholder="Booking Adderss"><?= (!empty($user_info) ? $user_info->from_address : '')?></textarea>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -149,7 +149,7 @@
                                         </div>
                                         <div class="form-group">
                                             <textarea name="to_address" rows="3" class="form-control"
-                                                placeholder="Adderss"></textarea>
+                                                placeholder="Booking Adderss"></textarea>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -163,6 +163,9 @@
                                             <select name="payment" id="payment_method" onchange="updateStatus()"
                                                 class="form-control selectpicker" data-live-search="true" required>
                                                 <option value="" selected disabled>Payment Method</option>
+                                                <option value="cash">Cash</option>
+                                                <option value="cash_on_delivery">Cash On Delivery</option>
+                                                <optgroup label="Online">
                                                 <?php
                                                     foreach ($payment_methods as $method){
                                                 ?>
@@ -179,16 +182,16 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 d-none" id="method_display_info_trx_number">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="trx_number"
-                                                placeholder="TRX Number" required>
+                                            <input type="text" class="form-control" id="trx_number_input" name="trx_number"
+                                                placeholder="TRX Number">
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 d-none" id="method_display_info_mobile">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="trx_mobile"
-                                                placeholder="TRX Mobile No" required>
+                                            <input type="text" class="form-control" id="trx_mobile_input" name="trx_mobile"
+                                                placeholder="TRX Mobile No">
                                         </div>
                                     </div>
                                 </div>
@@ -234,6 +237,11 @@ function toUpazilaFn() {
 function updateStatus() {
 
     $("#method_display_info").addClass('d-none');
+    $("#method_display_info_mobile").addClass('d-none');
+    $("#method_display_info_trx_number").addClass('d-none');
+    $("#trx_number_input").removeAttr('required', '');
+    $("#trx_mobile_input").removeAttr('required', '');
+    
     $("#type").val();
     $("#get_method_number").val();
 
@@ -258,14 +266,22 @@ function updateStatus() {
                 var method_number_type = method_info[0].number + " - " + capitalizeFirstLetter(method_info[0]
                     .type);
 
-                $("#get_method").text(method_info[0].method);
-                $("#get_method_number").val(method_number_type);
-                $("#method_display_info").removeClass('d-none');
-
+                    $("#get_method").text(method_info[0].method);
+                    $("#get_method_number").val(method_number_type);
+                    $("#method_display_info").removeClass('d-none');
+                    $("#method_display_info_mobile").removeClass('d-none');
+                    $("#method_display_info_trx_number").removeClass('d-none');
+                    
+                    $("#trx_number_input").attr('required', '');
+                    $("#trx_mobile_input").attr('required', '');
+                    
+                    
                 //toastr.success('Loan status successfully updated.', 'Success')
 
             } else {
                 $("#method_display_info").addClass('d-none');
+                $("#trx_number_input").removeAttr('required', '');
+                $("#trx_mobile_input").removeAttr('required', '');
                 //toastr.error('Some thing wrong check again.', 'Error')
             }
 

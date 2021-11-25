@@ -63,6 +63,11 @@ class CreateProfile extends Admin_Controller {
                     
                     $user_id = save_data('users',$insert, [], true);
                     
+                    if($this->input->post('privilege')=='admin'){
+                        $message = "Dear Agent, Your account has been successfully created. Your username is: ".$this->input->post('username')." And Password: ".$this->input->post('password')." Regards: Dhaka Parcel & Courier Ltd.";
+                        send_sms($_POST['mobile'], $message);
+                    }
+                    
                     if(!empty($user_id)){
                             if(!empty($_POST['zone'])){
                                 

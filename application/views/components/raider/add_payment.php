@@ -5,7 +5,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Add Delivery Payment</h1>
+                    <h1>Add Rider Payment</h1>
                 </div>
             </div>
 

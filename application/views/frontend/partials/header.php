@@ -88,6 +88,7 @@
                         <ul class="navbar-nav">
                             <li><a href="<?=site_url('')?>" class="nav-link">Home</a></li>
                             <li><a href="<?=site_url('about')?>" class="nav-link">About Us</a></li>
+                            <li><a href="<?=site_url('sister_concern')?>" class="nav-link">Sister Concern</a></li>
                             <li><a href="<?=site_url('services')?>" class="nav-link">Services</a></li>
                             <li><a href="<?=site_url('testimonial')?>" class="nav-link">Testimonial</a></li>
                             <li><a href="<?=site_url('news')?>" class="nav-link">News</a></li>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 10, 2021 at 04:27 AM
+-- Generation Time: Nov 24, 2021 at 11:01 PM
 -- Server version: 10.3.31-MariaDB-log-cll-lve
--- PHP Version: 7.3.28
+-- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -12473,7 +12473,71 @@ INSERT INTO `access_info` (`user_id`, `login_period`, `logout_period`, `os`, `br
 (2, '2021-10-04 16:28:35', '0000-00-00 00:00:00', '', ''),
 (2, '2021-10-10 12:04:19', '0000-00-00 00:00:00', '', ''),
 (3, '2021-10-10 12:05:00', '2021-10-10 12:05:15', '', ''),
-(2, '2021-10-10 12:05:19', '0000-00-00 00:00:00', '', '');
+(2, '2021-10-10 12:05:19', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-11 14:06:24', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-11 15:55:01', '0000-00-00 00:00:00', '', ''),
+(1, '2021-10-12 11:31:58', '2021-10-12 11:36:52', '', ''),
+(2, '2021-10-12 11:36:58', '0000-00-00 00:00:00', 'Windows 10', 'Chrome'),
+(2, '2021-10-12 15:32:19', '0000-00-00 00:00:00', '', ''),
+(3, '2021-10-12 18:51:55', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-13 13:53:25', '2021-10-13 17:10:07', '', ''),
+(13, '2021-10-17 12:59:25', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-26 11:07:35', '2021-10-26 11:08:16', '', ''),
+(1, '2021-10-26 11:08:20', '2021-10-26 12:47:22', 'Windows 10', 'Firefox'),
+(4, '2021-10-26 11:13:05', '2021-10-26 11:13:47', '', ''),
+(2, '2021-10-26 11:13:53', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-26 11:21:46', '2021-10-26 11:22:26', '', ''),
+(2, '2021-10-26 11:22:46', '2021-10-26 11:24:05', '', ''),
+(1, '2021-10-26 12:44:44', '2021-10-26 12:45:17', '', ''),
+(4, '2021-10-26 12:45:22', '2021-10-26 12:55:43', '', ''),
+(2, '2021-10-26 12:55:48', '2021-10-26 16:55:09', '', ''),
+(14, '2021-10-26 13:30:02', '0000-00-00 00:00:00', '', ''),
+(14, '2021-10-26 13:32:21', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-26 14:01:23', '2021-10-26 14:06:54', '', '');
+INSERT INTO `access_info` (`user_id`, `login_period`, `logout_period`, `os`, `browser`) VALUES
+(2, '2021-10-26 14:07:31', '2021-10-26 14:07:55', '', ''),
+(1, '2021-10-26 14:08:00', '2021-10-26 14:09:37', '', ''),
+(2, '2021-10-26 14:09:44', '0000-00-00 00:00:00', '', ''),
+(4, '2021-10-26 20:59:15', '0000-00-00 00:00:00', 'Android', 'Chrome'),
+(2, '2021-10-27 11:49:40', '2021-10-27 11:52:10', '', ''),
+(5, '2021-10-27 11:52:57', '2021-10-27 11:53:05', '', ''),
+(2, '2021-10-27 11:53:16', '0000-00-00 00:00:00', '', ''),
+(3, '2021-10-27 12:17:26', '2021-10-27 12:17:37', '', ''),
+(2, '2021-10-27 12:17:45', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-27 12:21:38', '2021-10-27 15:03:54', '', ''),
+(2, '2021-10-27 15:04:13', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-27 15:25:45', '2021-10-27 15:30:20', '', ''),
+(2, '2021-10-27 15:53:22', '2021-10-27 16:07:38', '', ''),
+(10, '2021-10-27 16:07:59', '2021-10-27 16:08:03', '', ''),
+(2, '2021-10-27 16:30:37', '0000-00-00 00:00:00', '', ''),
+(15, '2021-10-27 16:32:49', '0000-00-00 00:00:00', '', ''),
+(16, '2021-10-27 16:37:21', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-27 16:41:42', '0000-00-00 00:00:00', '', ''),
+(15, '2021-10-27 17:29:42', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-28 09:36:58', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-28 11:16:03', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-28 11:33:30', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-28 11:37:30', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-28 15:38:24', '2021-10-28 16:27:46', '', ''),
+(1, '2021-10-28 16:28:04', '2021-10-28 16:29:33', '', ''),
+(2, '2021-10-28 16:29:39', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-28 18:11:05', '0000-00-00 00:00:00', 'Windows 10', 'Chrome'),
+(3, '2021-10-29 12:17:02', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-30 09:27:46', '2021-10-30 09:48:14', '', ''),
+(4, '2021-10-30 18:00:48', '0000-00-00 00:00:00', '', ''),
+(2, '2021-10-31 21:17:02', '0000-00-00 00:00:00', '', ''),
+(4, '2021-11-02 10:48:56', '0000-00-00 00:00:00', '', ''),
+(2, '2021-11-02 16:28:51', '0000-00-00 00:00:00', '', ''),
+(1, '2021-11-07 10:03:05', '2021-11-07 10:03:30', '', ''),
+(2, '2021-11-07 10:03:35', '2021-11-07 11:43:08', '', ''),
+(2, '2021-11-07 19:03:20', '0000-00-00 00:00:00', '', ''),
+(1, '2021-11-15 15:31:04', '0000-00-00 00:00:00', '', ''),
+(2, '2021-11-17 13:41:12', '0000-00-00 00:00:00', '', ''),
+(2, '2021-11-24 10:12:28', '0000-00-00 00:00:00', 'Windows 10', 'Chrome'),
+(2, '2021-11-24 14:19:15', '0000-00-00 00:00:00', '', ''),
+(2, '2021-11-24 15:38:03', '0000-00-00 00:00:00', '', ''),
+(2, '2021-11-25 09:21:47', '0000-00-00 00:00:00', '', ''),
+(2, '2021-11-25 09:46:22', '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -12487,15 +12551,15 @@ CREATE TABLE `agent_transactions` (
   `agent_id` int(10) NOT NULL,
   `debit` decimal(8,2) NOT NULL,
   `credit` decimal(8,2) NOT NULL,
-  `payment_type` varchar(255) NOT NULL,
-  `bankname` varchar(255) NOT NULL,
-  `branchname` varchar(255) NOT NULL,
-  `account_no` varchar(255) NOT NULL,
-  `chequeno` varchar(255) NOT NULL,
-  `passdate` varchar(255) NOT NULL,
-  `comment` text NOT NULL,
+  `payment_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `bankname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `branchname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `account_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `chequeno` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `passdate` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `comment` text COLLATE utf8_unicode_ci NOT NULL,
   `trash` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `agent_transactions`
@@ -12546,32 +12610,32 @@ INSERT INTO `blog` (`id`, `date`, `title`, `description`, `path`, `trash`) VALUE
 CREATE TABLE `booking` (
   `id` int(255) NOT NULL,
   `date` date NOT NULL,
-  `booking_no` varchar(255) NOT NULL,
+  `booking_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL COMMENT 'user_id from subscribers table id',
-  `user_name` varchar(255) NOT NULL,
+  `user_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `category_id` int(11) NOT NULL,
   `subcategory_id` int(11) NOT NULL,
-  `description` text NOT NULL,
-  `from_name` varchar(255) NOT NULL,
-  `from_mobile` varchar(255) NOT NULL,
-  `from_division` varchar(200) NOT NULL,
-  `from_districts` varchar(200) NOT NULL,
-  `from_upazila` varchar(200) NOT NULL,
-  `from_address` text NOT NULL,
-  `to_name` varchar(255) NOT NULL,
-  `to_mobile` varchar(255) NOT NULL,
-  `to_division` varchar(200) NOT NULL,
-  `to_zila` varchar(200) NOT NULL,
-  `to_upazila` varchar(200) NOT NULL,
-  `to_address` text NOT NULL,
-  `payment` varchar(200) NOT NULL,
-  `trx_number` varchar(255) NOT NULL,
-  `trx_mobile` varchar(255) NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `from_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `from_mobile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `from_division` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `from_districts` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `from_upazila` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `from_address` text COLLATE utf8_unicode_ci NOT NULL,
+  `to_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `to_mobile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `to_division` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `to_zila` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `to_upazila` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `to_address` text COLLATE utf8_unicode_ci NOT NULL,
+  `payment` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `trx_number` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `trx_mobile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `service_charge` decimal(8,2) NOT NULL,
-  `booking_status` varchar(255) DEFAULT 'pending',
+  `booking_status` varchar(255) COLLATE utf8_unicode_ci DEFAULT 'pending',
   `delivery_date` date NOT NULL,
   `trash` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `booking`
@@ -12582,15 +12646,19 @@ INSERT INTO `booking` (`id`, `date`, `booking_no`, `user_id`, `user_name`, `cate
 (2, '2021-09-30', '2109307786', 1, 'Aminur Islam', 1, 2, 'Demokljd fsadjf lsadjfl', 'Aminur Two', '01910217481', 'Mymensingh', 'Brahmanbaria', 'Brahmanpara', 'hjjkl hj saff', 'Abdullah Mama', '01910217479', 'Rajshahi', 'Feni', 'Ajmiriganj', 'dfgsdf f dsaf fas', 'Bkash', 'KJDKJ545', '019102147482', 120.00, 'pending', '0000-00-00', 0),
 (3, '2021-09-30', '2109309810', 12, 'Khairul Islam 2021', 1, 2, 'Rem cum sed veniam ', 'Olga Head', '01636882940', 'Barisal', 'Sylhet', 'Kamolganj', 'Ex non illum itaque', 'Xena Conley', '01636882940', 'Rangpur', 'Noakhali', 'Ajmiriganj', 'Itaque sapiente nisi', 'Rocket', '701', 'Qui consequatur off', 120.00, 'pending', '0000-00-00', 0),
 (4, '2021-09-30', '2109306285', 12, 'Khairul Islam 2021', 1, 2, 'Rem aperiam velit en', 'Georgia Barr', '01636882940', 'Rangpur', 'Joypurhat', 'Bakerganj', 'Illo quibusdam sed f', 'Karina Green', '01636882940', 'Rangpur', 'Coxsbazar', 'Mymensingh Sadar', 'Exercitation volupta', 'DBBL', '100', 'Labore quasi ipsa u', 120.00, 'pending', '0000-00-00', 0),
-(5, '2021-09-30', '2109305408', 12, 'Khairul Islam 2021', 2, 2, 'Ducimus magna sapie', 'Ryder Stark', '01636882940', 'Rangpur', 'Panchagarh', 'Belabo', 'Maxime ex non corrup', 'Jeanette Huff', '01636882940', 'Chattagram', 'Jhalakathi', 'Mymensingh Sadar', 'Sed temporibus adipi', 'Bkash', '284', 'Dolor tempor digniss', 120.00, 'pending', '0000-00-00', 0),
+(5, '2021-09-30', '2109305408', 12, 'Khairul Islam 2021', 2, 2, 'Ducimus magna sapie', 'Ryder Stark', '01636882940', 'Rangpur', 'Panchagarh', 'Belabo', 'Maxime ex non corrup', 'Jeanette Huff', '01636882940', 'Chattagram', 'Jhalakathi', 'Mymensingh Sadar', 'Sed temporibus adipi', 'Bkash', '284', 'Dolor tempor digniss', 120.00, 'delivered', '0000-00-00', 0),
 (6, '2021-10-02', '2110026223', 2, 'MD. Khairul Islam', 1, 1, 'Irure maxime repelle', 'Julie Young', '01636882940', 'Barisal', 'Narail', 'Harirampur', 'Sit vel aut vero an', 'Lee Kidd', '01636882940', 'Mymensingh', 'Sherpur', 'Mymensingh Sadar', 'Dignissimos cum ulla', 'Nagad', '243', 'Aut est culpa et i', 120.00, 'pending', '0000-00-00', 1),
 (7, '2021-10-02', '2110026060', 2, 'MD. Khairul Islam', 2, 1, 'Iusto explicabo Ali', 'Yoshi Brewer', '01636882940', 'Barisal', 'Jhenaidah', 'Naniarchar', 'Fugiat ducimus expl', 'Donovan Hill', '01636882940', 'Barisal', 'Jashore', 'Mymensingh Sadar', 'Atque nihil eligendi', 'Rocket', '740', 'Non optio sunt nih', 120.00, 'pending', '0000-00-00', 1),
 (8, '2021-10-02', '2110022876', 2, 'MD. Khairul Islam', 2, 1, 'Iusto explicabo Ali', 'Yoshi Brewer', '01636882940', 'Barisal', 'Jhenaidah', 'Naniarchar', 'Fugiat ducimus expl', 'Donovan Hill', '01636882940', 'Barisal', 'Jashore', 'Mymensingh Sadar', 'Atque nihil eligendi', 'Rocket', '740', 'Non optio sunt nih', 120.00, 'pending', '0000-00-00', 1),
 (9, '2021-10-02', '2110022301', 2, 'MD. Khairul Islam', 2, 1, 'Velit ut in sit ut ', 'Taylor Gutierrez', '01636882940', 'Rangpur', 'Dinajpur', 'Kaptai', 'Eiusmod magna repreh', 'Deirdre Hammond', '01636882940', 'Rangpur', 'Faridpur', 'Ajmiriganj', 'Quod repellendus Et', 'Nagad', '584', 'Et sit aliquam repre', 120.00, 'pending', '0000-00-00', 0),
-(10, '2021-10-02', '2110027299', 2, 'MD. Khairul Islam', 2, 2, 'Fuga Odio quidem ei', 'Tatiana Morrow', '01636882940', 'Rajshahi', 'Dhaka', 'Derai', 'Rem nulla voluptate ', 'Kieran Jackson', '01636882940', 'Dhaka', 'Chandpur', 'Baraigram', 'Dolore suscipit repr', 'DBBL', '656', 'Expedita quis dolori', 120.00, 'pending', '0000-00-00', 0),
-(11, '2021-10-02', '2110024910', 2, 'MD. Khairul Islam', 2, 2, 'Modi pariatur Aperi', 'Clio Shannon', '01636882947', 'Chattagram', 'Sylhet', 'Chougachha', 'Magnam voluptas iust', 'Samuel Richardson', '01636882947', 'Rajshahi', 'Kurigram', 'Belaichari', 'Cumque excepteur dol', 'Bkash', '662', 'Esse omnis sapiente ', 120.00, 'pending', '0000-00-00', 0),
+(10, '2021-10-02', '2110027299', 2, 'MD. Khairul Islam', 2, 2, 'Fuga Odio quidem ei', 'Tatiana Morrow', '01636882940', 'Rajshahi', 'Dhaka', 'Derai', 'Rem nulla voluptate ', 'Kieran Jackson', '01636882940', 'Dhaka', 'Chandpur', 'Baraigram', 'Dolore suscipit repr', 'DBBL', '656', 'Expedita quis dolori', 120.00, 'processing', '0000-00-00', 0),
+(11, '2021-10-02', '2110024910', 2, 'MD. Khairul Islam', 2, 2, 'Modi pariatur Aperi', 'Clio Shannon', '01636882947', 'Chattagram', 'Sylhet', 'Chougachha', 'Magnam voluptas iust', 'Samuel Richardson', '01636882947', 'Rajshahi', 'Kurigram', 'Belaichari', 'Cumque excepteur dol', 'Bkash', '662', 'Esse omnis sapiente ', 120.00, 'delivered', '0000-00-00', 0),
 (12, '2021-10-02', '2110029032', 2, 'MD. Khairul Islam', 1, 1, 'Exercitation duis ma', 'Kalia Brown', '01636882942', 'Chattagram', 'Sylhet', 'Sadullapur', 'Rerum ipsum aut sun', 'Aladdin Norman', '01636882941', 'Rangpur', 'Feni', 'Bhola Sadar', 'Numquam corrupti no', 'Bkash', '130', 'Beatae vitae error o', 120.00, 'pending', '0000-00-00', 0),
-(13, '2021-10-02', '2110028741', 2, 'MD. Khairul Islam', 1, 2, 'Consequat Nesciunt', 'Shellie Ryan', '06636882940', 'Khulna', 'Netrokona', 'Monohargonj', 'Excepturi sunt offic', 'Dieter May', '06636882940', 'Sylhet', 'Pabna', 'Mymensingh Sadar', 'Nihil in proident v', 'Nagad', '956', 'Voluptas autem vitae', 120.00, 'pending', '0000-00-00', 0);
+(13, '2021-10-02', '2110028741', 2, 'MD. Khairul Islam', 1, 2, 'Consequat Nesciunt', 'Shellie Ryan', '06636882940', 'Khulna', 'Netrokona', 'Monohargonj', 'Excepturi sunt offic', 'Dieter May', '06636882940', 'Sylhet', 'Pabna', 'Mymensingh Sadar', 'Nihil in proident v', 'Nagad', '956', 'Voluptas autem vitae', 120.00, 'pending', '0000-00-00', 0),
+(14, '2021-10-17', '2110179172', 13, 'Md Tarikul Islam Apon', 1, 1, 'apon', 'md tarikul islam apon', '01716378052', 'Dhaka', 'Mymensingh', 'Bhaluka', 'najim uddin road', 'kasem', '01916416797', 'Sylhet', 'Habiganj', 'Ajmiriganj', 'main road', 'Nagad', '12345678', '12345678', 120.00, 'pending', '0000-00-00', 0),
+(15, '2021-10-27', '2110275328', 2, 'MD. Khairul Islam', 1, 1, 'asdasd', 'Harper Buck', '01636882947', 'Chattagram', 'Feni', 'Barura', 'adasd', 'Xaviera Sweeney', '01636882947', 'Barisal', 'Noakhali', 'Mymensingh Sadar', '', 'cash', '', '', 120.00, 'pending', '0000-00-00', 0),
+(16, '2021-10-27', '2110278451', 2, 'MD. Khairul Islam', 1, 1, 'asdasdasd', 'A', '01636882947', 'Rangpur', 'Feni', 'Chandina', 'Test', 'Xena Conley', '01636882941', 'Rangpur', 'Chattogram', 'Bhola Sadar', 'Test', 'DBBL', '657', 'Labore quasi ipsa u', 120.00, 'pending', '0000-00-00', 0),
+(17, '2021-10-27', '2110279905', 2, 'MD. Khairul Islam', 2, 2, 'Animi commodi repud', 'Kyra Valentine', '01636882940', 'Rangpur', 'Gaibandha', 'Naogaon Sadar', 'Numquam aute fugiat ', 'Dora Valenzuela', '01636882941', 'Barisal', 'Chandpur', 'Bhola Sadar', 'Nostrum magnam lorem', 'DBBL', '701', 'Sunt eum et sint con', 120.00, 'pending', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -12601,11 +12669,11 @@ INSERT INTO `booking` (`id`, `date`, `booking_no`, `user_id`, `user_name`, `cate
 CREATE TABLE `booking_agent_records` (
   `id` int(255) NOT NULL,
   `date` date NOT NULL,
-  `booking_no` varchar(255) NOT NULL,
+  `booking_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `agent_id` int(11) NOT NULL COMMENT 'agent_id from users table id',
   `booking_user_id` int(11) NOT NULL COMMENT 'booking_user_id from subscribers table id ',
   `trash` int(10) NOT NULL DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `booking_agent_records`
@@ -12619,7 +12687,12 @@ INSERT INTO `booking_agent_records` (`id`, `date`, `booking_no`, `agent_id`, `bo
 (5, '2021-10-02', '2110024910', 6, 2, 0),
 (6, '2021-10-02', '2110029032', 6, 2, 0),
 (7, '2021-10-02', '2110028741', 1, 2, 0),
-(8, '2021-10-02', '2110028741', 5, 2, 0);
+(8, '2021-10-02', '2110028741', 5, 2, 0),
+(9, '2021-10-17', '2110179172', 6, 13, 0),
+(10, '2021-10-27', '2110275328', 1, 2, 0),
+(11, '2021-10-27', '2110275328', 5, 2, 0),
+(12, '2021-10-27', '2110278451', 6, 2, 0),
+(13, '2021-10-27', '2110279905', 6, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -12629,11 +12702,11 @@ INSERT INTO `booking_agent_records` (`id`, `date`, `booking_no`, `agent_id`, `bo
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `img` text COLLATE utf8_unicode_ci NOT NULL,
   `position` int(11) NOT NULL DEFAULT 0,
   `trash` int(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `categories`
@@ -12652,12 +12725,12 @@ INSERT INTO `categories` (`id`, `category`, `img`, `position`, `trash`) VALUES
 CREATE TABLE `districts` (
   `id` int(2) NOT NULL,
   `division_id` int(1) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `bn_name` varchar(25) NOT NULL,
-  `lat` varchar(15) DEFAULT NULL,
-  `lon` varchar(15) DEFAULT NULL,
-  `url` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `bn_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `lat` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lon` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `districts`
@@ -12823,10 +12896,10 @@ INSERT INTO `districts_old` (`id`, `name`, `country`, `shipping_cost`, `status`,
 
 CREATE TABLE `divisions` (
   `id` int(1) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `bn_name` varchar(25) NOT NULL,
-  `url` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `bn_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `divisions`
@@ -12866,7 +12939,7 @@ CREATE TABLE `footer` (
 --
 
 INSERT INTO `footer` (`id`, `location`, `email`, `phone`, `fb_link`, `g_link`, `in_link`, `tw_link`, `youtube`, `trash`) VALUES
-(1, '27/A, Indira Road, Farmgate, Tejgaon, Dhaka-1215', 'atiq.ullah81@yahoo.com', '01713634913,01912441630', 'https://facebook.com', '', '', 'https://www.twitter.com', 'https://www.youtube.com', '');
+(1, '48/1, Yosuf Mansion (1st floor), Motijheel C/A, Dhaka-1000, Bangladesh', 'dhakacourier2011@gmail.com', '01912441630, 01713634913', 'https://www.facebook.com/dhakacourierltd/', '', '', 'https://www.twitter.com', 'https://www.youtube.com', '');
 
 -- --------------------------------------------------------
 
@@ -12925,7 +12998,7 @@ CREATE TABLE `header` (
 --
 
 INSERT INTO `header` (`id`, `web_title`, `web_logo`, `fev_icon`, `food_menu`, `apk`, `is_verification`, `trash`) VALUES
-(1, 'Dhaka Parcel & Courier Ltd', 'backend/images/header/gallery16302100680.png', 'backend/images/header/gallery16265023380.png', 'backend/images/header/gallery16102633590.pdf', 'public/apk/Alo_Online_BD.apk', 0, 0);
+(1, 'Dhaka Parcel & Courier Service Ltd', 'backend/images/header/gallery16358324260.jpg', 'backend/images/header/gallery16265023380.png', 'backend/images/header/gallery16102633590.pdf', 'public/apk/Alo_Online_BD.apk', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -12978,7 +13051,29 @@ INSERT INTO `message` (`id`, `name`, `last_name`, `email`, `mobile`, `subject`, 
 (29, 'aminur islam', '', '', '01937476716', NULL, 'text secount msg', ''),
 (30, 'wem:dhakacourierltd.com ich mag  www.audi.com', '', '', '', NULL, 'ich mag https://www.audi.com', ''),
 (31, 'test customer', '', '', '01967473340', NULL, '01967473340', ''),
-(32, 'natakix', '', '', '89432956267', NULL, 'hi. i\'m love sucks big dick. my profile here https://best-sex-here1.com/?u=41nkd08&o=8dhpkzk', '');
+(32, 'natakix', '', '', '89432956267', NULL, 'hi. i\'m love sucks big dick. my profile here https://best-sex-here1.com/?u=41nkd08&o=8dhpkzk', ''),
+(33, 'mohammed koofee', '', '', '87161585742', NULL, 'hello dear, \r\nas-salamu alaykum \r\nfirst let me introduce myself, my name is noor mohammed ali al-koofee from iraq. \r\n \r\ni am married in saudi arabia. my husband has been domestically abusive lately, the rate of abuse has attracted public attention since 2019 after a popular television presenter, rania al-baz, was severely beaten by her own husband too, i am interested in investing in your country through your personal guidelines. before the covid-19 pandemic started, i saved a total of $20 million currently deposited in the bank ready to be wire transferred to your country for possible investment & migration opportunities. \r\n \r\nif interested, kindly contact me to send all proof of funds for your consideration. i cannot say everything here but i can be reached directly on whatsapp only: +966592291747, or mailto:contact@noormohammedali.com or email: noormohammedali966@gmail.com \r\n \r\nsincerely yours, \r\nnoor mohammed ali al-koofee \r\nsaudi arabia', ''),
+(34, 'mike holmes', '', '', '88527537918', NULL, 'howdy \r\n \r\ni have just took a look on your seo for  dhakacourierltd.com for the ranking keywords and saw that your website could use an upgrade. \r\n \r\nwe will improve your seo metrics and ranks organically and safely, using only whitehat methods, while providing monthly reports and outstanding support. \r\n \r\nplease check our services below, we offer seo at cheap rates. \r\nhttps://www.hilkom-digital.de/cheap-seo-packages/ \r\n \r\nstart enhancing your sales and leads with us, today! \r\n \r\nregards \r\nmike holmes\r\n \r\nhilkom digital team \r\nsupport@hilkom-digital.de', ''),
+(35, 'andrew goldenberge', '', '', '84556517426', NULL, 'hello, \r\nwe provide funding through our venture capital company to both start-up and existing companies either looking for funding for expansion or to accelerate growth in their company. \r\n \r\nwe have a structured joint venture investment plan in which we are interested in an annual return on investment not more than 10% roi. \r\n \r\nwe are also currently structuring a convertible debt and loan financing of 3% interest repayable annually with no early repayment penalties. \r\n \r\nif you have a business plan or executive summary i can review to understand a much better idea of your business and what you are looking to do, this will assist in determining the best possible investment structure we can pursue and discuss more extensively. \r\n \r\nif you are interested in any of the above, kindly respond to us via this email andrew.goldenberg@castleprojectservicesltd.com \r\n \r\ni wait to hear from you. \r\n \r\nsincerely, \r\n \r\nandrew goldenberge \r\n \r\ninvestment/wealth manager \r\ncastle project services ltd. \r\ne-mail: andrew.goldenberg@castleprojectservicesltd.com', ''),
+(36, 'donald cole', '', '', '82619664584', NULL, 'good day \r\n \r\ni contacted you some days back seeking your cooperation in a matter regarding funds worth $24 million, i urge you to  get back to me through this email coledd11@cloedcolela.com if you\'re still interested. \r\n \r\ni await your response. \r\n \r\nthanks, \r\n \r\ndonald cole', ''),
+(37, 'rapidlex promotion', '', '', '85287643359', NULL, 'any language. any application. rapidlex desktop application for windows 7/8/10, macos & linux. \r\nare you anyone working with foreign language texts? do not waste your time by copying text from one application to other to get your translation. just select your text in any application like outlook, word, powerpoint, pdf, e-book reader or any other and double press left ctrl key, rapidlex pops-up and your translation is done. free 14-day trial without registration needed. download at http://www.rapidlex.com/.', ''),
+(38, 'mike roberts', '', '', '89367914881', NULL, 'hello \r\n \r\nwe all know the importance that dofollow link have on any website`s ranks. \r\nhaving most of your linkbase filled with nofollow ones is of no good for your ranks and seo metrics. \r\n \r\nbuy quality dofollow links from us, that will impact your ranks in a positive way \r\nhttps://www.digital-x-press.com/product/150-dofollow-backlinks/ \r\n \r\nbest regards \r\nmike roberts\r\n \r\nsupport@digital-x-press.com', ''),
+(39, 'chau cheung', '', '', '81457969316', NULL, 'hello, \r\ni am contacting you regarding a transaction of mutual benefit, i am an attorney who managed a client\'s account that passed away many years ago, he passed away without any known relative. \r\nwe can work together mutually to process and receive the funds, let me know if you wish to know more about my proposal and i shall provide you with more information. \r\n \r\nregards, \r\nmr chau shiu cheung \r\nchaushuicheung@hongkongsolicitors.org', ''),
+(40, 'mike nash', '', '', '87812731943', NULL, 'hi there \r\n \r\ndo you want a quick boost in ranks and sales for your website? \r\nhaving a high da score, always helps \r\n \r\nget your dhakacourierltd.com to have a da between 50 to 60 points in moz with us today and reap the benefits of such a great feat. \r\n \r\nsee our offers here: \r\nhttps://www.strictlydigital.net/product/moz-da50-seo-plan/ \r\n \r\non sale: \r\nhttps://www.strictlydigital.net/product/ahrefs-dr60/ \r\n \r\n \r\nthank you \r\nmike nash', ''),
+(41, 'david song', '', '', '89347446444', NULL, 'hello, \r\nthis is a consultancy and brokerage firm specializing in growth financial loan and equity funding investments. we specialize in investments in all private and public sectors in a broad range of areas within our financial investment services. we are experts in financial and operational management, due diligence and capital planning in all markets and industries. \r\nour investors wish to invest in any viable project presented by your management after reviews on your business project presentation plan. we look forward to your swift response. \r\n \r\nregards, \r\nmr. david song \r\nemail:davidsong2030@gmail.com', ''),
+(42, 'gerardsaw', '', '', '84171633422', NULL, 'dhakacourierltd.com tyrueoswkdhfbjksdhbdvsddnajkmkxdbfsdjdfadladabfhghgdhsjkd', ''),
+(43, '', '', '', '', NULL, '', ''),
+(44, 'mike hardman', '', '', '86316744381', NULL, 'howdy \r\n \r\nwe will enhance your local ranks organically and safely, using only whitehat methods, while providing google maps and website offsite work at the same time. \r\n \r\nplease check our pricelist here, we offer local seo at cheap rates. \r\nhttps://speed-seo.net/product/local-seo-package/ \r\n \r\nnew: \r\nhttps://www.speed-seo.net/product/zip-codes-gmaps-citations/ \r\n \r\nregards \r\nmike hardman\r\n \r\nspeed seo digital agency', ''),
+(45, 'mike ward', '', '', '83124471136', NULL, 'good day \r\n \r\ni have just took an in depth look on your  dhakacourierltd.com for its seo metrics and saw that your website could use a boost. \r\n \r\nwe will increase your seo metrics and ranks organically and safely, using only whitehat methods, while providing monthly reports and outstanding support. \r\n \r\nplease check our plans here, we offer seo at cheap rates. \r\nhttps://www.hilkom-digital.de/cheap-seo-packages/ \r\n \r\nstart enhancing your sales and leads with us, today! \r\n \r\nregards \r\nmike ward\r\n \r\nhilkom digital team \r\nsupport@hilkom-digital.de', ''),
+(46, 'georgeloazy', '', '', '83871156256', NULL, 'passive income from $ 6879 per day >>>>>>>>>>>>>>  https://www.google.com/url?q=https%3a%2f%2fvk.cc%2fc7wvjo&sa=d&34=67&usg=afqjcnhj_a66ufjc5mfsabppuo4gggxh6w', ''),
+(47, 'timothycleaw', '', '', '89153199567', NULL, 'change your life and get passive income from $ 5699 in a day >>>>>>>>>>>>>>>>>>>>>>>>>>> https://www.google.com/url?q=https%3a%2f%2fvk.cc%2fc7wvjo&sa=d&99=04&usg=afqjcnhj_a66ufjc5mfsabppuo4gggxh6w', ''),
+(48, 'georgeloazy', '', '', '82912527898', NULL, 'income from one investment more $ 5585 in a day >>>>>>>>>>>>>>  https://www.google.com/url?q=https%3a%2f%2fvk.cc%2fc7wvjo&sa=d&42=89&usg=afqjcnhj_a66ufjc5mfsabppuo4gggxh6w', ''),
+(49, 'david holman', '', '', '83314581181', NULL, 'we are a team of it experts specialized in the production of real and authentic documents such as passport, driving license , diploma certificates, phd\'s, \r\nielts certificate, bachelor  degrees, nclex certificate, mba, id cards, ss cards, associate certificate, university certificates, green cards, death certificate, master degree, working permits, visa\'s etc. contact us on whatsapp for more information +49 1590 2969018. or email us at... documentsservicesexperts@gmail.com', ''),
+(50, 'haroldelubs', '', '', '89183164652', NULL, 'a few weeks ago, elon musk, in an interview, accidentally blabbed about a cryptocurrency trading robot that brings him passive income from $ 13,000 to $ 135,000 per day and asked to remove this moment from the video after filming. \r\nhttps://www.google.com/url?q=https%3a%2f%2fvk.cc%2fc8amsu&sa=d&65=22&usg=afqjcngimsvvckcjtul1s1o9fbbu24tnpa \r\nbut the operator who filmed all this remembered the name of the trading robot and tried to make money. \r\non the same day, he made a deposit of $ 500 and launched a trading robot and after 3 hours his account had $ 3750 and a week later $ 563700. \r\non the robot, you earn in the currency of your country, europe - eur, australia - aud, canada - cad, sweden - sec and so on. \r\nhurry up to register as after the influx of new users, the administrators decided to stop registering new users from next week. \r\nhttps://www.google.com/url?q=https%3a%2f%2fvk.cc%2fc8amsu&sa=d&01=93&usg=afqjcngimsvvckcjtul1s1o9fbbu24tnpa', ''),
+(51, 'timothycleaw', '', '', '81878394887', NULL, 'launch artificial intelligence with one button and earn from $ 5758 in a day >>>>>>>>>>>>>>>>>>>>>>>>>>> https://www.google.com/url?q=https%3a%2f%2fvk.cc%2fc8efys&sa=d&91=71&usg=afqjcne19l0r90htg4gsnameaeldz-6c8g', ''),
+(52, 'eric', 'jones', 'eric.jones.z.mail@gmail.com', '555-555-1212', NULL, 'my name’s eric and i just came across your website - dhakacourierltd.com - in the search results.\r\n\r\nhere’s what that means to me…\r\n\r\nyour seo’s working.\r\n\r\nyou’re getting eyeballs – mine at least.\r\n\r\nyour content’s pretty good, wouldn’t change a thing.\r\n\r\nbut…\r\n\r\neyeballs don’t pay the bills.\r\n\r\ncustomers do.\r\n\r\nand studies show that 7 out of 10 visitors to a site like dhakacourierltd.com will drop by, take a gander, and then head for the hills without doing anything else.\r\n\r\nit’s like they never were even there.\r\n\r\nyou can fix this.\r\n\r\nyou can make it super-simple for them to raise their hand, say, “okay, let’s talk” without requiring them to even pull their cell phone from their pocket… thanks to talk with web visitor.\r\n\r\ntalk with web visitor is a software widget that sits on your site, ready and waiting to capture any visitor’s name, email address and phone number.  it lets you know immediately – so you can talk to that lead immediately… without delay… before they head for those hills.\r\n  \r\nclick here http://talkwithcustomer.com to try out a live demo with talk with web visitor now to see exactly how it works.\r\n\r\nnow it’s also true that when reaching out to hot leads, you must act fast – the difference between contacting someone within 5 minutes versus 30 minutes later is huge – like 100 times better!\r\n\r\nthat’s what makes our new sms text with lead feature so powerful… you’ve got their phone number, so now you can start a text message (sms) conversation with them… so even if they don’t take you up on your offer right away, you continue to text them new offers, new content, and new reasons to do business with you.\r\n\r\nthis could change everything for you and your business.\r\n\r\nclick here http://talkwithcustomer.com to learn more about everything talk with web visitor can do and start turing eyeballs into money.\r\n\r\neric\r\nps: talk with web visitor offers a free 14 days trial – you could be converting up to 100x more leads immediately!   \r\nit even includes international long distance calling. \r\npaying customers are out there waiting. \r\nstarting connecting today by clicking here http://talkwithcustomer.com to try talk with web visitor now.\r\n\r\nif you\'d like to unsubscribe click here http://talkwithcustomer.com/unsubscribe.aspx?d=dhakacourierltd.com', ''),
+(53, 'mike smith', '', '', '88518725292', NULL, 'hello \r\n \r\nwe all know the importance that dofollow link have on any website`s ranks. \r\nhaving most of your linkbase filled with nofollow ones is of no good for your ranks and seo metrics. \r\n \r\nbuy quality dofollow links from us, that will impact your ranks in a positive way \r\nhttps://www.digital-x-press.com/product/150-dofollow-backlinks/ \r\n \r\nbest regards \r\nmike smith\r\n \r\nsupport@digital-x-press.com', ''),
+(54, 'roberts zuluf', '', '', '83923653983', NULL, 'hi \r\nhow are you? i wanted to reach out to you and verify that email was a good way to reach you or we can discuss this via the telephone,whatsapp only. +90 555 140 8097 or contact@frzuluf.com \r\ni count in your honor for a quick response for a good deal. \r\nregards, \r\nroberts zuluf', '');
 
 -- --------------------------------------------------------
 
@@ -13052,7 +13147,7 @@ CREATE TABLE `payment_method` (
 --
 
 INSERT INTO `payment_method` (`id`, `method`, `number`, `type`, `img`, `trash`) VALUES
-(0, 'DBBL', '110.11014220', 'personal', '0', 0),
+(0, 'DBBL', '110.110.14220', 'personal', '0', 0),
 (1, 'Bkash', '01615457930', 'personal', 'public/images/logo/payment_method-1620547677.webp', 0),
 (3, 'Nagad', '01615457930', 'personal', 'public/images/logo/payment_method-1620548085.webp', 0),
 (5, 'Rocket', '01715457930', 'personal', 'public/images/logo/payment_method-1620548205.webp', 0);
@@ -13065,12 +13160,12 @@ INSERT INTO `payment_method` (`id`, `method`, `number`, `type`, `img`, `trash`) 
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `cat_id` int(11) NOT NULL,
   `sub_cat_id` int(11) NOT NULL,
   `trash` int(1) NOT NULL DEFAULT 0,
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `products`
@@ -13105,6 +13200,88 @@ INSERT INTO `profiles` (`id`, `name`, `description`, `path`, `trash`) VALUES
 (7, 'freelance it lab', 'ipsum is simply text of the stry simply dummy text of the printing and typesetting industry. lorem ipsum is simply text of the. lorem ipsum is simply text of the stry simply dummy text of the printing and text of the stry simply dummy text of the printing and typesetting industry.', 'backend/images/profile/gallery15775158600.png', ''),
 (8, 'asad', 'video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link', 'backend/images/profile/gallery15775509970.jpg', ''),
 (9, 'service', 'video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link video link vi', 'backend/images/profile/gallery15775515040.png', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rider_or_agent_registration`
+--
+
+CREATE TABLE `rider_or_agent_registration` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `rider_or_agent_registration`
+--
+
+INSERT INTO `rider_or_agent_registration` (`id`, `date`, `name`, `email`, `phone`) VALUES
+(1, '2021-10-28', 'KHAIRUL ISLAM', 'admin@gmail.com', '01707536945'),
+(4, '2021-10-30', 'Adria Hodges', 'kyfaly@mailinator.com', '+1 (543) 657-6013'),
+(5, '2021-10-30', 'Noelani Hendrix', 'curysa@mailinator.com', '+1 (477) 555-5822'),
+(6, '2021-10-30', 'Colt Coffey', 'zyhix@mailinator.com', '+1 (654) 902-6356');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads`
+--
+
+CREATE TABLE `roads` (
+  `id` int(255) NOT NULL,
+  `road_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `trash` int(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `roads`
+--
+
+INSERT INTO `roads` (`id`, `road_name`, `trash`) VALUES
+(6, 'ঢাকা ময়মনসিংহ', 1),
+(4, 'Mymensingh To Dhaka', 0),
+(5, 'Dhaka To Mymensingh', 0),
+(7, 'Khulna To Bangura', 0),
+(8, 'A To B', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `road_mapping`
+--
+
+CREATE TABLE `road_mapping` (
+  `id` int(255) NOT NULL,
+  `date` date NOT NULL,
+  `invoice` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `transport_code` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'transport table code',
+  `road` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'road table id',
+  `trash` int(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `road_mapping`
+--
+
+INSERT INTO `road_mapping` (`id`, `date`, `invoice`, `transport_code`, `road`, `trash`) VALUES
+(1, '2021-10-12', 'rdmp-2110129889', '1255787', '8', 1),
+(2, '2021-10-12', 'rdmp-2110129889', '1223823', '7', 0),
+(3, '2021-10-12', 'rdmp-2110128218', '1255787', '5', 0),
+(4, '2021-10-12', 'rdmp-2110128218', '1223823', '8', 0),
+(5, '2021-10-12', 'rdmp-2110122360', '1255787', '4', 0),
+(6, '2021-10-12', 'rdmp-2110122360', '1223823', '7', 0),
+(7, '2021-10-12', 'rdmp-2110121304', '1255787', '5', 0),
+(8, '2021-10-12', 'rdmp-2110121304', '1223823', '8', 0),
+(9, '2021-10-13', 'rdmp-2110137863', '1255787', '5', 1),
+(10, '2021-10-13', 'rdmp-2110137863', '1223823', '7', 1),
+(28, '2021-10-13', 'rdmp-2110138648', '1223823', '4', 0),
+(27, '2021-10-13', 'rdmp-2110138648', '1255787', '7', 0),
+(29, '2021-11-24', 'rdmp-2111242333', '1255787', '5', 0),
+(30, '2021-11-24', 'rdmp-2111242333', '1223823', '7', 0);
 
 -- --------------------------------------------------------
 
@@ -13187,6 +13364,34 @@ INSERT INTO `settings` (`id`, `site_name`, `header_text`, `footer_text`, `banner
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sister_concern`
+--
+
+CREATE TABLE `sister_concern` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `update_at` date DEFAULT NULL,
+  `title` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` mediumtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `path` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `trash` int(1) NOT NULL DEFAULT 0
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `sister_concern`
+--
+
+INSERT INTO `sister_concern` (`id`, `date`, `update_at`, `title`, `url`, `path`, `trash`) VALUES
+(7, '2021-10-26', '2021-10-26', 'Playstation Logo Coloruyu', 'https://www.playstation.com/en-us/', 'backend/images/sister/sister16352006800.png', 0),
+(8, '2021-10-26', NULL, 'Bayerische Motoren Werke AG', 'https://www.bmw.com/en/index.html', 'backend/images/sister/sister16352007270.png', 0),
+(9, '2021-10-26', NULL, 'Google-Chrome', 'https://www.google.com/chrome/', 'backend/images/sister/sister16352008430.png', 0),
+(10, '2021-10-26', NULL, 'Google-Photos', 'https://www.google.com/photos/about/', 'backend/images/sister/sister16352009330.png', 0),
+(11, '2021-10-26', NULL, 'Huawei-Logo', 'https://www.huawei.com/en/', 'backend/images/sister/sister16352009710.png', 0),
+(12, '2021-10-26', '2021-10-26', 'Lays', 'https://www.lays.com', 'backend/images/sister/sister16352010080.png', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `site_meta`
 --
 
@@ -13235,7 +13440,9 @@ CREATE TABLE `sliders` (
 
 INSERT INTO `sliders` (`id`, `name`, `path`, `position`, `is_offer`, `status`) VALUES
 (68, '', 'public/images/slider/gallery16302183270.jpeg', 0, 0, 1),
-(69, '', 'public/images/slider/gallery16263038890.jpg', 0, 0, 1);
+(69, '', 'public/images/slider/gallery16263038890.jpg', 0, 0, 1),
+(0, '', 'public/images/slider/gallery16358303240.jpg', 0, 0, 1),
+(0, '', 'public/images/slider/gallery16358307290.jpg', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -13366,9 +13573,9 @@ INSERT INTO `stock` (`id`, `product_id`, `sale_price`, `purchase_price`, `quanti
 CREATE TABLE `subcategories` (
   `id` int(11) NOT NULL,
   `cat_id` int(11) NOT NULL,
-  `subcategory` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subcategory` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `trash` int(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `subcategories`
@@ -13399,6 +13606,7 @@ CREATE TABLE `subscribers` (
   `email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `username` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `password` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `orginal_password` text COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `profile_verification` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'pending',
   `mobile` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
@@ -13415,26 +13623,31 @@ CREATE TABLE `subscribers` (
   `document_type` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `nid_front` text COLLATE utf8_unicode_ci NOT NULL,
   `nid_back` text COLLATE utf8_unicode_ci NOT NULL,
-  `birth_certificate` text COLLATE utf8_unicode_ci NOT NULL
+  `birth_certificate` text COLLATE utf8_unicode_ci NOT NULL,
+  `user_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `subscribers`
 --
 
-INSERT INTO `subscribers` (`id`, `date`, `subscriber_id`, `referral_user`, `name`, `gender`, `birthday`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `image`, `profile_verification`, `mobile`, `payment_gateway`, `trx_id`, `address`, `status`, `verify_code`, `is_use`, `fb_link`, `profasion`, `guardian_name`, `guardian_phone`, `document_type`, `nid_front`, `nid_back`, `birth_certificate`) VALUES
-(1, '2021-09-08 05:14:37', 'KG-600122', '', 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, 'pending', '01910217482', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(2, '2021-09-18 03:12:22', 'KG-763072', '', 'MD. Khairul Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'mdkhairul773@gmail.com', '01636882947', '058e391a0b6342c694ceb96e2ea71671', NULL, 'pending', '01636882947', '', '', 'mdkhairul773', 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(3, '2021-09-21 06:09:38', 'KG-579704', '', 'atiqullah', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01713634913', '426902aff9e28b9f2cc3cc6b4579489b', NULL, 'pending', '01713634913', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(4, '2021-09-21 10:15:38', 'KG-692298', '', 'Harunur Rashid', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01716333787', '7a91aca8562d6c8c3ed6a3b9b3059b74', NULL, 'pending', '01716333787', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(5, '2021-09-23 15:51:51', 'KG-128839', '', 'Firoz Khan', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01757964645', 'd14f336a5c4bad6e29b45686ffe9b36f', NULL, 'pending', '01757964645', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(6, '2021-09-25 06:31:48', 'KG-578159', '', 'Mamun Talukder', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01719720785', 'fb6cdb7c97c5200193bc4d1d0f8ccf10', NULL, 'pending', '01719720785', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(7, '2021-09-30 06:28:41', 'KG-988203', '', 'Korim Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217481', '6d9c29d93f59a451881750f35cb18dc1', NULL, 'pending', '01910217481', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(8, '2021-09-30 06:29:56', 'KG-732660', '', 'Rohim Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217480', '6d9c29d93f59a451881750f35cb18dc1', NULL, 'pending', '01910217480', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(9, '2021-09-30 06:30:18', 'KG-487366', '', 'Hamidur Rahman', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217479', '6d9c29d93f59a451881750f35cb18dc1', NULL, 'pending', '01910217479', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(10, '2021-09-30 06:30:53', 'KG-434098', '', 'Jobbar Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217479', '6d9c29d93f59a451881750f35cb18dc1', NULL, 'pending', '01910217479', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(11, '2021-09-30 06:33:26', 'KG-555923', '', 'Jafor Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, 'pending', '01910217482', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', ''),
-(12, '2021-09-30 06:46:22', 'KG-910624', '', 'Khairul Islam 2021', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01707563645', 'b561af12c6fadde53de2cf0aec811774', NULL, 'pending', '01707563645', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '');
+INSERT INTO `subscribers` (`id`, `date`, `subscriber_id`, `referral_user`, `name`, `gender`, `birthday`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `orginal_password`, `image`, `profile_verification`, `mobile`, `payment_gateway`, `trx_id`, `address`, `status`, `verify_code`, `is_use`, `fb_link`, `profasion`, `guardian_name`, `guardian_phone`, `document_type`, `nid_front`, `nid_back`, `birth_certificate`, `user_type`) VALUES
+(1, '2021-09-08 05:14:37', 'KG-600122', '', 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'aminurweb@gmail.com', '01910217482', '6d9c29d93f59a451881750f35cb18dc1', '123456', NULL, 'pending', '01910217482', '', '', 'Freelance It lab', 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(2, '2021-09-18 03:12:22', 'KG-763072', '', 'MD. Khairul Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'mdkhairul773@gmail.com', '01636882947', '058e391a0b6342c694ceb96e2ea71671', '01636882947', NULL, 'pending', '01636882947', '', '', 'mdkhairul773', 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(3, '2021-09-21 06:09:38', 'KG-579704', '', 'atiqullah', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01713634913', '426902aff9e28b9f2cc3cc6b4579489b', '01713634913', NULL, 'pending', '01713634913', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(4, '2021-09-21 10:15:38', 'KG-692298', '', 'Harunur Rashid', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01716333787', '7a91aca8562d6c8c3ed6a3b9b3059b74', '01716333787', NULL, 'pending', '01716333787', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(5, '2021-09-23 15:51:51', 'KG-128839', '', 'Firoz Khan', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01757964645', 'd14f336a5c4bad6e29b45686ffe9b36f', '01757964645', NULL, 'pending', '01757964645', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(6, '2021-09-25 06:31:48', 'KG-578159', '', 'Mamun Talukder', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01719720785', 'fb6cdb7c97c5200193bc4d1d0f8ccf10', '01719720785', NULL, 'pending', '01719720785', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(7, '2021-09-30 06:28:41', 'KG-988203', '', 'Korim Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217481', '6d9c29d93f59a451881750f35cb18dc1', '01910217481', NULL, 'pending', '01910217481', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(8, '2021-09-30 06:29:56', 'KG-732660', '', 'Rohim Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217480', '6d9c29d93f59a451881750f35cb18dc1', '01910217480', NULL, 'pending', '01910217480', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(9, '2021-09-30 06:30:18', 'KG-487366', '', 'Hamidur Rahman', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217479', '6d9c29d93f59a451881750f35cb18dc1', '01910217479', NULL, 'pending', '01910217479', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(10, '2021-09-30 06:30:53', 'KG-434098', '', 'Jobbar Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217479', '6d9c29d93f59a451881750f35cb18dc1', '01910217479', NULL, 'pending', '01910217479', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(11, '2021-09-30 06:33:26', 'KG-555923', '', 'Jafor Mia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01910217482', '6d9c29d93f59a451881750f35cb18dc1', '01910217482', NULL, 'pending', '01910217482', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(12, '2021-09-30 06:46:22', 'KG-910624', '', 'Khairul Islam 2021', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01707563645', 'b561af12c6fadde53de2cf0aec811774', '01707563645', NULL, 'pending', '01707563645', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(13, '2021-10-17 06:59:02', 'KG-962362', '', 'Md Tarikul Islam Apon', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01716378052', 'b7826cc02619bfc1e15413a57994373a', '01716378052', NULL, 'pending', '01716378052', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(14, '2021-10-26 07:24:21', 'KG-546911', '', 'Mustafizur Rahman', NULL, NULL, NULL, NULL, NULL, NULL, '', '01937476716', 'e650b9e05d8660f5e8b1349de3f9000e', '01937476716', NULL, 'pending', '01937476716', '', '', '22 Coronation Road, Sankipara,Mymensingh', 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer'),
+(15, '2021-10-27 10:32:44', 'KG-589880', '', 'KHAIRUL ISLAM 771', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '016368829470', '0ca0a2dbc4ce5afe8e45105fad493f44', '016368829470', NULL, 'pending', '016368829470', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'merchant'),
+(16, '2021-10-27 10:36:34', 'KG-334089', '', 'KHAIRUL ISLAM 7848944', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01636882944', 'e69725fbcfea9d8ee0220227533bf960', '01636882944', NULL, 'pending', '01636882944', '', '', NULL, 'active', NULL, 0, '', '', '', '', '', '', '', '', 'custommer');
 
 -- --------------------------------------------------------
 
@@ -13467,7 +13680,10 @@ INSERT INTO `system_action_menus` (`id`, `parent_id`, `dropdown_id`, `name`, `ty
 (115, 68, 0, 'Deactive', 'success', 'subscriber/user/deactive', 0, 'fa fa-check', 1),
 (116, 71, 133, 'edit', 'info', 'trx_method/TrxMethod/edit', 0, 'fa fa-pencil-square-o', 1),
 (117, 71, 133, 'Delete', 'danger', 'trx_method/TrxMethod/delete', 0, 'fa fa-trash-o', 1),
-(128, 68, 0, 'View', 'info', 'subscriber/user/profile', 0, 'fa fa-eye', 1);
+(128, 68, 0, 'View', 'info', 'subscriber/user/profile', 0, 'fa fa-eye', 1),
+(132, 94, 165, 'View', 'info', 'sister_concern/sister_concern/view', 0, 'fa fa-eye', 0),
+(133, 94, 165, 'Edit', 'warning', 'sister_concern/sister_concern/edit', 0, 'fa fa-pencil-square-o', 1),
+(134, 94, 165, 'Delete', 'danger', 'sister_concern/sister_concern/trash', 0, 'fa fa-trash-o', 1);
 
 -- --------------------------------------------------------
 
@@ -13492,28 +13708,34 @@ CREATE TABLE `system_aside_menus` (
 --
 
 INSERT INTO `system_aside_menus` (`id`, `name`, `controller_path`, `selector`, `icon`, `has_sub_menu`, `has_action_menu`, `position`, `status`) VALUES
-(21, 'Slider', '', 'slider', 'fa fa-photo', 1, 1, 0, 1),
-(26, 'About Me', 'about_us/About_controller/add', 'about_us', 'fa fa-question', 0, 1, 1, 1),
-(34, 'Settings', '', 'setting', 'fa fa-cog', 1, 1, 18, 1),
-(42, 'Privilege', 'system_privilege/privilegeController', 'privilege', 'fa fa-users', 0, 0, 16, 1),
+(21, 'Slider', '', 'slider', 'fa fa-photo', 1, 1, 1, 0),
+(26, 'About Me', 'about_us/About_controller/add', 'about_us', 'fa fa-question', 0, 1, 8, 0),
+(34, 'Settings', '', 'setting', 'fa fa-cog', 1, 1, 16, 1),
+(42, 'Privilege', 'system_privilege/privilegeController', 'privilege', 'fa fa-users', 0, 0, 14, 1),
 (66, 'SMS', '', 'sms', 'fa fa-paper-plane', 1, 1, 12, 1),
 (68, 'Customer', 'subscriber/user', 'user_menu', 'fa fa-users', 0, 0, 11, 1),
-(69, 'Pages', 'pages/pages', 'pages', 'fa fa-file', 0, 0, 5, 1),
-(71, 'Payment Method', '', 'payment_method', 'fa fa-money', 1, 0, 8, 1),
+(69, 'Pages', 'pages/pages', 'pages', 'fa fa-file', 0, 0, 12, 0),
+(71, 'Payment Method', '', 'payment_method', 'fa fa-money', 1, 0, 10, 1),
 (72, 'District', 'district/District', 'district', 'fa fa-map-marker', 0, 1, 13, 0),
 (73, 'Upazila', 'upazila/Upazila', 'upazila', 'fa fa-map-marker', 0, 1, 14, 0),
-(77, 'Blog', '', 'blog', 'fa fa-rss', 1, 1, 4, 1),
-(78, 'Message', 'message/message/index', 'message', 'fa fa-commenting', 0, 1, 15, 1),
-(79, 'Testimonial', '', 'testimonial', 'fa fa-male', 1, 1, 3, 1),
-(80, 'Services', '', 'services', 'fa fa-paper-plane', 1, 1, 2, 1),
-(84, 'Booking List', 'booking/booking', 'booking_list', 'fa fa-calendar', 0, 0, 9, 1),
+(77, 'Blog', '', 'blog', 'fa fa-rss', 1, 1, 11, 0),
+(78, 'Message', 'message/message/index', 'message', 'fa fa-commenting', 0, 1, 13, 1),
+(79, 'Testimonial', '', 'testimonial', 'fa fa-male', 1, 1, 10, 0),
+(80, 'Services', '', 'services', 'fa fa-paper-plane', 1, 1, 9, 0),
+(84, 'Parcel List', 'booking/booking', 'booking_list', 'fa fa-calendar', 0, 0, 3, 1),
 (85, 'Agente Payment', '', 'agente_payment', 'fa fa-paypal', 1, 1, 10, 0),
-(86, 'Sub-Category', '', 'subcategory', 'fa fa-cubes', 1, 1, 7, 1),
-(87, 'Category', '', 'category', 'fa fa-sitemap', 1, 1, 6, 1),
-(88, 'Product', '', 'product', 'fa fa-product-hunt', 1, 1, 2, 0),
-(89, 'Access Info', 'access_info/access_info', 'access_info', 'fa fa-cog', 0, 0, 17, 1),
-(90, 'Agent  Payment', '', 'agent', 'fa fa-paypal', 1, 1, 0, 1),
-(91, 'Delivery Man', '', 'delivery_man', 'fa fa-paypal', 1, 1, 0, 1);
+(86, 'Sub-Category', '', 'subcategory', 'fa fa-cubes', 1, 1, 9, 1),
+(87, 'Category', '', 'category', 'fa fa-sitemap', 1, 1, 8, 1),
+(89, 'Access Info', 'access_info/access_info', 'access_info', 'fa fa-cog', 0, 0, 15, 1),
+(90, 'Agent  Payment', '', 'agent', 'fa fa-paypal', 1, 1, 4, 1),
+(91, 'Rider Payment', '', 'raider', 'fa fa-paypal', 1, 1, 5, 1),
+(92, 'Transport', '', 'transport', 'fa fa-car', 1, 1, 6, 1),
+(93, 'Road Mapping', '', 'road_mapping', 'fa fa-road', 1, 1, 7, 1),
+(94, 'Sister Concern', '', 'sister_concern', 'fa fa-building', 1, 1, 6, 0),
+(95, 'Rider Or Agent', 'riderAgent_list/RiderAgent_list', 'riderAgent_list', 'fa fa-male', 0, 0, 7, 0),
+(96, 'Website Settings', '', 'website_settings', 'fa fa-globe', 1, 0, 0, 1),
+(97, 'Team', '', 'team', 'fa fa-user-secret', 1, 1, 1, 1),
+(98, 'Application Setting', '', 'application_setting', 'fa fa-cog', 1, 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -13537,35 +13759,58 @@ CREATE TABLE `system_aside_menu_dropdowns` (
 --
 
 INSERT INTO `system_aside_menu_dropdowns` (`id`, `parent_id`, `name`, `selector`, `controller_path`, `icon`, `position`, `status`) VALUES
-(49, 21, 'Trash', 'slider_trash', 'slider/slider_controller/trash_list', 'fa fa-trash-o', 2, 1),
-(50, 21, 'All Slider', 'slider_list', 'slider/slider_controller', 'fa fa-list-alt', 1, 1),
-(51, 21, 'Add Slider', 'add_slider', 'slider/slider_controller/add', 'fa fa-plus-square-o', 0, 1),
-(81, 34, 'Header', 'header', 'setting/setting/header', 'fa fa-angle-right', 1, 1),
-(82, 34, 'Footer', 'setting', 'setting/setting/footer', 'fa fa-angle-right', 2, 1),
+(49, 21, 'Trash', 'slider_trash', 'slider/slider_controller/trash_list', 'fa fa-trash-o', 2, 0),
+(50, 21, 'All Slider', 'slider_list', 'slider/slider_controller', 'fa fa-list-alt', 1, 0),
+(51, 21, 'Add Slider', 'add_slider', 'slider/slider_controller/add', 'fa fa-plus-square-o', 0, 0),
+(81, 34, 'Header', 'header', 'setting/setting/header', 'fa fa-angle-right', 0, 1),
+(82, 34, 'Footer', 'setting', 'setting/setting/footer', 'fa fa-angle-right', 1, 1),
 (127, 66, 'Send SMS', 'send_sms', 'sms/sendSms/send_sms', 'fa fa-angle-right', 1, 1),
 (128, 66, 'SMS Report', 'sms_report_', 'sms/sendSms/sms_report', 'fa fa-angle-right', 2, 1),
 (129, 66, 'Custom SMS', 'custom_sms', 'sms/sendSms/send_custom_sms', 'fa fa-angle-right', 0, 1),
 (132, 71, 'Add Method', 'add_method', 'trx_method/TrxMethod', 'fa fa-angle-right', 0, 1),
-(133, 71, 'All Method', 'all_method', 'trx_method/TrxMethod/all', 'fa fa-angle-right', 1, 1),
+(133, 71, 'All Method', 'all_method', 'trx_method/TrxMethod/all', 'fa fa-angle-right', 1, 0),
 (134, 34, 'Theme Color', 'theme_color', 'setting/setting/theme_color', 'fa fa-angle-right', 0, 0),
-(139, 77, 'Add New', 'blog', 'blog/blog/index', 'fa fa-angle-right', 0, 1),
-(140, 77, 'View All', 'blog', 'blog/blog/all_view', 'fa fa-angle-right', 1, 1),
-(141, 79, 'Add New', 'testimonial', 'testimonial/testimonial/index	', 'fa fa-angle-right', 0, 1),
-(142, 79, 'View All', 'testimonial', 'testimonial/testimonial/all_view', 'fa fa-angle-right', 1, 1),
-(143, 80, 'Add New', 'services', 'service/service', 'fa fa-angle-right', 0, 1),
-(144, 80, 'View All', 'view_all', 'service/service/all_view	', 'fa fa-angle-right', 1, 1),
+(139, 77, 'Add New', 'blog', 'blog/blog/index', 'fa fa-angle-right', 0, 0),
+(140, 77, 'View All', 'blog', 'blog/blog/all_view', 'fa fa-angle-right', 1, 0),
+(141, 79, 'Add New', 'testimonial', 'testimonial/testimonial/index	', 'fa fa-angle-right', 0, 0),
+(142, 79, 'View All', 'testimonial', 'testimonial/testimonial/all_view', 'fa fa-angle-right', 0, 1),
+(143, 80, 'Add New', 'services', 'service/service', 'fa fa-angle-right', 0, 0),
+(144, 80, 'View All', 'view_all', 'service/service/all_view	', 'fa fa-angle-right', 1, 0),
 (147, 85, 'Add Payment', 'add_payment', 'agente_payment/agente_payment/create', 'fa fa-angle-right', 0, 1),
 (148, 85, 'All Payment', 'all_payment', 'agente_payment/agente_payment', 'fa fa-angle-right', 1, 1),
 (149, 86, 'All Sub-Category', 'All', 'subcategory/subcategory', 'fa fa-angle-right', 1, 1),
 (150, 86, 'Add Sub-Category', 'add', 'subcategory/subcategory/add', 'fa fa-angle-right', 0, 1),
 (151, 87, 'All Category', 'all', 'category/category', 'fa fa-angle-right', 1, 1),
 (152, 87, 'Add Category', 'add', 'category/category/add	', 'fa fa-angle-right', 0, 1),
-(153, 88, 'All Products', 'all', 'product/product/', 'fa fa-angle-right', 0, 1),
-(154, 88, 'Add Product', 'add', 'product/product/add', 'fa fa-angle-right', 0, 1),
 (155, 90, 'Add Payment', 'add_payment', 'agent/agent/add_payment', 'fa fa-angle-right', 0, 1),
-(156, 90, 'View All', 'view_all', 'agent/agent', 'fa fa-angle-right', 0, 1),
-(157, 91, 'Add Payment', 'add_payment', 'delivery_man/delivery_man/add_payment', 'fa fa-angle-right', 0, 1),
-(158, 91, 'View All', 'view_all', 'delivery_man/delivery_man', 'fa fa-angle-right', 0, 1);
+(156, 90, 'View All', 'view_all', 'agent/agent', 'fa fa-angle-right', 1, 1),
+(157, 91, 'Add Payment', 'add_payment', 'raider/raider/add_payment', 'fa fa-angle-right', 0, 1),
+(158, 91, 'View All', 'view_all', 'raider/raider', 'fa fa-angle-right', 1, 1),
+(159, 92, 'New Transport', 'new_transport', 'transport/transport/create', 'fa fa-angle-right', 0, 1),
+(160, 92, 'All Transport', 'all_transport', 'transport/transport', 'fa fa-angle-right', 1, 1),
+(161, 93, 'Add Road', 'add_road', 'road_mapping/road_mapping', 'fa fa-angle-right', 0, 1),
+(162, 93, 'Road Mapping', 'road_mapping_add', 'road_mapping/road_mapping/mapping', 'fa fa-angle-right', 1, 1),
+(163, 93, 'All Mapping', 'all_mapping', 'road_mapping/road_mapping/all_mapping', 'fa fa-angle-right', 2, 1),
+(164, 94, 'Add New', 'add', 'sister_concern/sister_concern/add', 'fa fa-angle-right', 0, 0),
+(165, 94, 'View All', 'all', 'sister_concern/sister_concern', 'fa fa-angle-right', 0, 0),
+(166, 96, 'Add Slider', 'add_slider', 'slider/slider_controller/add', 'fa fa-angle-right', 0, 1),
+(167, 96, 'All Slider', 'slider_list', 'slider/slider_controller', 'fa fa-angle-right', 1, 1),
+(168, 96, 'About Us ', 'about_us', 'about_us/About_controller/add', 'fa fa-angle-right', 2, 1),
+(169, 96, 'Add Sister Concern', 'add_sister_concern', 'sister_concern/sister_concern/add', 'fa fa-angle-right', 3, 1),
+(170, 96, 'All Sister Concern', 'all_sister_concern', 'sister_concern/sister_concern', 'fa fa-angle-right', 4, 1),
+(171, 96, 'All Services', 'view_all', 'service/service/all_view', 'fa fa-angle-right', 6, 1),
+(172, 96, 'Add Services', 'services', 'service/service', 'fa fa-angle-right', 5, 1),
+(173, 96, 'Add Blog', 'add_blog', 'blog/blog/index', 'fa fa-angle-right', 9, 1),
+(174, 96, 'All Blog', 'all_blog', 'blog/blog/all_view', 'fa fa-angle-right', 10, 1),
+(175, 96, 'Add Testimonial', 'add_testimonial', 'testimonial/testimonial/index', 'fa fa-angle-right', 7, 1),
+(176, 96, 'All Testimonial', 'all_testimonial', 'trx_method/TrxMethod/all', 'fa fa-angle-right', 8, 1),
+(177, 96, 'Pages', 'pages', 'pages/pages', 'fa fa-angle-right', 11, 1),
+(178, 97, 'Raider', 'riderAgent_list', 'riderAgent_list/RiderAgent_list', 'fa fa-angle-right', 3, 1),
+(179, 97, 'Branch', 'branch', 'team/branch', 'fa fa-angle-right', 0, 1),
+(180, 97, 'Branch User', 'branchUser', 'team/branchUser', 'fa fa-angle-right', 1, 1),
+(181, 97, 'Merchant', 'merchant', 'team/merchant', 'fa fa-angle-right', 2, 1),
+(182, 97, 'Warehouse', 'warehouse', 'team/warehouse', 'fa fa-angle-right', 4, 1),
+(183, 97, 'Warehouse User', 'warehouseUser', 'team/warehouseUser', 'fa fa-angle-right', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -13589,9 +13834,9 @@ INSERT INTO `system_privileges` (`id`, `admin_id`, `aside_menu_id`, `aside_menu_
 (1, 10, '[\"5\",\"4\",\"3\",\"1\"]', '[\"11\",\"10\",\"9\",\"8\",\"7\",\"6\",\"5\"]', '[\"6\",\"5\",\"4\",\"3\",\"2\",\"1\"]'),
 (2, 12, '[\"7\",\"6\",\"2\"]', '[\"15\",\"14\",\"13\",\"12\",\"1\"]', '[\"11\",\"10\",\"9\",\"14\",\"13\"]'),
 (3, 13, '[\"84\",\"80\",\"79\",\"78\",\"77\",\"73\",\"72\",\"71\",\"69\",\"68\",\"66\",\"42\",\"34\",\"26\",\"21\"]', '[\"144\",\"143\",\"142\",\"141\",\"140\",\"139\",\"133\",\"132\",\"129\",\"128\",\"127\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"117\",\"116\",\"128\",\"115\",\"60\",\"59\",\"58\",\"57\"]'),
-(4, 4, '[\"89\",\"87\",\"86\",\"85\",\"84\",\"80\",\"79\",\"78\",\"77\",\"73\",\"72\",\"71\",\"69\",\"68\",\"66\",\"42\",\"34\",\"26\",\"21\"]', '[\"152\",\"151\",\"150\",\"149\",\"148\",\"147\",\"144\",\"143\",\"142\",\"141\",\"140\",\"139\",\"133\",\"132\",\"129\",\"128\",\"127\",\"134\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"117\",\"116\",\"128\",\"115\",\"60\",\"59\",\"58\",\"57\"]'),
+(4, 4, '[\"95\",\"94\",\"93\",\"92\",\"91\",\"90\",\"89\",\"87\",\"86\",\"84\",\"80\",\"79\",\"78\",\"77\",\"71\",\"69\",\"68\",\"66\",\"42\",\"34\",\"26\",\"21\"]', '[\"165\",\"164\",\"163\",\"162\",\"161\",\"160\",\"159\",\"158\",\"157\",\"152\",\"151\",\"150\",\"149\",\"144\",\"143\",\"142\",\"141\",\"140\",\"139\",\"133\",\"132\",\"129\",\"128\",\"127\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"134\",\"133\",\"117\",\"116\",\"128\",\"115\",\"60\",\"59\",\"58\",\"57\"]'),
 (5, 3, '[\"84\"]', NULL, NULL),
-(6, 1, '[\"91\",\"90\",\"84\",\"79\",\"66\"]', '[\"158\",\"157\",\"156\",\"155\",\"142\",\"141\",\"129\",\"128\",\"127\"]', NULL),
+(6, 1, '[\"91\",\"90\",\"84\"]', '[\"158\",\"157\",\"156\",\"155\"]', NULL),
 (7, 6, '[\"84\"]', NULL, NULL),
 (8, 5, '[\"84\"]', NULL, NULL);
 
@@ -13622,16 +13867,41 @@ INSERT INTO `testimonial` (`id`, `name`, `designation`, `description`, `path`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `transport`
+--
+
+CREATE TABLE `transport` (
+  `id` int(100) NOT NULL,
+  `code` int(100) UNSIGNED NOT NULL,
+  `engine_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `car_number` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `chassis_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `driver_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `driver_mobile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `trash` int(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `transport`
+--
+
+INSERT INTO `transport` (`id`, `code`, `engine_no`, `car_number`, `chassis_no`, `driver_name`, `driver_mobile`, `trash`) VALUES
+(4, 1255787, 'E102030', 'Dhaka - 102030', 'C102030', 'Rahat', '01769554512', 0),
+(5, 1223823, 'E - 4520', 'Mymensingh - 3250', 'C-890', 'Amin', '01636882947', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `unions`
 --
 
 CREATE TABLE `unions` (
   `id` int(4) NOT NULL,
   `upazilla_id` int(3) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `bn_name` varchar(25) NOT NULL,
-  `url` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `bn_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `unions`
@@ -18194,11 +18464,11 @@ INSERT INTO `unions` (`id`, `upazilla_id`, `name`, `bn_name`, `url`) VALUES
 CREATE TABLE `upazilas` (
   `id` int(3) NOT NULL,
   `district_id` int(2) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `bn_name` varchar(25) NOT NULL,
-  `url` varchar(50) NOT NULL,
+  `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `bn_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `shipping_cost` decimal(4,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `upazilas`
@@ -19247,11 +19517,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `opening`, `name`, `l_name`, `gender`, `birthday`, `maritial_status`, `position`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `privilege`, `image`, `mobile`, `branch`) VALUES
 (1, '2019-12-09 01:59:36', 'Superadmin', '', '', '', '', '', '', '', '', '', 'developer@gmail.com', 'superadmin', 'f7a42d7e1f2512e5a7f4700fbf6c9df4', 'admin', 'public/profiles/profile_16265022520.png', '01983667657', ''),
-(2, '2019-12-09 01:59:36', 'President', '', '', '', '', '', '', '', '', '', '', 'president', '3f41a4eed1b5d78e1a588f31fc97b629', 'president', 'public/profiles/profile_16307087580.png', '', ''),
-(3, '2021-09-08 04:30:52', 'Aminur Islam', '', '', '', '', '', '', '', '', '', 'aminurweb@gmail.com', 'amin123', '7b449a091c6590e85a9cf9eca4fa8a1f', 'user', 'public/profiles/amin123.jpg', '01910217482', ''),
-(4, '2021-09-21 12:26:46', 'Dhaka Courier Ltd', '', '', '', '', '', '', '', '', '', 'freelanceitlab.com@gmail.com', 'dhakacourier', 'e187cd89e20971d8aed6dcf976ac7508', 'super', 'public/profiles/dhakacourier.png', '01710511241', ''),
-(5, '2021-09-28 11:55:56', 'Amin Agent', '', '', '', '', '', '', '', '', '', 'Q@gmail.com', '01636882947', '058e391a0b6342c694ceb96e2ea71671', 'admin', 'public/profiles/01636882947.jpg', '01636882947', ''),
-(6, '2021-09-29 10:26:44', 'Khairul Islam', '', '', '', '', '', '', '', '', '', 'adc@gmail.com', '016368829470', '0ca0a2dbc4ce5afe8e45105fad493f44', 'admin', 'public/profiles/016368829470.jpg', '016368829470', '');
+(2, '2019-12-09 01:59:36', 'President', '', '', '', '', '', '', '', '', '', '', 'president', '3f41a4eed1b5d78e1a588f31fc97b629', 'president', 'public/profiles/profile_16362578870.jpg', '', ''),
+(4, '2021-09-21 12:26:46', 'Dhaka Courier Ltd', '', '', '', '', '', '', '', '', '', 'freelanceitlab.com@gmail.com', 'dhakacourier', 'e187cd89e20971d8aed6dcf976ac7508', 'super', 'public/profiles/dhakacourier.png', '01710511241', '');
 
 -- --------------------------------------------------------
 
@@ -19262,20 +19529,15 @@ INSERT INTO `users` (`id`, `opening`, `name`, `l_name`, `gender`, `birthday`, `m
 CREATE TABLE `user_zones` (
   `id` int(255) NOT NULL,
   `user_id` int(255) NOT NULL COMMENT 'user_id from users table',
-  `zone` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `zone` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user_zones`
 --
 
 INSERT INTO `user_zones` (`id`, `user_id`, `zone`) VALUES
-(19, 6, 'Bhola Sadar'),
-(18, 6, 'Belaichari'),
-(17, 6, 'Baraigram'),
-(16, 6, 'Ajmiriganj'),
-(15, 1, 'Mymensingh Sadar'),
-(25, 5, 'Mymensingh Sadar');
+(15, 1, 'Mymensingh Sadar');
 
 -- --------------------------------------------------------
 
@@ -19418,6 +19680,24 @@ ALTER TABLE `profiles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `rider_or_agent_registration`
+--
+ALTER TABLE `rider_or_agent_registration`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads`
+--
+ALTER TABLE `roads`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_mapping`
+--
+ALTER TABLE `road_mapping`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
@@ -19434,6 +19714,12 @@ ALTER TABLE `sessions`
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sister_concern`
+--
+ALTER TABLE `sister_concern`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -19477,6 +19763,12 @@ ALTER TABLE `system_aside_menu_dropdowns`
 -- Indexes for table `system_privileges`
 --
 ALTER TABLE `system_privileges`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `transport`
+--
+ALTER TABLE `transport`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -19525,13 +19817,13 @@ ALTER TABLE `agent_transactions`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `booking_agent_records`
 --
 ALTER TABLE `booking_agent_records`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -19555,7 +19847,7 @@ ALTER TABLE `divisions`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -19568,6 +19860,30 @@ ALTER TABLE `pages`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `rider_or_agent_registration`
+--
+ALTER TABLE `rider_or_agent_registration`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `roads`
+--
+ALTER TABLE `roads`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `road_mapping`
+--
+ALTER TABLE `road_mapping`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `sister_concern`
+--
+ALTER TABLE `sister_concern`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `sms_record`
@@ -19585,31 +19901,37 @@ ALTER TABLE `subcategories`
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `system_action_menus`
 --
 ALTER TABLE `system_action_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menus`
 --
 ALTER TABLE `system_aside_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menu_dropdowns`
 --
 ALTER TABLE `system_aside_menu_dropdowns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
 
 --
 -- AUTO_INCREMENT for table `system_privileges`
 --
 ALTER TABLE `system_privileges`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `transport`
+--
+ALTER TABLE `transport`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `unions`
@@ -19633,13 +19955,13 @@ ALTER TABLE `upazillas_old`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user_zones`
 --
 ALTER TABLE `user_zones`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Constraints for dumped tables

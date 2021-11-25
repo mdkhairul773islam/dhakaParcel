@@ -1,0 +1,27 @@
+/* sister section start */
+.sister_section {
+    padding: 75px 0 45px;
+    background: #FFF;
+}
+.sister_section .sister_content {
+    transition: 0.4s ease-in-out;
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.sister_section .sister_content img {height: 180px !important;object-fit:cover;}
+
+.sister_section .sister_content:hover {box-shadow: 0px 0px 15px 3px #ddd;;}
+.sister_section .sister_content h4 {
+    text-overflow: ellipsis;
+    margin: 12px 0px 8px;
+    overflow: hidden;
+    color: #222;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+  
+/* sister section End */

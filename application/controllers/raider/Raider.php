@@ -1,4 +1,4 @@
-<?php class Delivery_man extends Admin_Controller{
+<?php class Raider extends Admin_Controller{
         public function __construct(){
             parent::__construct();
         }
@@ -12,7 +12,7 @@
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
             $this->load->view('admin/includes/nav', $this->data);
-            $this->load->view('components/delivery_man/index', $this->data);
+            $this->load->view('components/raider/index', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
 
@@ -25,7 +25,7 @@
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
             $this->load->view('admin/includes/nav', $this->data);
-            $this->load->view('components/delivery_man/add_payment', $this->data);
+            $this->load->view('components/raider/add_payment', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
     }

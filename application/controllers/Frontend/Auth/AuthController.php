@@ -60,7 +60,7 @@
 
         return view('frontend.auth.forgot');
     }
-
+    
     /*
      * *************************
      *  Below Code Load The
@@ -83,6 +83,7 @@
             $data['subscriber_id'] = $subscriberId;
             $data['username'] = $_POST['mobile'];
             $data['password'] = hash('md5', $_POST['password'].config_item('encryption_key'));
+            $data['orginal_password'] = $_POST['password'];
             unset($data['confirm_password']);
             if($_POST['password']==$_POST['confirm_password']){
                 save('subscribers', $data);
