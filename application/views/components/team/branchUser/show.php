@@ -7,17 +7,29 @@
                 </div>
             </div>
             <div class="panel-body">
-                <table class="table table-sm">
+                <table class="table table-bordered">
                     <tbody>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <img src="#" class="img-fluid img-thumbnail" style="height: 100px" alt="branch User">
+                            </td>
+                        </tr>
+
                         <tr>
                             <th>Status</th>
                             <td>
-                                <span class="badge bg-secondary">Active</span>
+                                <span class="bg-success">Active</span>
                             </td>
                         </tr>
                         <tr>
                             <th width="30%">Name</th>
                             <td width="70%">
+                                Md shaokat hossain
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Branch</th>
+                            <td>
                                 Main Branch
                             </td>
                         </tr>
@@ -54,102 +66,16 @@
                         <tr>
                             <th>Email</th>
                             <td>
-                                shaokat71@stitbd.com
+                                dhaka@branch.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Password</th>
+                            <td>
+                                12345
                             </td>
                         </tr>
 
-
-                        <tr>
-                            <th>Branch User List</th>
-                            <td>
-                                <table class="table table-sm">
-                                    <tbody>
-                                        <tr>
-                                            <th width="10%">#</th>
-                                            <th width="30%">Name</th>
-                                            <th width="30%">Address
-                                            </th>
-                                            <th width="30%">Contact Number
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>1
-                                            </td>
-                                            <td>Md shaokat hossain
-                                            </td>
-                                            <td>68/F, Level-1-2,Green Road, </td>
-                                            <td>01834163689 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Merchant List</th>
-                            <td>
-                                <table class="table table-sm">
-                                    <tbody>
-                                        <tr>
-                                            <th width="10%">#</th>
-                                            <th width="30%">Name</th>
-                                            <th width="30%">Address
-                                            </th>
-                                            <th width="30%">Contact Number
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>1
-                                            </td>
-                                            <td>Md. Shaokat Hossain
-                                            </td>
-                                            <td>dhaka </td>
-                                            <td>01757769498 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2
-                                            </td>
-                                            <td>BFDC FISH
-                                            </td>
-                                            <td>DAsddf </td>
-                                            <td>05165654 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3
-                                            </td>
-                                            <td>Kazi
-                                            </td>
-                                            <td>Homna </td>
-                                            <td>0516553654 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Rider List</th>
-                            <td>
-                                <table class="table table-sm">
-                                    <tbody>
-                                        <tr>
-                                            <th width="10%">#</th>
-                                            <th width="30%">Name</th>
-                                            <th width="30%">Address
-                                            </th>
-                                            <th width="30%">Contact Number
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>1
-                                            </td>
-                                            <td>Rana khan
-                                            </td>
-                                            <td>mirpur </td>
-                                            <td>0165452545 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

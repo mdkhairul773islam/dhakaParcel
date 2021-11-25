@@ -13,13 +13,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Warehouse Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Warehouse Name" class="form-control" required>
+                                <input type="text" name="name" placeholder="Warehouse Name" class="form-control"
+                                    required>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Warehouse <span class="req">*</span></label>
+                                <label class="control-label">Warehouse Type <span class="req">*</span></label>
                                 <select name="warehouse_type" class="form-control" data-live-search="true" required>
                                     <option value="" selected disabled>Select Type</option>
                                     <option value="0"></option>

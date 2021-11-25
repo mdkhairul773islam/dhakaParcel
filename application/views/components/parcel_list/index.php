@@ -3,13 +3,8 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Warehouse Users List</h1>
+                    <h1>Parcels List</h1>
                 </div>
-                <a href="<?= get_url('/team/warehouseUser/add'); ?>" class="pull-right btn btn-success m-0"
-                    style="font-size: 12px;">
-                    <i class="fa fa-pencil "></i>
-                    Add Warehouse Users
-                </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
@@ -18,11 +13,13 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
+                                <th>ID</th>
                                 <th>Name</th>
-                                <th>Image</th>
                                 <th>Email</th>
-                                <th>Warehouse</th>
-                                <th>Contact Number</th>
+                                <th>Branch</th>
+                                <th>Area</th>
+                                <th>Upazila</th>
+                                <th>District</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -35,6 +32,8 @@
                                 <td>Shami@gmail.com</td>
                                 <td>Imtiaz</td>
                                 <td>Abdullah</td>
+                                <td>Dhaka</td>
+                                <td>Dhaka</td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>

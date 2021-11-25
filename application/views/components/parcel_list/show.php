@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>View Warehouse</h1>
+                    <h1>View Raider</h1>
                 </div>
             </div>
             <div class="panel-body">
@@ -22,7 +22,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th width="30%">Warehouse</th>
+                            <th width="30%">Rider ID</th>
                             <td width="70%">
                                 012365
                             </td>
@@ -31,6 +31,30 @@
                             <th>Full Address</th>
                             <td>
                                 68/F, Level-1-2,Green Road,
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>District</th>
+                            <td>
+                                District Name
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Thana/Upazila</th>
+                            <td>
+                                Dhanmondi
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Area</th>
+                            <td>
+                                Jigatala TSO
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Branch</th>
+                            <td>
+                                Jigatala TSO
                             </td>
                         </tr>
                         <tr>
@@ -47,6 +71,12 @@
                         </tr>
                         <tr>
                             <th>Password</th>
+                            <td>
+                                shaokat71@stitbd.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Image</th>
                             <td>
                                 shaokat71@stitbd.com
                             </td>

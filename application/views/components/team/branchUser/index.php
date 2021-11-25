@@ -22,7 +22,7 @@
                                 <th>Email</th>
                                 <th>Branch</th>
                                 <th>Upazila</th>
-                                <th>Distric</th>
+                                <th>District</th>
                                 <th>Area</th>
                                 <th>Status</th>
                                 <th>Action</th>

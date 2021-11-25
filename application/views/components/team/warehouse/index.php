@@ -29,7 +29,6 @@
                                 <td>1</td>
                                 <td>Amin</td>
                                 <td>Shami@gmail.com</td>
-                                <td>Dhaka</td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
