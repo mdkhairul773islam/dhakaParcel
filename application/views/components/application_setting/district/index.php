@@ -14,7 +14,7 @@
             <div class="panel-body">
                 <?php msg(); ?>
                 <div class="table-responsive">
-                    <table id="branchList" class="table table-hover table-bordered display">
+                    <table id="districtList" class="table table-hover table-bordered display">
                         <thead>
                             <tr>
                                 <th>SL</th>
@@ -23,7 +23,7 @@
                                 <th>Home Delivery</th>
                                 <th>Lock Down Service</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,6 +68,6 @@
 
 <script>
 $(document).ready(function() {
-    $('#branchList').DataTable();
+    $('#districtList').DataTable();
 });
 </script>

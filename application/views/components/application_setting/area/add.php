@@ -32,16 +32,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Area Name" class="form-control"
-                                    required>
+                                <input type="text" name="name" placeholder="Area Name" class="form-control" required>
                             </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Post Code <span class="req">*</span></label>
-                                <input type="text" name="contact_number" placeholder="Area Post Code"
-                                    class="form-control" required>
+                                <input type="text" name="post_code" placeholder="Area Post Code" class="form-control" required>
                             </div>
                         </div>
                     </div>

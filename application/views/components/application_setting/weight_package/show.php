@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>View Raider</h1>
+                    <h1>View Weight Package</h1>
                 </div>
             </div>
             <div class="panel-body">
@@ -16,70 +16,28 @@
                             </td>
                         </tr>
                         <tr>
+                            <th width="30%">ID</th>
+                            <td width="70%">D-11</td>
+                        </tr>
+                        <tr>
                             <th width="30%">Name</th>
-                            <td width="70%">
-                                Main Branch
-                            </td>
+                            <td width="70%">Khairul Islam</td>
                         </tr>
                         <tr>
-                            <th width="30%">Rider ID</th>
-                            <td width="70%">
-                                012365
-                            </td>
+                            <th width="30%">Title</th>
+                            <td width="70%">Demo Title</td>
                         </tr>
                         <tr>
-                            <th>Full Address</th>
-                            <td>
-                                68/F, Level-1-2,Green Road,
-                            </td>
+                            <th>Weight Type</th>
+                            <td>KG</td>
                         </tr>
                         <tr>
-                            <th>District</th>
-                            <td>
-                                District Name
-                            </td>
+                            <th>Details</th>
+                            <td>Dhanmondi Test Habijabi</td>
                         </tr>
                         <tr>
-                            <th>Thana/Upazila</th>
-                            <td>
-                                Dhanmondi
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Area</th>
-                            <td>
-                                Jigatala TSO
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Branch</th>
-                            <td>
-                                Jigatala TSO
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Contact Number</th>
-                            <td>
-                                01834163689
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Email</th>
-                            <td>
-                                shaokat71@stitbd.com
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Password</th>
-                            <td>
-                                shaokat71@stitbd.com
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Image</th>
-                            <td>
-                                shaokat71@stitbd.com
-                            </td>
+                            <th>Rate</th>
+                            <td>120</td>
                         </tr>
                     </tbody>
                 </table>

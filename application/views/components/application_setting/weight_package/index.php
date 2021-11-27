@@ -3,42 +3,38 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Riders List</h1>
+                    <h1>Weight Packages List</h1>
                 </div>
-                <a href="<?= get_url('/team/rider/add'); ?>" class="pull-right btn btn-success m-0"
+                <a href="<?= get_url('/application_setting/weight_package/add'); ?>" class="pull-right btn btn-success m-0"
                     style="font-size: 12px;">
                     <i class="fa fa-pencil "></i>
-                    Add Rider
+                    Add Weight Packages
                 </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
                 <div class="table-responsive">
-                    <table id="branchList" class="table table-hover table-bordered display">
+                    <table id="weight_packageList" class="table table-hover table-bordered display">
                         <thead>
                             <tr>
                                 <th>SL</th>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Email</th>
-                                <th>Branch</th>
-                                <th>Area</th>
-                                <th>Upazila</th>
-                                <th>District</th>
+                                <th>Weight Type</th>
+                                <th>Title</th>
+                                <th>Rate</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>01</td>
                                 <td>D-120</td>
-                                <td>Amin</td>
-                                <td>Shami@gmail.com</td>
-                                <td>Imtiaz</td>
-                                <td>Abdullah</td>
-                                <td>Dhaka</td>
-                                <td>Dhaka</td>
+                                <td>Amin Mia</td>
+                                <td>KG</td>
+                                <td>Product</td>
+                                <td>120</td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -74,6 +70,6 @@
 
 <script>
 $(document).ready(function() {
-    $('#branchList').DataTable();
+    $('#weight_packageList').DataTable();
 });
 </script>

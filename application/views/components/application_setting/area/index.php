@@ -8,13 +8,13 @@
                 <a href="<?= get_url('/application_setting/area/add'); ?>" class="pull-right btn btn-success m-0"
                     style="font-size: 12px;">
                     <i class="fa fa-pencil "></i>
-                    Add Rider
+                    Add Area
                 </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
                 <div class="table-responsive">
-                    <table id="branchList" class="table table-hover table-bordered display">
+                    <table id="areaList" class="table table-hover table-bordered display">
                         <thead>
                             <tr>
                                 <th>SL</th>
@@ -23,16 +23,16 @@
                                 <th>Thana/Upazila</th>
                                 <th>District</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>D-120</td>
-                                <td>Amin</td>
-                                <td>Shami@gmail.com</td>
-                                <td>Imtiaz</td>
+                                <td>01</td>
+                                <td>Mymensingh</td>
+                                <td>5260</td>
+                                <td>Haluaghat</td>
+                                <td>Mymensingh</td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -68,6 +68,6 @@
 
 <script>
 $(document).ready(function() {
-    $('#branchList').DataTable();
+    $('#areaList').DataTable();
 });
 </script>

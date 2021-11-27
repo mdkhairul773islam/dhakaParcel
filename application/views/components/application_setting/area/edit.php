@@ -3,13 +3,13 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Edit Rider</h1>
+                    <h1>Edit Area</h1>
                 </div>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
                 <form action="" method="post" enctype="multipart/form-data">
-                <div class="row">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Districts <span class="req">*</span></label>
@@ -32,16 +32,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Area Name" class="form-control"
-                                    required>
+                                <input type="text" name="name" placeholder="Area Name" class="form-control" required>
                             </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Post Code <span class="req">*</span></label>
-                                <input type="text" name="contact_number" placeholder="Area Post Code"
-                                    class="form-control" required>
+                                <input type="text" name="post_code" placeholder="Area Post Code" class="form-control" required>
                             </div>
                         </div>
                     </div>
