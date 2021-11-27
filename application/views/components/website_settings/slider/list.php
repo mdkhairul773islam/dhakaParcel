@@ -38,6 +38,9 @@
                 <div class="panal-header-title pull-left">
                     <h1>All Slider</h1>
                 </div>
+                <a href="<?= get_url('/website_settings/slider/add'); ?>" class="pull-right btn btn-success m-0" style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i> Add Slider
+                </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>

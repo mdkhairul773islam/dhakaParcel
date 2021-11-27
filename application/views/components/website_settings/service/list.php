@@ -5,6 +5,9 @@
                 <div class="panal-header-title pull-left">
                     <h1>All Service</h1>
                 </div>
+                <a href="<?= get_url('/website_settings/service/index'); ?>" class="pull-right btn btn-success m-0" style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i> Add Service
+                </a>
             </div>
             <div class="panel-body">
                  <?php msg(); ?>
@@ -23,8 +26,8 @@
                         <td><?php echo isset($value->title) ? $value->title : ''; ?></td>
                         <td><?php echo isset($value->description) ? substr($value->description,0,40) : ''; ?>..</td>
                         <td>
-                            <a class="btn btn-warning" href="<?php echo get_url("service/service/edit/{$value->id}"); ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a class="btn btn-danger" href="<?php echo get_url("service/service/delete/{$value->id}"); ?>" onclick="return confirm('Are your sure to proccess this action ?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-warning" href="<?php echo get_url("website_settings/service/edit/{$value->id}"); ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-danger" href="<?php echo get_url("website_settings/service/delete/{$value->id}"); ?>" onclick="return confirm('Are your sure to proccess this action ?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                     <?php }} ?>

@@ -13,7 +13,8 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label"> Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Unit Name" class="form-control" required>
+                                <input type="text" name="name" value="<?= (!empty($unit->name) ? $unit->name : ''); ?>"
+                                    placeholder="Unit Name" class="form-control" required>
                             </div>
                         </div>
                     </div>
@@ -21,7 +22,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Update" class="btn btn-success">
+                            <input type="submit" name="update" value="Update" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

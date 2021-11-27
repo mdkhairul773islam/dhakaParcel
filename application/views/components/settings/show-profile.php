@@ -4,31 +4,29 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                  <h1>
-                     <?php
-                       if($profile[0]->privilege == "super"){
-                         //echo ucwords($profile[0]->privilege)." Admin Profile";
-                         echo "Super Admin Profile";
-                       }elseif($profile[0]->privilege == "admin"){
-                         //echo ucwords($profile[0]->privilege)." Profile";
-                         echo "Agnet Profile";
-                       }elseif($profile[0]->privilege == "user"){
-                          echo "Delivery Man Profile"; 
-                       }else{
-                           echo "";
-                       }
-                       ?>
+                    <h1>
+                        <?php
+                            if($profile[0]->privilege == "super"){
+                            //echo ucwords($profile[0]->privilege)." Admin Profile";
+                            echo "Super Admin Profile";
+                        }elseif($profile[0]->privilege == "admin"){
+                            //echo ucwords($profile[0]->privilege)." Profile";
+                            echo "Agnet Profile";
+                        }elseif($profile[0]->privilege == "user"){
+                            echo "Delivery Man Profile"; 
+                        }else{
+                            echo "";
+                        }
+                        ?>
                   </h1>
                 </div>
             </div>
 
             <div class="panel-body">
-
                 <h3 style="padding: 0 15px; margin: 15px 0;">
                     Profile : <strong><?php echo $profile[0]->name; ?></strong>
                 </h3>
                 <br>
-
                 <!-- left side -->
                 <aside class="col-md-3">
                     <div class="border-top">&nbsp;</div>
@@ -40,13 +38,11 @@
 
 
                 <div class="col-md-9">
-
-                      <!-- Nav tabs -->
+                    <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                      </ul>
-                  <!-- Tab panes -->
-
+                    </ul>
+                    <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="profile">
                             <div class="col-xs-12 profile-title no-padding">
@@ -122,7 +118,6 @@
                   </div>
                 </div>
             </div>
-
             <div class="panel-footer">&nbsp;</div>
         </div>
     </div>

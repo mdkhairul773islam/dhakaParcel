@@ -25,7 +25,6 @@
 
 
             if(!empty($_POST['save'])){
-                
                 unset($_POST['save']);
                 $data = $_POST;
                 $data['date'] = date('Y-m-d');
@@ -39,7 +38,6 @@
                     set_msg('warning', 'warning', 'Vehicle Not Created !');
                     redirect_back();
                 }
-                
             }
 
             $this->load->view('admin/includes/header', $this->data);

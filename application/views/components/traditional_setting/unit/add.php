@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Save" class="btn btn-success">
+                            <input type="submit" name="save" value="Save" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

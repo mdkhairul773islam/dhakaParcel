@@ -5,6 +5,9 @@
                 <div class="panal-header-title pull-left">
                     <h1>All Testimonial</h1>
                 </div>
+                <a href="<?= get_url('/website_settings/testimonial/index'); ?>" class="pull-right btn btn-success m-0" style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i> Add Testimonial
+                </a>
             </div>
             <div class="panel-body">
                  <?php msg(); ?>
@@ -26,8 +29,8 @@
                         <td><?php echo isset($value->designation) ? $value->designation : ''; ?></td>
                         <td><?php echo isset($value->description) ? substr($value->description,0,40) : ''; ?>..</td>
                         <td class="text-right">
-                            <a class="btn btn-warning" href="<?php echo get_url("testimonial/testimonial/edit/{$value->id}"); ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                             <a class="btn btn-danger" href="<?php echo get_url("testimonial/testimonial/delete/{$value->id}"); ?>" onclick="return confirm('Are your sure to proccess this action ?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-warning" href="<?php echo get_url("website_settings/testimonial/edit/{$value->id}"); ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-danger" href="<?php echo get_url("website_settings/testimonial/delete/{$value->id}"); ?>" onclick="return confirm('Are your sure to proccess this action ?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                     <?php }} ?>

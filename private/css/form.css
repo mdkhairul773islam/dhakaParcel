@@ -4,9 +4,9 @@
 }
 .form-control:focus {box-shadow: none;}
 .btn {
-	padding-right: 15px;
+	padding-right: 10px;
 	border-radius: 0;
-	padding-left: 15px;
+	padding-left: 10px;
 }
 textarea {resize: none;}
 .form-group.required .control-label:after {

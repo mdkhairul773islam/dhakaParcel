@@ -93,7 +93,7 @@
     (()=>{
         var page = read('#page');
         page.addEventListener('change', ()=>{
-            axios.post(url+'pages/Pages/getContent', makeFormData({title:page.value}))
+            axios.post(url+'website_settings/pages/getContent', makeFormData({title:page.value}))
             .then(response=>{
                 if((response.data).length){
                     console.log(response.data);

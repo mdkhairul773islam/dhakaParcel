@@ -14,7 +14,6 @@
             </div>
 
             <div class="panel-body">
-
                 <h2 style="padding: 0 15px; margin: 15px 0;">
                     Profile: <strong><?php echo $profile[0]->name; ?></strong>
                 </h2>
@@ -22,20 +21,16 @@
 
                 <!-- left side -->
                 <aside class="col-md-3">
-                    <img id="img-view" src="<?php echo site_url($profile[0]->image); ?>" alt="Photo not found!"
-                        class="img-responsive img-thumbnail" style="width: 100%;">
-
+                    <img id="img-view" src="<?php echo site_url($profile[0]->image); ?>" alt="Photo not found!" class="img-responsive img-thumbnail" style="width: 100%;">
                     <div class="profile-upload">
                         <label class="btn btn-primary" style="display: block;" for="img-input"><i
                                 class="fa fa-cloud-upload"></i> Upload</label>
                         <input type="file" name="image" id="img-input" style="display: none;">
-                    </div> <br />
-
+                    </div><br/>
                 </aside>
 
 
                 <div class="col-md-9">
-
                     <div class="form-group">
                         <label for="" class="col-sm-3 col-xs-12 control-label">Name </label>
                         <div class="col-sm-7 col-xs-10">
@@ -66,22 +61,16 @@
                             <input type="text" name="username" value="<?php echo $profile[0]->username; ?>" readonly
                                 class="form-control" placeholder="username">
                         </div>
-
                     </div>
-
-
 
                     <div class="form-group">
                         <label for="" class="col-md-3 control-label">Privilege</label>
                         <div class="col-md-7">
                             <select name="privilege" class="form-control">
-                                <option value="">-- Select --</option>
-                                <option value="super" <?php if($profile[0]->privilege=='super'){echo "selected"; } ?>>
-                                    Super Admin</option>
-                                <option value="admin" <?php if($profile[0]->privilege=='admin'){echo "selected"; } ?>>
-                                    Agent</option>
-                                <option value="user" <?php if($profile[0]->privilege=='user'){echo "selected"; } ?>>
-                                    Delivery Man</option>
+                                <option value="">Select Privilege</option>
+                                <option value="super" <?php if($profile[0]->privilege=='super'){echo "selected"; } ?>>Super Admin</option>
+                                <option value="admin" <?php if($profile[0]->privilege=='admin'){echo "selected"; } ?>>Agent</option>
+                                <option value="user" <?php if($profile[0]->privilege=='user'){echo "selected"; } ?>>Delivery Man</option>
                             </select>
                         </div>
                     </div>
@@ -146,10 +135,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
             <div class="panel-footer">&nbsp;</div>
         </div>
 
@@ -158,20 +145,19 @@
 </div>
 
 <script type="text/javascript">
-$(document).ready(function() {
-
-    var reader = new FileReader();
-    $("#img-input").change(function(ev) {
-        var file = ev.target.files[0];
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-        $(reader).load(function() {
-            var imgURL = reader.result;
-            $("#img-view").attr({
-                src: imgURL
+    $(document).ready(function() {
+        var reader = new FileReader();
+        $("#img-input").change(function(ev) {
+            var file = ev.target.files[0];
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+            $(reader).load(function() {
+                var imgURL = reader.result;
+                $("#img-view").attr({
+                    src: imgURL
+                });
             });
         });
     });
-});
 </script>

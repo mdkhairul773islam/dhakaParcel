@@ -13,9 +13,16 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Item category<span class="req">*</span></label>
-                                <select name="item_category_name" class="form-control">
-                                    <option value="" selected disabeld>Select Category</option>
-                                    <option value=""></option>
+                                <select name="item_category_name" class="form-control selectpicker"
+                                    data-live-search="true">
+                                    <option value="" selected disabled>Select Category</option>
+                                    <?php 
+                                        if(!empty($categoryList)){
+                                            foreach($categoryList as $key => $row){
+                                    ?>
+                                    <option value="<?= $row->category_code; ?>"><?= $row->category_name; ?>
+                                    </option>
+                                    <?php } } ?>
                                 </select>
                             </div>
                         </div>
@@ -31,9 +38,14 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Unit<span class="req">*</span></label>
-                                <select name="unit" class="form-control">
+                                <select name="unit" class="form-control selectpicker" data-live-search="true">
                                     <option value="" selected disabeld>Select Unit</option>
-                                    <option value=""></option>
+                                    <?php 
+                                        if(!empty($unitList)){
+                                            foreach($unitList as $row){
+                                    ?>
+                                    <option value="<?= $row->name; ?>"><?= $row->name; ?></option>
+                                    <?php } } ?>
                                 </select>
                             </div>
                         </div>
@@ -41,21 +53,21 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">OD Rate<span class="req">*</span></label>
-                                <input type="text" name="od_rate" placeholder="OD Rate" class="form-control" required>
+                                <input type="number" name="od_rate" placeholder="OD Rate" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">HD Rate<span class="req">*</span></label>
-                                <input type="text" name="hd_rate" placeholder="HD Rate" class="form-control" required>
+                                <input type="number" name="hd_rate" placeholder="HD Rate" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Transit OD <span class="req">*</span></label>
-                                <input type="text" name="transit_od" placeholder="Transit OD" class="form-control"
+                                <input type="number" name="transit_od" placeholder="Transit OD" class="form-control"
                                     required>
                             </div>
                         </div>
@@ -63,7 +75,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Transit HD<span class="req">*</span></label>
-                                <input type="text" name="transit_hd" placeholder="Transit HD" class="form-control"
+                                <input type="number" name="transit_hd" placeholder="Transit HD" class="form-control"
                                     required>
                             </div>
                         </div>
@@ -72,7 +84,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Save" class="btn btn-success">
+                            <input type="submit" name="save" value="Save" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

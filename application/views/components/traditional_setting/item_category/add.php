@@ -13,7 +13,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Name <span class="req">*</span></label>
-                                <input type="text" name="item_category_name" placeholder="Item Category Name"
+                                <input type="text" name="category_name" placeholder="Item Category Name"
                                     class="form-control" required>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Save" class="btn btn-success">
+                            <input type="submit" name="save" value="Save" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

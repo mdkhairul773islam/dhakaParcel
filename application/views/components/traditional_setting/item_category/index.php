@@ -7,14 +7,14 @@
                 </div>
                 <a href="<?= get_url('/traditionalSetting/item_category/add'); ?>"
                     class="pull-right btn btn-success m-0" style="font-size: 12px;">
-                    <i class="fa fa-pencil "></i>
+                    <i class="fa fa-plus"></i>
                     Add Item Category
                 </a>
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
                 <div class="table-responsive">
-                    <table id="itemCategoryList" class="table table-hover table-bordered display">
+                    <table id="categoryList" class="table table-hover table-bordered display">
                         <thead>
                             <tr>
                                 <th>SL</th>
@@ -25,10 +25,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($item_category_list)){
+                                    foreach($item_category_list as $key => $row){
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>Khairul Islam</td>
-                                <td>Amin</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= (!empty($row->category_name) ? $row->category_name : ''); ?></td>
+                                <td><?= (!empty($row->details) ? $row->details : ''); ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -43,16 +47,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php } } ?>
                         </tbody>
                     </table>
                 </div>
@@ -64,6 +69,6 @@
 
 <script>
 $(document).ready(function() {
-    $('#vehiclesList').DataTable();
+    $('#categoryList').DataTable();
 });
 </script>

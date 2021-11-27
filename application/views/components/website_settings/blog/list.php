@@ -5,6 +5,9 @@
                 <div class="panal-header-title pull-left">
                     <h1>All Blogs</h1>
                 </div>
+                <a href="<?= get_url('/website_settings/blog/index'); ?>" class="pull-right btn btn-success m-0" style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i> Add Blog
+                </a>
             </div>
             <div class="panel-body">
                  <?php msg(); ?>
@@ -26,8 +29,8 @@
                         <td><?php echo isset($value->title) ? $value->title : ''; ?></td>
                         <td><?php echo isset($value->description) ? substr($value->description,0,40) : ''; ?>..</td>
                         <td class="text-right">
-                            <a class="btn btn-warning" href="<?php echo get_url("blog/blog/edit/{$value->id}"); ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a class="btn btn-danger" href="<?php echo get_url("blog/blog/delete/{$value->id}"); ?>" onclick="return confirm('Are your sure to proccess this action ?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-warning" href="<?php echo get_url("website_settings/blog/edit/{$value->id}"); ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-danger" href="<?php echo get_url("website_settings/blog/delete/{$value->id}"); ?>" onclick="return confirm('Are your sure to proccess this action ?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                     <?php }} ?>

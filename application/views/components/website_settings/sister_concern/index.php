@@ -6,6 +6,9 @@
                 <div class="panal-header-title pull-left">
                     <h1>All Sister Concern</h1>
                 </div>
+                <a href="<?= get_url('/website_settings/sister_concern/add'); ?>" class="pull-right btn btn-success m-0" style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i> Add Sister Concern
+                </a>
             </div>
             <div class="panel-body">
                  <?php msg(); ?>
@@ -25,11 +28,11 @@
                         <td><?php echo isset($value->url) ? $value->url : ''; ?>..</td>
                         <td>
                             <a  class="btn btn-warning" 
-                                href="<?php echo get_url("sister_concern/sister_concern/edit/{$value->id}"); ?>">
+                                href="<?php echo get_url("website_settings/sister_concern/edit/{$value->id}"); ?>">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </a>
                             <a  class="btn btn-danger" 
-                                href="<?php echo get_url("sister_concern/sister_concern/delete/{$value->id}"); ?>" 
+                                href="<?php echo get_url("website_settings/sister_concern/delete/{$value->id}"); ?>" 
                                 onclick="return confirm('Are your sure to proccess this action ?')">
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </a>

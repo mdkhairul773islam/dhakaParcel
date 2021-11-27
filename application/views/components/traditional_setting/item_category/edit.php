@@ -12,9 +12,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label">Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Item Category Name" class="form-control"
-                                    required>
+                                <label class="control-label">Name</label>
+                                <input type="text" name="category_name"
+                                    value="<?= (!empty($item_category_data->category_name) ? $item_category_data->category_name : ''); ?>"
+                                    placeholder="Item Category Name" class="form-control" required>
                             </div>
                         </div>
 
@@ -24,7 +25,7 @@
                                     Details
                                 </label>
                                 <textarea name="details" placeholder="Item Category Details"
-                                    class="form-control"></textarea>
+                                    class="form-control"><?= (!empty($item_category_data->details) ? $item_category_data->details : ''); ?></textarea>
                             </div>
                         </div>
 
@@ -33,7 +34,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Update" class="btn btn-success">
+                            <input type="submit" name="update" value="Update" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

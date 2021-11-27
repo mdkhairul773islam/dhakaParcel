@@ -22,7 +22,7 @@
                                 <th>Net Amount</th>
                                 <th>Delivery Type</th>
                                 <th>Status</th>
-                                <th class="text-center">Action</th>
+                                <th class="text-center" style="width: 110px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>

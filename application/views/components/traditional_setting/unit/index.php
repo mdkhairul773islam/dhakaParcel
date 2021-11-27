@@ -24,9 +24,13 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(empty(!$unitList)){
+                                    foreach($unitList as $key => $row){
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>Khairul Islam 1</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= (!empty($row->name) ? $row->name : '')?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -41,16 +45,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>

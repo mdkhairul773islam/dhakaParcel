@@ -7,8 +7,7 @@
                 </div>
                 <a href="<?= get_url('/team/branch/add'); ?>" class="pull-right btn btn-success m-0"
                     style="font-size: 12px;">
-                    <i class="fa fa-pencil "></i>
-                    Add Branch
+                    <i class="fa fa-pencil "></i> Add Branch
                 </a>
             </div>
             <div class="panel-body">

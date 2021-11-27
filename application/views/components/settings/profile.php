@@ -1,5 +1,5 @@
 <style>
-    .message{
+    .message {
         border: 1px solid #ddd;
         border-radius: 10px;
         display: none;
@@ -45,14 +45,12 @@
 
 
                 <div class="col-md-9">
-
-                      <!-- Nav tabs -->
+                    <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile </a></li>
                     </ul>
 
-                  <!-- Tab panes -->
-
+                    <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="profile">
                             <div class="col-xs-12 profile-title no-padding">
@@ -64,8 +62,6 @@
                                 </div>
                             </div>
 
-
-
                             <!-- Pop Up Edit Password -->
                             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                               <div class="modal-dialog modal-lg" role="document">
@@ -76,9 +72,7 @@
                                     </div>
 
                                     <div class="model-body" style="margin-top: 20px;">
-
                                         <form action="" id="edit_form" class="form-horizontal">
-
                                             <div class="form-group">
                                                 <label class="control-label col-md-4">Old Password  <span class="req">*</span></label>
                                                 <div class="col-md-6">
@@ -107,16 +101,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </form>
-
-                                        
                                         
                                         <div class="col-md-12">
                                             <div class="message"></div>
                                         </div>
                                     </div>
-
                                     <div class="model-footer">&nbsp;</div>
                                 </div>
                               </div>
@@ -133,35 +123,30 @@
                                         <p><?php echo $profile_info[0]->name; ?></p>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6 col-xs-12">
                                     <label class="control-label col-xs-5">Username </label>
                                     <div class="col-xs-7">
                                         <p><?php echo $profile_info[0]->username; ?></p>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6 col-xs-12">
                                     <label class="control-label col-xs-5">Email</label>
                                     <div class="col-xs-7">
                                         <p><?php echo $profile_info[0]->email; ?></p>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6 col-xs-12">
                                     <label class="control-label col-xs-5">Mobile Number</label>
                                     <div class="col-xs-7">
                                         <p><?php echo $profile_info[0]->mobile; ?></p>
                                     </div>
                                 </div>
-
                                  <div class="col-sm-6 col-xs-12">
                                     <label class="control-label col-xs-5">Privilege</label>
                                     <div class="col-xs-7">
                                         <p><?php echo $profile_info[0]->privilege; ?></p>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6 col-xs-12">
                                     <label class="control-label col-xs-5">Showroom</label>
                                     <div class="col-xs-7">
@@ -188,10 +173,9 @@
 
                         <div role="tabpanel" class="tab-pane" id="friends">4</div>
                         <div role="tabpanel" class="tab-pane" id="groups">5</div>
-                  </div>
+                    </div>
                 </div>
             </div>
-
             <div class="panel-footer">&nbsp;</div>
         </div>
     </div>
@@ -214,13 +198,8 @@
                 $('input[name="conf_pass"]').val("");
                 $('input[name="current_pass"]').val("");
                 console.log(response);
-
             });
              ev.preventDefault();
         });
-
-
-        });
-
-
+    });
 </script>

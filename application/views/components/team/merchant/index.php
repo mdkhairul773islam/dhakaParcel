@@ -5,10 +5,8 @@
                 <div class="panal-header-title pull-left">
                     <h1>Merchants List</h1>
                 </div>
-                <a href="<?= get_url('/team/merchant/add'); ?>" class="pull-right btn btn-success m-0"
-                    style="font-size: 12px;">
-                    <i class="fa fa-pencil "></i>
-                    Add Merchants
+                <a href="<?= get_url('/team/merchant/add'); ?>" class="pull-right btn btn-success m-0" style="font-size: 12px;">
+                    <i class="fa fa-pencil "></i> Add Merchants
                 </a>
             </div>
             <div class="panel-body">
