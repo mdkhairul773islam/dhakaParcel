@@ -3,83 +3,61 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>View Raider</h1>
+                    <h1>View Booking Parcel</h1>
                 </div>
             </div>
             <div class="panel-body">
                 <table class="table table-sm">
                     <tbody>
                         <tr>
-                            <th>Status</th>
-                            <td>
+                            <th style="width: 30%">Status</th>
+                            <td style="width: 70%">
                                 <span class="badge bg-secondary">Active</span>
                             </td>
                         </tr>
                         <tr>
-                            <th width="30%">Name</th>
-                            <td width="70%">
-                                Main Branch
-                            </td>
+                            <th>Name</th>
+                            <td>Main Branch</td>
                         </tr>
                         <tr>
-                            <th width="30%">Rider ID</th>
-                            <td width="70%">
-                                012365
-                            </td>
+                            <th>Rider ID</th>
+                            <td>012365</td>
                         </tr>
                         <tr>
                             <th>Full Address</th>
-                            <td>
-                                68/F, Level-1-2,Green Road,
-                            </td>
+                            <td>68/F, Level-1-2,Green Road,</td>
                         </tr>
                         <tr>
                             <th>District</th>
-                            <td>
-                                District Name
-                            </td>
+                            <td>District Name</td>
                         </tr>
                         <tr>
                             <th>Thana/Upazila</th>
-                            <td>
-                                Dhanmondi
-                            </td>
+                            <td>Dhanmondi</td>
                         </tr>
                         <tr>
                             <th>Area</th>
-                            <td>
-                                Jigatala TSO
-                            </td>
+                            <td>Jigatala TSO</td>
                         </tr>
                         <tr>
                             <th>Branch</th>
-                            <td>
-                                Jigatala TSO
-                            </td>
+                            <td>Jigatala TSO</td>
                         </tr>
                         <tr>
                             <th>Contact Number</th>
-                            <td>
-                                01834163689
-                            </td>
+                            <td>01834163689</td>
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td>
-                                shaokat71@stitbd.com
-                            </td>
+                            <td>shaokat71@stitbd.com</td>
                         </tr>
                         <tr>
                             <th>Password</th>
-                            <td>
-                                shaokat71@stitbd.com
-                            </td>
+                            <td>shaokat71@stitbd.com</td>
                         </tr>
                         <tr>
                             <th>Image</th>
-                            <td>
-                                shaokat71@stitbd.com
-                            </td>
+                            <td>shaokat71@stitbd.com</td>
                         </tr>
                     </tbody>
                 </table>

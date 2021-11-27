@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Parcels List</h1>
+                    <h1>Booking Parcel List</h1>
                 </div>
             </div>
             <div class="panel-body">
@@ -13,27 +13,29 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Invoice</th>
-                                <th>Customer Name</th>
-                                <th>Customer Contact</th>
-                                <th>Customer Address</th>
-                                <th>Districk</th>
-                                <th>Area</th>
-                                <th>Total Charge</th>
+                                <th>Date</th>
+                                <th>Parcel No</th>
+                                <th>Sender Contact</th>
+                                <th>Sender Branch</th>
+                                <th>Receiver Contact</th>
+                                <th>Receiver Branch</th>
+                                <th>Net Amount</th>
+                                <th>Delivery Type</th>
                                 <th>Status</th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>D-120</td>
-                                <td>Amin</td>
-                                <td>Shami@gmail.com</td>
-                                <td>Imtiaz</td>
-                                <td>Abdullah</td>
-                                <td>Dhaka</td>
-                                <td>Dhaka</td>
+                                <td>01</td>
+                                <td>10/12/2020</td>
+                                <td>D-1023</td>
+                                <td>01910217482</td>
+                                <td>Mymensingh</td>
+                                <td>01910217482</td>
+                                <td>Mymensingh</td>
+                                <td>320</td>
+                                <td>KG</td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>

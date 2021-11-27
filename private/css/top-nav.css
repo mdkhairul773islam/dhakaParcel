@@ -8,6 +8,9 @@ nav.content-fixed-nav > ul li {width: 55px;}
 	top: 7px;
 	right: 5px;
 }
+nav.content-fixed-nav .nav-inner-right li:first-child {
+	border: 1px solid red;
+}
 .content-fixed-nav span.badge-messages {background: #46C35F;}
 .content-fixed-nav span.badge-notification {background: #00A8FF;}
 ul.dropdown-menu {

@@ -10,20 +10,18 @@
                 <table class="table table-sm">
                     <tbody>
                         <tr>
-                            <th>Status</th>
-                            <td>
+                            <th style="width: 30%;">Status</th>
+                            <td style="width: 70%;">
                                 <span class="badge bg-secondary">Active</span>
                             </td>
                         </tr>
                         <tr>
-                            <th width="30%">Name</th>
-                            <td width="70%">
-                                Main Branch
-                            </td>
+                            <th>Name</th>
+                            <td>Main Branch</td>
                         </tr>
                         <tr>
-                            <th width="30%">COD %</th>
-                            <td width="70%">32%</td>
+                            <th>COD %</th>
+                            <td>32%</td>
                         </tr>
                         <tr>
                             <th>Default Charge</th>

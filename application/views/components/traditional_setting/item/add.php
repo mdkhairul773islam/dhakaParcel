@@ -13,7 +13,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Item category<span class="req">*</span></label>
-                                <select name="category" class="form-control">
+                                <select name="item_category_name" class="form-control">
                                     <option value="" selected disabeld>Select Category</option>
                                     <option value=""></option>
                                 </select>

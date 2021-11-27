@@ -29,14 +29,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                                if(!empty($vehicleList)){
+                                    foreach($vehicleList as $key => $row){
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>Khairul Islam 1</td>
-                                <td>Amin</td>
-                                <td>Shami</td>
-                                <td>Imtiaz</td>
-                                <td>Abdullah</td>
-                                <td>Dhaka</td>
+                                <td><?= $key+1; ?></td>
+                                <td><?= ucfirst($row->vehicle_name); ?></td>
+                                <td><?= ucfirst($row->vehicle_sl_no); ?></td>
+                                <td><?= ucfirst($row->vehicle_no); ?></td>
+                                <td><?= ucfirst($row->driver_name); ?></td>
+                                <td><?= ucfirst($row->driver_contact_number); ?></td>
+                                <td><?= ucfirst($row->vehicle_road); ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -51,15 +55,16 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
+                                <?php } } ?>
                             </tr>
                         </tbody>
                     </table>

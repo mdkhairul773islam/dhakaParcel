@@ -10,22 +10,22 @@
                 <table class="table table-sm">
                     <tbody>
                         <tr>
-                            <th>Status</th>
-                            <td>
+                            <th style="width: 30%;">Status</th>
+                            <td style="width: 70%;">
                                 <span class="badge bg-secondary">Active</span>
                             </td>
                         </tr>
                         <tr>
-                            <th width="30%">ID</th>
-                            <td width="70%">D-11</td>
+                            <th>ID</th>
+                            <td>D-11</td>
                         </tr>
                         <tr>
-                            <th width="30%">Name</th>
-                            <td width="70%">Khairul Islam</td>
+                            <th>Name</th>
+                            <td>Khairul Islam</td>
                         </tr>
                         <tr>
-                            <th width="30%">Title</th>
-                            <td width="70%">Demo Title</td>
+                            <th>Title</th>
+                            <td>Demo Title</td>
                         </tr>
                         <tr>
                             <th>Weight Type</th>

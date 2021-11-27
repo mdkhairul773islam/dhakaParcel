@@ -13,8 +13,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Item Category Name" class="form-control"
-                                    required>
+                                <input type="text" name="item_category_name" placeholder="Item Category Name"
+                                    class="form-control" required>
                             </div>
                         </div>
 
