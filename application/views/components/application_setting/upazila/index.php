@@ -25,10 +25,15 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($upazilaList)){
+                                foreach($upazilaList as $key => $upazila){
+                                    $district = get_name('districts', 'name', ['id'=> $upazila->district_id]);
+                            ?>
                             <tr>
-                                <td>01</td>
-                                <td>Khairul Islam</td>
-                                <td>Dhaka</td>
+                                <td><?= ($key+1) ?></td>
+                                <td><?= $upazila->name; ?></td>
+                                <td><?= $district; ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -43,16 +48,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$upazila->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$upazila->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>

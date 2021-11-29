@@ -8,7 +8,7 @@
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

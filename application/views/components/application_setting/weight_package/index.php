@@ -5,8 +5,8 @@
                 <div class="panal-header-title pull-left">
                     <h1>Weight Packages List</h1>
                 </div>
-                <a href="<?= get_url('/application_setting/weight_package/add'); ?>" class="pull-right btn btn-success m-0"
-                    style="font-size: 12px;">
+                <a href="<?= get_url('/application_setting/weight_package/add'); ?>"
+                    class="pull-right btn btn-success m-0" style="font-size: 12px;">
                     <i class="fa fa-pencil "></i>
                     Add Weight Packages
                 </a>
@@ -28,13 +28,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                               if(!empty($weightPackage)){
+                                   foreach($weightPackage as $key => $row){ 
+                            ?>
                             <tr>
-                                <td>01</td>
-                                <td>D-120</td>
-                                <td>Amin Mia</td>
-                                <td>KG</td>
-                                <td>Product</td>
-                                <td>120</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= ucwords($row->wp_id); ?></td>
+                                <td><?= $row->name; ?></td>
+                                <td><?= ucwords($row->weight_type); ?></td>
+                                <td><?= $row->title; ?></td>
+                                <td><?= $row->rate; ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -49,16 +53,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>

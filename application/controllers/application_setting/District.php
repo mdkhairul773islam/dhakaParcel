@@ -8,6 +8,8 @@
             $this->data['meta_title'] = '';
             $this->data['meta_description'] = '';
 
+            $this->data['districtList'] = get_result('districts', ['trash'=>0], [], '', 'name', 'ASC');
+
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);
