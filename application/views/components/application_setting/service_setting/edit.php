@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>Edit Service Area</h1>
+                    <h1>Edit Service Area Setting</h1>
                 </div>
             </div>
             <div class="panel-body">

@@ -26,7 +26,7 @@
                                 <th>Upazila</th>
                                 <th>Distric</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th class="text-center" style="width: 120px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>

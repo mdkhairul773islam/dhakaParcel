@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
+
 <div class="container-fluid">
     <div class="row">
         <div class="panel panel-default">
@@ -7,6 +9,76 @@
                 </div>
             </div>
             <div class="panel-body">
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Branch</label>
+                                <select name="branch_name" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                                    <option value="" disabled selected>Select Branch</option>
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Booking Type</label>
+                                <select name="booking_type" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                                    <option value="" disabled selected>Select Booking Type</option>
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Delivery Type</label>
+                                <select name="delivery_type" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                                    <option value="" disabled selected>Select Delivery Type</option>
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Status</label>
+                                <select name="status" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                                    <option value="" disabled selected>Select Status</option>
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">From Date</label>
+                                <div class="input-group date" id="datetimepickerFrom">
+                                    <input type="text" name="form_date" class="form-control" placeholder="From">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">From To</label>
+                                <div class="input-group date" id="datetimepickerTo">
+                                    <input type="text" name="form_to" class="form-control" placeholder="To">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                <hr>
+
                 <?php msg(); ?>
                 <div class="table-responsive">
                     <table id="parcelList" class="table table-hover table-bordered display">
@@ -22,7 +94,7 @@
                                 <th>Net Amount</th>
                                 <th>Delivery Type</th>
                                 <th>Status</th>
-                                <th class="text-center" style="width: 110px;">Action</th>
+                                <th class="text-center none" style="width: 120px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,10 +110,11 @@
                                 <td>KG</td>
                                 <td>
                                     <a href="#" class="text-success">
-                                        <b>Active/Inactive</b>
+                                        <b>Confirmed Booking</b>
                                     </a>
                                 </td>
-                                <td class="text-center">
+                                <td class="text-center none">
+                                    <a href="#" class="btn btn-primary" onclick="window.print()"><i class="fa fa-print"></i></a>
                                     <?php
                                         if($action_menus){
                                         foreach($action_menus as $action_menu){
@@ -69,8 +142,22 @@
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 <script>
-$(document).ready(function() {
-    $('#parcelList').DataTable();
-});
+    $(function() {
+        $('.selectpicker').selectpicker();
+    });
+    $(document).ready(function() {
+        $('#parcelList').DataTable();
+    });
+
+    // linking between two date
+    $('#datetimepickerFrom').datetimepicker({
+        format: 'YYYY-MM-DD',
+        useCurrent: false
+    });
+    $('#datetimepickerTo').datetimepicker({
+        format: 'YYYY-MM-DD',
+        useCurrent: false
+    });
 </script>

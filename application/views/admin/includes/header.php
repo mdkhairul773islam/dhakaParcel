@@ -32,21 +32,28 @@
     <link href="<?php echo site_url('private/css/form.css'); ?>" rel="stylesheet">
     <link href="<?php echo site_url('private/css/top-nav.css'); ?>" rel="stylesheet">
     <link href="<?php echo site_url('private/css/style.css'); ?>" rel="stylesheet">
+    <link href="<?php echo site_url('private/plugins/angularjs-select2/select2.css'); ?>" rel="stylesheet">
 
     <!-- Responsive CSS -->
     <link href="<?php echo site_url('private/css/responsive.css'); ?>" rel="stylesheet">
     <!-- Freelance iT Lab official CDN -->
     <link href="<?php echo site_url('private/css/fit_official.css'); ?>" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+    <!-- jQuery -->
+    <script type="text/javaScript" src="<?php echo site_url('private/js/jquery.js'); ?>"></script>
+    <script type="text/javaScript" src="<?php echo site_url('private/plugins/angularjs-select2/select2.min.js'); ?>">
+    </script>
+
     <!-- Angular -->
     <script type=" text/javaScript" src="<?php echo site_url('private/js/angular.js'); ?>">
     </script>
+    <script type="text/javaScript"
+        src="<?php echo site_url('private/plugins/angularjs-select2/angular-ui-select2.js'); ?>"></script>
     <script type="text/javaScript" src="<?php echo site_url('private/js/angular-sanitize.min.js'); ?>"></script>
     <script type="text/javaScript" src="<?php echo site_url('private/js/dirPagination.js'); ?>"></script>
     <script type="text/javaScript" src="<?php echo site_url('private/js/ng-controller/app.js'); ?>"></script>
 
-    <!-- jQuery -->
-    <script type="text/javaScript" src="<?php echo site_url('private/js/jquery.js'); ?>"></script>
     <!-- includ moment for bootstrap calander -->
     <script type="text/javascript" src="<?php echo site_url('private/js/Moment.js'); ?>"></script>
     <script type="text/javaScript"

@@ -313,9 +313,9 @@ div#lightbox {
 	transform: translate(-100%);
 	border-right: 1px solid #efefef;
 }
-@page {margin: 0;}
+@page {margin: 15px;}
 @media print {
-	aside, nav, .none, .panel-heading, .panel-footer, .color_plate{
+	aside, nav, .none, .panel-heading, .panel-footer, .color_plate, .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate, form {
 		display: none !important;
 	}
 	.panel {
@@ -326,7 +326,20 @@ div#lightbox {
 		width: 100% !important;
 	}
 	.hide {display: block !important;}
+	table.dataTable thead .sorting {padding-right: 8px;}
+	table.dataTable thead .sorting_asc,
+	table.dataTable thead .sorting {
+		background-image: unset !important;
+		background-size: 0 !important;
+	}
 }
+table.dataTable thead .sorting {
+	vertical-align: middle;
+	padding-left: 8px;
+	font-size: 12px;
+}
+table.dataTable tbody td {font-size: 13px;}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {padding: 2px 12px}
 
 /* custom boostrap spacing class style */
 .m-0 {margin: 0 !important;}

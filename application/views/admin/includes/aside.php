@@ -41,7 +41,9 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-nav">
         <h3 class="sidebar-brand <?php if($this->data['width'] == 'full-width') {echo 'sidebar-slide';} ?>">
-			<a style="font-size: 23px !important;" href="<?php echo site_url('admin/dashboard'); ?>">Dhaka Courier Ltd</a>
+			<a style="font-size: 23px !important;" href="<?php echo site_url('admin/dashboard'); ?>">
+                Dhaka Courier Ltd
+            </a>
 		</h3>
     </div>
     <nav class="aside-nav">
@@ -52,7 +54,6 @@
                 </a>
             </li>
             <?php $user_data = $this->session->userdata(); ?>
-
             <?php if($user_data['privilege']=='president'){ ?>
             <li class="developer aside_menu">
                 <a href="javascript:void(0)" data-toggle="collapse">
@@ -60,7 +61,6 @@
                     &nbsp; Aside Menu
                     <span class="icon"><i class="fa fa-sort-desc"></i></span>
                 </a>
-
                 <ul class="sidebar-nav collapse">
                     <li class="create">
                         <a href="<?php echo site_url('system_aside_menu/menuController/add');?>">
@@ -68,21 +68,18 @@
                             Create
                         </a>
                     </li>
-
                     <li class="list">
                         <a href="<?php echo site_url('system_aside_menu/menuController');?>">
                             <i class="fa fa-angle-right"></i>
                             List
                         </a>
                     </li>
-
                     <li class="trash_list">
                         <a href="<?php echo site_url('system_aside_menu/menuController/trash_list');?>">
                             <i class="fa fa-angle-right"></i>
                             Trash List
                         </a>
                     </li>
-
                     <li class="alignment">
                         <a href="<?php echo site_url('system_aside_menu/menuController/alignment');?>">
                             <i class="fa fa-angle-right"></i>
@@ -92,14 +89,12 @@
                 </ul>
             </li>
 
-
             <li class="developer aside_dropdown">
                 <a href="javascript:void(0)">
                     <i class="fa fa-list-alt"></i>
                     &nbsp; Dropdown Menu
                     <span class="icon"><i class="fa fa-sort-desc"></i></span>
                 </a>
-
                 <ul class="sidebar-nav collapse">
                     <li class="create">
                         <a href="<?php echo site_url('system_aside_menu/dropdownMenuController/add');?>">
@@ -107,21 +102,18 @@
                             Create
                         </a>
                     </li>
-
                     <li class="list">
                         <a href="<?php echo site_url('system_aside_menu/dropdownMenuController');?>">
                             <i class="fa fa-angle-right"></i>
                             List
                         </a>
                     </li>
-
                     <li class="alignment">
                         <a href="<?php echo site_url('system_aside_menu/dropdownMenuController/alignment');?>">
                             <i class="fa fa-angle-right"></i>
                             Alignment
                         </a>
                     </li>
-
                     <li class="trash_list">
                         <a href="<?php echo site_url('system_aside_menu/dropdownMenuController/trash_list');?>">
                             <i class="fa fa-angle-right"></i>
@@ -131,14 +123,12 @@
                 </ul>
             </li>
 
-
             <li class="developer aside_action_menu">
                 <a href="javascript:void(0)">
                     <i class="fa fa-list-alt"></i>
                     &nbsp; Action Menu
                     <span class="icon"><i class="fa fa-sort-desc"></i></span>
                 </a>
-
                 <ul class="sidebar-nav collapse">
                     <li class="create">
                         <a href="<?php echo site_url('system_aside_menu/actionMenuController/add');?>">
@@ -146,21 +136,18 @@
                             Create
                         </a>
                     </li>
-
                     <li class="list">
                         <a href="<?php echo site_url('system_aside_menu/actionMenuController');?>">
                             <i class="fa fa-angle-right"></i>
                             List
                         </a>
                     </li>
-
                     <li class="trash_list">
                         <a href="<?php echo site_url('system_aside_menu/actionMenuController/trash_list');?>">
                             <i class="fa fa-angle-right"></i>
                             Trash List
                         </a>
                     </li>
-
                     <li class="alignment">
                         <a href="<?php echo site_url('system_aside_menu/actionMenuController/alignment');?>">
                             <i class="fa fa-angle-right"></i>
@@ -169,7 +156,6 @@
                     </li>
                 </ul>
             </li>
-
             <li class="developer privilege">
                 <a href="<?php echo site_url('system_privilege/privilegeController'); ?>">
                     <i class="fa fa-users"></i>
@@ -177,7 +163,6 @@
                 </a>
             </li>
             <?php } ?>
-
             <?php
                 if(isset($_GET["system_id"])){
                     $system_id = base64_decode($_GET["system_id"]);
@@ -189,7 +174,6 @@
                     $aside_menu_dropdown_id = '';
                 }
             ?>
-
             <!--read menu from database start-->
             <?php
                 $menu = read('system_aside_menus', ['status'=>1], 'position ASC');
@@ -199,16 +183,12 @@
             ?>
             <li class="<?php echo (!empty($aside_menu_id) && $menu_value->id==$aside_menu_id) ? "active" : ''; ?>">
                 <a href="<?php echo ($menu_value->has_sub_menu==1) ? "javascript:void(0)" : site_url($menu_value->controller_path).'?system_id='.base64_encode($menu_value->id); ?>">
-
                     <?php echo (!empty($menu_value->icon)) ? '<i class="'.$menu_value->icon.'"></i>' : ''; ?>
-
                     &nbsp; <?php echo (!empty($menu_value->name)) ? $menu_value->name : ''; ?>
-
                     <?php if($menu_value->has_sub_menu==1){ ?>
                         <span class="icon"><i class="fa fa-sort-desc"></i></span>
                     <?php } ?>
                 </a>
-
                 <!--dropdown menu start -->
                 <?php
                     if($menu_value->has_sub_menu==1){
@@ -235,7 +215,6 @@
             </li>
             <?php }}} ?>
             <!--read menu from database end-->
-
             <br>
             <br>
             <br>
@@ -244,11 +223,8 @@
     </nav>
 </aside>
 <!-- /don't delete this -->
-
-
 <script>
     var sidebar_nav = document.querySelectorAll(".sidebar-nav>li>a");
-
     if(sidebar_nav){
         window.onload = ()=>{
             var activated_dropdown = document.querySelector(".sidebar-nav>li.active>ul.collapse")
@@ -256,7 +232,6 @@
                 activated_dropdown.style.cssText = `height:${activated_dropdown.scrollHeight}px`;
             }
         }
-
         sidebar_nav.forEach((value, index)=>{
             value.addEventListener('click', (event)=>{
                 if(event.target.closest('li').classList.contains('active')){
@@ -269,9 +244,7 @@
                         value1.parentElement.classList.remove('active');
                         value1.parentElement.lastElementChild.style.cssText = ``;
                     });
-
                     event.target.closest('li').classList.add('active')
-
                     if(event.target.nextElementSibling){
                         event.target.nextElementSibling.style.cssText = `height:${event.target.nextElementSibling.scrollHeight}px`;
                     }

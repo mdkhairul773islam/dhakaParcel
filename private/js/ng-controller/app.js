@@ -1,4 +1,5 @@
 var app = angular.module("MainApp", [
+  "ui.select2",
   "angularUtils.directives.dirPagination",
   "ngSanitize",
 ]);
@@ -15,6 +16,7 @@ if (
 var angularUrl = url + "ajax/";
 var angularSiteurl = url;
 
+app.constant("select2Options", "allowClear:true");
 // custom filter in Angular js
 app.filter("removeUnderScore", function () {
   return function (input) {

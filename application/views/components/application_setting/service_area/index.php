@@ -23,7 +23,7 @@
                                 <th>Default Charge</th>
                                 <th>Weight Type</th>
                                 <th>Status</th>
-                                <th class="text-center">Action</th>
+                                <th class="text-center" style="width: 120px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>

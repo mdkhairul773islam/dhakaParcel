@@ -21,12 +21,12 @@
                                 <th>Area</th>
                                 <th>Total Charge</th>
                                 <th>Status</th>
-                                <th class="text-center">Action</th>
+                                <th class="text-center none">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>01</td>
                                 <td>D-120</td>
                                 <td>Amin</td>
                                 <td>Shami@gmail.com</td>
@@ -34,12 +34,13 @@
                                 <td>Abdullah</td>
                                 <td>Dhaka</td>
                                 <td>Dhaka</td>
-                                <td>
+                                <td style="width: 120px;">
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
                                     </a>
                                 </td>
-                                <td class="text-center">
+                                <td class="text-center none">
+                                    <a href="#" class="btn btn-primary" onclick="window.print()"><i class="fa fa-print"></i></a>
                                     <?php
                                         if($action_menus){
                                         foreach($action_menus as $action_menu){

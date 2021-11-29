@@ -1,21 +1,16 @@
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" />
 <style>
-.right {
-    display: inline-block;
-    float: right;
-}
-
-p span .sms {
-    border: 1px solid transparent;
-    width: 40px;
-}
-
-@media screen and (min-width: 992px) {
-    .horizantal_button {
-        margin-top: 25px;
+    .right {
+        display: inline-block;
+        float: right;
     }
-}
+    p span .sms {
+        border: 1px solid transparent;
+        width: 40px;
+    }
+    @media screen and (min-width: 992px) {
+        .horizantal_button {margin-top: 25px;}
+    }
 </style>
 
 <div class="container-fluid" ng-controller="CustomSMSCtrl">
@@ -141,16 +136,16 @@ p span .sms {
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 <script>
-$(document).ready(function() {
-    $(' input[name="type" ]').on('change', function(event) {
-        if ($(this).val() == "member") {
-            $('#member_name').slideDown();
-        } else {
-            $('#member_name').slideUp();
-        }
+    $(document).ready(function() {
+        $(' input[name="type" ]').on('change', function(event) {
+            if ($(this).val() == "member") {
+                $('#member_name').slideDown();
+            } else {
+                $('#member_name').slideUp();
+            }
+        });
     });
-});
-$(function() {
-    $('.selectpicker').selectpicker();
-});
+    $(function() {
+        $('.selectpicker').selectpicker();
+    });
 </script>

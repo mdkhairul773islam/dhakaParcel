@@ -8,6 +8,11 @@
 	border-radius: 0;
 	padding-left: 10px;
 }
+.table .btn {
+	border-radius: 2px !important;
+	padding: 3px 10px !important;
+	margin: 1px !important;
+}
 textarea {resize: none;}
 .form-group.required .control-label:after {
 	content: "\26B9";

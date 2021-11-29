@@ -138,7 +138,7 @@
                 <?php 
                     if ($users) {foreach($users as $user_key => $user_value){ 
                         // get single user's privilege to activate checkbox
-                        $privilegeOfUser = read('system_privileges', ['admin_id'=>$user_value->id]);
+                        $privilegeOfUser            = read('system_privileges', ['admin_id'=>$user_value->id]);
                         $aside_menu_array           = ($privilegeOfUser && isset($privilegeOfUser[0]->aside_menu_id)) ? json_decode($privilegeOfUser[0]->aside_menu_id, true) : '';
                         $aside_dropdown_menu_array  = ($privilegeOfUser && isset($privilegeOfUser[0]->aside_menu_dropdown_id)) ? json_decode($privilegeOfUser[0]->aside_menu_dropdown_id, true) : '';
                         $action_menu_array          = ($privilegeOfUser && isset($privilegeOfUser[0]->action_menu_id)) ? json_decode($privilegeOfUser[0]->action_menu_id, true) : '';
@@ -196,6 +196,7 @@
                                 <!--read menus from database start-->
                                 <?php if($system_aside_menus){ foreach($system_aside_menus as $p_aside_menus_key => $p_aside_menus_value){ ?>
                                 <!--read menus from database end-->
+                                
                                 <tr>
                                     <td><?php echo $p_aside_menus_key+1; ?></td>
                                     <td>

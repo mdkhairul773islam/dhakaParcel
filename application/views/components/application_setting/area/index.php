@@ -23,16 +23,22 @@
                                 <th>Thana/Upazila</th>
                                 <th>District</th>
                                 <th>Status</th>
-                                <th class="text-center">Action</th>
+                                <th class="text-center" style="width: 120px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($areaList)){
+                                    foreach($areaList as $key => $area){
+                                        $district = get_name('districts', 'name', ['id'=> $area->district_id]);
+                                        $thanaUpazila = get_name('upazilas', 'name', ['id'=> $area->upazila_id]);
+                            ?>
                             <tr>
-                                <td>01</td>
-                                <td>Mymensingh</td>
-                                <td>5260</td>
-                                <td>Haluaghat</td>
-                                <td>Mymensingh</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= $area->name; ?></td>
+                                <td><?= $area->post_code; ?></td>
+                                <td><?= $thanaUpazila?></td>
+                                <td><?= $district?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -47,16 +53,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$area->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$area->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>
