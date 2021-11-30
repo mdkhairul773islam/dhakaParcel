@@ -30,13 +30,14 @@
                             <?php 
                                 if(!empty($districtList)){
                                     foreach($districtList as $key => $row){
+                                        $service_area = get_name('service_area', 'name', ['service_area_code'=>$row->service_area_code,'trash'=> 0]);
                             ?>
                             <tr>
                                 <td><?= ($key+1); ?></td>
                                 <td><?= $row->name; ?></td>
-                                <td><?= $row->name; ?></td>
-                                <td><?= $row->name; ?></td>
-                                <td><?= $row->name; ?></td>
+                                <td><?= $service_area; ?></td>
+                                <td><?= $row->home_delivery; ?></td>
+                                <td><?= $row->lock_down_service; ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
