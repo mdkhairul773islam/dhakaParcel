@@ -23,6 +23,20 @@
             $this->data['meta_title'] = '';
             $this->data['meta_description'] = '';
 
+            $this->data['service_area'] = get_result('service_area', ['trash'=>0, 'status'=>'active']);
+
+            if(!empty($_POST['save'])){
+                unset($_POST['save']);
+                $data = $_POST;
+                if (save_data('districts', $data)) {
+                   set_msg('success', 'Districts Successfully Created!');
+                   redirect('/application_setting/district?system_id=OThfMTg3', 'refresh');
+                } else {
+                    set_msg('warning', 'Districts Not Created!');
+                    redirect_back();
+                }
+            }
+
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);
             $this->load->view('admin/includes/headermenu', $this->data);

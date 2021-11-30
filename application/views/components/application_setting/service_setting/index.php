@@ -5,8 +5,8 @@
                 <div class="panal-header-title pull-left">
                     <h1>Service Area Settings List</h1>
                 </div>
-                <a href="<?= get_url('/application_setting/service_setting/add'); ?>" class="pull-right btn btn-success m-0"
-                    style="font-size: 12px;">
+                <a href="<?= get_url('/application_setting/service_setting/add'); ?>"
+                    class="pull-right btn btn-success m-0" style="font-size: 12px;">
                     <i class="fa fa-pencil "></i>
                     Add Service Area Settings
                 </a>
@@ -26,11 +26,29 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($service_area)){
+                                    foreach($service_area as $key =>$area){
+                                        $service_area_setting_list = get_result('service_area_setting', ['service_area_code'=>$area->service_area_code, 'trash'=>0]);
+                            ?>
                             <tr>
-                                <td>01</td>
-                                <td>Inside Dhaka</td>
-                                <td>Upto 1 KG</td>
-                                <td>50 Tk</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= $area->name; ?></td>
+                                <td>
+                                    <?php 
+                                        foreach($service_area_setting_list as $key => $list){
+                                            $weight_package = get_name('weight_package', 'name', ['wp_id'=>$list->weight_package_id, 'trash'=>0]);
+                                    ?>
+                                    <span><?= '<strong>'.($key+1).') '.'</strong>'.$weight_package.'</br>';?></span>
+                                    <?php } ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                        foreach($service_area_setting_list as $key => $list){
+                                    ?>
+                                    <span><?= $list->rate.'</br>'; ?></span>
+                                    <?php } ?>
+                                </td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -45,16 +63,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$area->service_area_code); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$area->service_area_code) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>
