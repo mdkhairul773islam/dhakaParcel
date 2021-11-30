@@ -5,8 +5,8 @@
                 <div class="panal-header-title pull-left">
                     <h1>Service Areas List</h1>
                 </div>
-                <a href="<?= get_url('/application_setting/service_area/add'); ?>" class="pull-right btn btn-success m-0"
-                    style="font-size: 12px;">
+                <a href="<?= get_url('/application_setting/service_area/add'); ?>"
+                    class="pull-right btn btn-success m-0" style="font-size: 12px;">
                     <i class="fa fa-pencil "></i>
                     Add Service Areas
                 </a>
@@ -27,12 +27,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($service_area)){
+                                    foreach($service_area as $key => $area){
+                            ?>
                             <tr>
-                                <td>01</td>
-                                <td>Amin Mia</td>
-                                <td>5</td>
-                                <td>32 Tk</td>
-                                <td>KG</td>
+                                <td><?= ($key+1) ?></td>
+                                <td><?= $area->name; ?></td>
+                                <td><?= $area->cod_charge; ?> Tk</td>
+                                <td><?= $area->default_charge; ?></td>
+                                <td><?= $area->weight_type; ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -47,16 +51,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$area->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$area->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>
