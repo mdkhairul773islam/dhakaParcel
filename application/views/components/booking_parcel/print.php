@@ -20,6 +20,26 @@
                 padding: 0;
                 box-sizing: border-box;
             }
+            .print_btn {
+                text-align: right;
+                margin: 5px 0;
+            }
+            .print_btn a:hover {
+                background: #138496;
+                color: #fff;
+            }
+            .print_btn a {
+                background: #17A2B8;
+                transition: all .2s;
+                border-radius: 2px;
+                padding: 3px;
+                color: #fff;
+                outline: none;
+                font-size: 12px;
+                min-width: 60px;
+                box-shadow: none;
+                text-align: center;
+            }
             .print_header img {max-height: 65px;}
             .table td, .table th {
                 padding: 5px !important;
@@ -35,7 +55,7 @@
             .print_header p {margin: 0;}
             .print_header {
                 justify-content: space-between;
-                align-items: flex-stat;
+                align-items: flex-start;
                 text-align: center;
                 display: flex;
                 margin: 10px 0 20px;
@@ -61,93 +81,271 @@
                 margin: 15px 0 10px;
                 align-items: flex-start;
             }
-            .customer_info img {
-                max-width: 165px;
+            .customer_info img {max-width: 165px;}
+            @page {
+                size: A4 portrait;
+                margin: 15px;
+            }
+            @media print {
+                .none {display: none;}
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="print_header">
-                <img src="<?php echo site_url('private/images/logo.png') ?>" alt="">
-                <div class="title">
-                    <h3>Dhaka Parcel</h3>
-                    <p><strong>Head Office : </strong> 48/1, Yosuf Mansion (1st floor), Motijheel C/A, Dhaka-1000</p>
-                    <p><strong>Hot Line :</strong> 01912441630, 01713634913</p>
-                </div>
-                <h5>Customer Copy</h5>
+            <div class="print_btn">
+                <a href="#" class="btn none " onclick="window.print()">Print</a>
             </div>
-            <ul class="print_info">
-                <li><strong>Service Type</strong> : Office Delivery</li>
-                <li><strong>Booking Date</strong> : 26-Nov-2021</li>
-                <li><strong>Parcel No</strong> : METTROSESE20211126-00002</li>
-            </ul>
+            <div class="print_body">
+                <div class="print_header">
+                    <img src="<?php echo site_url('private/images/logo.jpg') ?>" alt="">
+                    <div class="title">
+                        <h3>Dhaka Parcel</h3>
+                        <p><strong>Head Office : </strong> 48/1, Yosuf Mansion (1st floor), Motijheel C/A, Dhaka-1000</p>
+                        <p><strong>Hot Line :</strong> 01912441630, 01713634913</p>
+                    </div>
+                    <h5>Customer Copy</h5>
+                </div>
+                <ul class="print_info">
+                    <li><strong>Service Type</strong> : Office Delivery</li>
+                    <li><strong>Booking Date</strong> : 26-Nov-2021</li>
+                    <li><strong>Parcel No</strong> : METTROSESE20211126-00002</li>
+                </ul>
 
-            <div class="customer_info">
-                <ul>
-                    <li><strong>From </strong> : Mymensingh</li>
-                    <li><strong>Address</strong> : Mymensingh</li>
-                    <li><strong>Phone</strong> : 01910217482</li>
-                </ul>
-                <div class="barcode_img">
-                    <img src="<?php echo site_url('private/images/barcode.png') ?>" alt="">
+                <div class="customer_info">
+                    <ul>
+                        <li><strong>From </strong> : Mymensingh</li>
+                        <li><strong>Address</strong> : Mymensingh</li>
+                        <li><strong>Phone</strong> : 01910217482</li>
+                    </ul>
+                    <div class="barcode_img">
+                        <img src="<?php echo site_url('private/images/barcode.png') ?>" alt="">
+                    </div>
+                    <ul>
+                        <li><strong>To </strong> : Mymensingh</li>
+                        <li><strong>Address</strong> : Mymensingh</li>
+                        <li><strong>Phone</strong> : 01910217482</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li><strong>To </strong> : Mymensingh</li>
-                    <li><strong>Address</strong> : Mymensingh</li>
-                    <li><strong>Phone</strong> : 01910217482</li>
-                </ul>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="width: 45px;" class="text-center">SL.No</th>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Description</th>
+                            <th style="width: 100px;" class="text-center">Unit</th>
+                            <th style="width: 100px;" class="text-center">Unit Rate</th>
+                            <th style="width: 90px;" class="text-center">Quantity</th>
+                            <th style="width: 100px;" class="text-right">Total Rate</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">01</td>
+                            <td class="text-center">Books and stationery</td>
+                            <td class="text-center">Book Sample Packet</td>
+                            <td class="text-center">Packet</td>
+                            <td class="text-center">600.00</td>
+                            <td class="text-center">100.00</td>
+                            <td class="text-right">6900.00</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4" rowspan="10" style="vertical-align: middle;">Total Bill Amount : Three Hundred Taka Only</th>
+                            <th class="text-right" colspan="2">Total Amount</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Vat Amount (15.0000 %)</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Discount Total</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Grand Total</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Net Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Paid Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Due Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <tr>
-                        <th style="width: 45px;" class="text-center">SL.No</th>
-                        <th class="text-center">Category</th>
-                        <th class="text-center">Description</th>
-                        <th style="width: 100px;" class="text-center">Unit</th>
-                        <th style="width: 100px;" class="text-center">Unit Rate</th>
-                        <th style="width: 90px;" class="text-center">Quantity</th>
-                        <th style="width: 100px;" class="text-right">Total Rate</th>
-                    </tr>
-                    <tr>
-                        <td class="text-center">01</td>
-                        <td class="text-center">Books and stationery</td>
-                        <td class="text-center">Book Sample Packet</td>
-                        <td class="text-center">Packet</td>
-                        <td class="text-center">600.00</td>
-                        <td class="text-center">100.00</td>
-                        <td class="text-right">6900.00</td>
-                    </tr>
-                    <tr>
-                        <th colspan="4" rowspan="10" style="vertical-align: middle;">Total Bill Amount : Three Hundred Taka Only</th>
-                        <th class="text-right" colspan="2">Total Amount</th>
-                        <th class="text-right">6900.00</th>
-                    </tr>
-                    <tr>
-                        <th class="text-right" colspan="2">Vat Amount (15.0000 %)</th>
-                        <th class="text-right">6900.00</th>
-                    </tr>
-                    <tr>
-                        <th class="text-right" colspan="2">Discount Total</th>
-                        <th class="text-right">6900.00</th>
-                    </tr>
-                    <tr>
-                        <th class="text-right" colspan="2">Grand Total</th>
-                        <th class="text-right">230.00</th>
-                    </tr>
-                    <tr>
-                        <th class="text-right" colspan="2">Net Amount</th>
-                        <th class="text-right">230.00</th>
-                    </tr>
-                    <tr>
-                        <th class="text-right" colspan="2">Paid Amount</th>
-                        <th class="text-right">230.00</th>
-                    </tr>
-                    <tr>
-                        <th class="text-right" colspan="2">Due Amount</th>
-                        <th class="text-right">230.00</th>
-                    </tr>
-                </table>
+
+            <div class="print_body">
+                <div class="print_header">
+                    <img src="<?php echo site_url('private/images/logo.jpg') ?>" alt="">
+                    <div class="title">
+                        <h3>Dhaka Parcel</h3>
+                        <p><strong>Head Office : </strong> 48/1, Yosuf Mansion (1st floor), Motijheel C/A, Dhaka-1000</p>
+                        <p><strong>Hot Line :</strong> 01912441630, 01713634913</p>
+                    </div>
+                    <h5>Booking Branch Copy</h5>
+                </div>
+                <ul class="print_info">
+                    <li><strong>Service Type</strong> : Office Delivery</li>
+                    <li><strong>Booking Date</strong> : 26-Nov-2021</li>
+                    <li><strong>Parcel No</strong> : METTROSESE20211126-00002</li>
+                </ul>
+
+                <div class="customer_info">
+                    <ul>
+                        <li><strong>From </strong> : Mymensingh</li>
+                        <li><strong>Address</strong> : Mymensingh</li>
+                        <li><strong>Phone</strong> : 01910217482</li>
+                    </ul>
+                    <div class="barcode_img">
+                        <img src="<?php echo site_url('private/images/barcode.png') ?>" alt="">
+                    </div>
+                    <ul>
+                        <li><strong>To </strong> : Mymensingh</li>
+                        <li><strong>Address</strong> : Mymensingh</li>
+                        <li><strong>Phone</strong> : 01910217482</li>
+                    </ul>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="width: 45px;" class="text-center">SL.No</th>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Description</th>
+                            <th style="width: 100px;" class="text-center">Unit</th>
+                            <th style="width: 100px;" class="text-center">Unit Rate</th>
+                            <th style="width: 90px;" class="text-center">Quantity</th>
+                            <th style="width: 100px;" class="text-right">Total Rate</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">01</td>
+                            <td class="text-center">Books and stationery</td>
+                            <td class="text-center">Book Sample Packet</td>
+                            <td class="text-center">Packet</td>
+                            <td class="text-center">600.00</td>
+                            <td class="text-center">100.00</td>
+                            <td class="text-right">6900.00</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4" rowspan="10" style="vertical-align: middle;">Total Bill Amount : Three Hundred Taka Only</th>
+                            <th class="text-right" colspan="2">Total Amount</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Vat Amount (15.0000 %)</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Discount Total</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Grand Total</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Net Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Paid Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Due Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="print_body">
+                <div class="print_header">
+                    <img src="<?php echo site_url('private/images/logo.jpg') ?>" alt="">
+                    <div class="title">
+                        <h3>Dhaka Parcel</h3>
+                        <p><strong>Head Office : </strong> 48/1, Yosuf Mansion (1st floor), Motijheel C/A, Dhaka-1000</p>
+                        <p><strong>Hot Line :</strong> 01912441630, 01713634913</p>
+                    </div>
+                    <h5>Delivery Branch Copy</h5>
+                </div>
+                <ul class="print_info">
+                    <li><strong>Service Type</strong> : Office Delivery</li>
+                    <li><strong>Booking Date</strong> : 26-Nov-2021</li>
+                    <li><strong>Parcel No</strong> : METTROSESE20211126-00002</li>
+                </ul>
+
+                <div class="customer_info">
+                    <ul>
+                        <li><strong>From </strong> : Mymensingh</li>
+                        <li><strong>Address</strong> : Mymensingh</li>
+                        <li><strong>Phone</strong> : 01910217482</li>
+                    </ul>
+                    <div class="barcode_img">
+                        <img src="<?php echo site_url('private/images/barcode.png') ?>" alt="">
+                    </div>
+                    <ul>
+                        <li><strong>To </strong> : Mymensingh</li>
+                        <li><strong>Address</strong> : Mymensingh</li>
+                        <li><strong>Phone</strong> : 01910217482</li>
+                    </ul>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="width: 45px;" class="text-center">SL.No</th>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Description</th>
+                            <th style="width: 100px;" class="text-center">Unit</th>
+                            <th style="width: 100px;" class="text-center">Unit Rate</th>
+                            <th style="width: 90px;" class="text-center">Quantity</th>
+                            <th style="width: 100px;" class="text-right">Total Rate</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center">01</td>
+                            <td class="text-center">Books and stationery</td>
+                            <td class="text-center">Book Sample Packet</td>
+                            <td class="text-center">Packet</td>
+                            <td class="text-center">600.00</td>
+                            <td class="text-center">100.00</td>
+                            <td class="text-right">6900.00</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4" rowspan="10" style="vertical-align: middle;">Total Bill Amount : Three Hundred Taka Only</th>
+                            <th class="text-right" colspan="2">Total Amount</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Vat Amount (15.0000 %)</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Discount Total</th>
+                            <th class="text-right">6900.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Grand Total</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Net Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Paid Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                        <tr>
+                            <th class="text-right" colspan="2">Due Amount</th>
+                            <th class="text-right">230.00</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </body>

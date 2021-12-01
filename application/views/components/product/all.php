@@ -15,47 +15,8 @@
                 </div>
             </div>
             <div class="panel-body">
-                <?php /*
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <select name="search[id]" class="form-control selectpicker" data-live-search="true">
-                                    <option value="" selected disabled>Select Product</option>
-                                    <?php if(!empty($all_product)) foreach($all_product as $row){ ?>
-                                    <option value="<?=($row->id)?>"><?=($row->title)?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <select name="search[cat_id]" ng-model="cat_id" class="form-control selectpicker" data-live-search="true">
-                                    <option value="" selected disabled>Select Category</option>
-                                    <?php if(!empty($categories)) foreach($categories as $row){ ?>
-                                    <option value="<?=($row->id)?>"><?=($row->category)?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <select name="search[sub_cat_id]" id="sub_cat_id" class="form-control" data-live-search="true">
-                                    <option value="" selected disabled>Select Sub-Category</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-1">
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-info" value="Filter">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <hr>
-                */ ?>
                 <?php msg(); ?>
+                
                 <table class="table table-bordered">
                     <tr>
                         <th width="40">SL</th>

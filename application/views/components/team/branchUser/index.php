@@ -29,14 +29,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($branchUserList)){
+                                foreach($branchUserList as $key => $row){
+                                    $branch = get_row('branch', ['code'=>$row->branch, 'trash'=>0]);
+                                    $upazila = get_name('upazilas', 'name', ['id'=>$branch->upazila_id, 'trash'=>0]);
+                                    $district = get_name('districts', 'name', ['id'=>$branch->district_id, 'trash'=>0]);
+                                    $area = get_name('area', 'name', ['id'=>$branch->area_id, 'trash'=>0]);
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>Khairul Islam 1</td>
-                                <td>Amin</td>
-                                <td>Shami</td>
-                                <td>Imtiaz</td>
-                                <td>Abdullah</td>
-                                <td>Dhaka</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= $row->name; ?></td>
+                                <td><?= $row->email; ?></td>
+                                <td><?= $branch->name; ?></td>
+                                <td><?= $upazila; ?></td>
+                                <td><?= $district; ?></td>
+                                <td><?= $area; ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -51,16 +59,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$row->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php } } ?>
                         </tbody>
                     </table>
                 </div>
