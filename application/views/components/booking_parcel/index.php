@@ -114,7 +114,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center none">
-                                    <a href="#" class="btn btn-primary" onclick="window.print()"><i class="fa fa-print"></i></a>
+                                    <a href="<?php echo site_url('booking_parcel/booking_parcel/print')?>" target="_blank" class="btn btn-primary"><i class="fa fa-print"></i></a>
                                     <?php
                                         if($action_menus){
                                         foreach($action_menus as $action_menu){

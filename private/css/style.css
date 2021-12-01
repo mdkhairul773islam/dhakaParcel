@@ -70,6 +70,7 @@ body {background: #ECEFF4;}
 	position: relative;
 }
 .content-fixed-nav > ul > li > a {
+	border-bottom: 1px solid #d8e2e7 !important;
     border: 1px solid #eee;
     height: 65px;
     border-top: none;

@@ -41,5 +41,13 @@
             $this->load->view('components/booking_parcel/edit', $this->data);
             $this->load->view('admin/includes/footer', $this->data);
         }
+
+        public function print(){
+            $this->data['meta_keyword'] = '';
+            $this->data['meta_title'] = '';
+            $this->data['meta_description'] = '';
+            
+            $this->load->view('components/booking_parcel/print', $this->data);
+        }
     }
 ?>

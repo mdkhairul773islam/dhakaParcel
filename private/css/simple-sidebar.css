@@ -28,6 +28,7 @@
     position: absolute;
     margin-right: -250px;
 }
+.aside-nav > .sidebar-nav {min-height: calc(100vh - 65px);}
 .sidebar-nav {
     list-style: none;
     width: 250px;

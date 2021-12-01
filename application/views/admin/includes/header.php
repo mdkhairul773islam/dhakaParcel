@@ -11,14 +11,11 @@
 
     <title><?php echo ucwords($meta_title); ?></title>
     <!-- favicon -->
-    <link rel="icon" href="<?php echo site_url(isset($site_info) ? $site_info[0]->fev_icon : ''); ?>"
-        type="image/x-icon" />
+    <link rel="icon" href="<?php echo site_url(isset($site_info) ? $site_info[0]->fev_icon : ''); ?>" type="image/x-icon" />
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo site_url('private/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <!-- Bootstrap Date Picker -->
-    <link
-        href="<?php echo site_url('private/plugins/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css'); ?>"
-        rel="stylesheet">
+    <link href="<?php echo site_url('private/plugins/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css'); ?>" rel="stylesheet">
     <!-- Bootstrap file upload CSS -->
     <link href="<?php echo site_url('private/plugins/bootstrap-fileinput-master/css/fileinput.min.css') ;?>"
         rel="stylesheet">
