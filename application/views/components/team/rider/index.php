@@ -20,6 +20,7 @@
                                 <th>SL</th>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Username</th>
                                 <th>Email</th>
                                 <th>Branch</th>
                                 <th>Area</th>
@@ -30,15 +31,24 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                if(!empty($riderList)){
+                                    foreach($riderList as $key => $rider){
+                                        $branch = get_row('branch', ['code'=>$rider->branch, 'trash'=>0]);
+                                        $upazila = get_name('upazilas', 'name', ['id'=>$branch->upazila_id, 'trash'=>0]);
+                                        $district = get_name('districts', 'name', ['id'=>$branch->district_id, 'trash'=>0]);
+                                        $area = get_name('area', 'name', ['id'=>$branch->area_id, 'trash'=>0]);
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>D-120</td>
-                                <td>Amin</td>
-                                <td>Shami@gmail.com</td>
-                                <td>Imtiaz</td>
-                                <td>Abdullah</td>
-                                <td>Dhaka</td>
-                                <td>Dhaka</td>
+                                <td><?= ($key+1); ?></td>
+                                <td><?= $rider->rider_code; ?></td>
+                                <td><?= $rider->name; ?></td>
+                                <td><?= $rider->username; ?></td>
+                                <td><?= $rider->email; ?></td>
+                                <td><?= $branch->name; ?></td>
+                                <td><?= $area; ?></td>
+                                <td><?= $upazila; ?></td>
+                                <td><?= $district; ?></td>
                                 <td>
                                     <a href="#" class="text-success">
                                         <b>Active/Inactive</b>
@@ -53,16 +63,17 @@
                                             if(strtolower($action_menu->name) == "delete" ){?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
                                         onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$rider->id); ?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <?php }else{ ?>
                                     <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
+                                        href="<?php echo get_url($action_menu->controller_path."/".$rider->id) ;?>"><i
                                             class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                     <!---------------------------------------->
                                     <?php }}}} ?>
                                 </td>
                             </tr>
+                            <?php }} ?>
                         </tbody>
                     </table>
                 </div>

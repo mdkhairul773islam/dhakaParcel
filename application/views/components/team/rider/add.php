@@ -60,8 +60,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="control-label">Contact Number <span class="req">*</span></label>
-                                <input type="text" name="contact_number" placeholder="Rider Contact Number"
-                                    class="form-control" required>
+                                <input type="text" name="mobile" placeholder="Rider Contact Number" class="form-control"
+                                    required>
                             </div>
                         </div>
 
@@ -74,16 +74,24 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
+                                <label class="control-label">Username <span class="req">*</span></label>
+                                <input type="text" name="username" placeholder="Username" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
                                 <label class="control-label">Password <span class="req">*</span></label>
                                 <input type="password" name="password" placeholder="Password" class="form-control"
                                     required>
                             </div>
                         </div>
 
+
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Image <span class="req">*</span></label>
-                                <input type="file" name="image" placeholder="Image" class="form-control" required>
+                                <label class="control-label">Image</label>
+                                <input type="file" name="image" placeholder="Image" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -91,7 +99,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Submit" class="btn btn-success">
+                            <input type="submit" name="save" value="Save" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

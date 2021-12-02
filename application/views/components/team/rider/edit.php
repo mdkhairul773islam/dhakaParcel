@@ -12,74 +12,101 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label">Name <span class="req">*</span></label>
-                                <input type="text" name="name" placeholder="Rider Name" class="form-control" required>
+                                <label class="control-label">Name </label>
+                                <input type="text" name="name" value="<?= $rider[0]->name; ?>" placeholder="Rider Name"
+                                    class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label">Full Address <span class="req">*</span></label>
-                                <input type="text" name="address" placeholder="Rider Address" class="form-control"
-                                    required>
+                                <label class="control-label">Full Address </label>
+                                <input type="text" name="address" value="<?= $rider[0]->address; ?>"
+                                    placeholder="Rider Address" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Districts <span class="req">*</span></label>
-                                <select name="districts" class="form-control" data-live-search="true" required>
-                                    <option value="" selected disabled>Select Districts</option>
-                                    <option value="0"></option>
+                                <label class="control-label">Districts </label>
+                                <select ui-select2="{allowClear: true}" ng-model="district_id"
+                                    ng-init="district_id='<?= $rider[0]->district_id; ?>'" name="district_id"
+                                    class="form-control" data-placeholder="Select Districts" required>
+                                    <option value="" selected disabled></option>
+                                    <?php
+                                        if(!empty($districtList)){
+                                            foreach($districtList as $row){
+                                    ?>
+                                    <option value="<?= $row->id; ?>"><?= $row->name; ?></option>
+                                    <?php } } ?>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Branch <span class="req">*</span></label>
-                                <select name="branch_id" class="form-control" data-live-search="true" required>
-                                    <option value="" selected disabled>Select Branch</option>
-                                    <option value="0"></option>
+                                <label class="control-label">Branch </label>
+                                <select ui-select2="{allowClear: true}" ng-model="branch_id"
+                                    ng-init="branch_id='<?= $rider[0]->branch; ?>'" name="branch" class="form-control"
+                                    data-placeholder="Select Branch" required>
+                                    <option value="" selected disabled></option>
+                                    <?php
+                                        if(!empty($branchList)){
+                                            foreach($branchList as $branch){
+                                    ?>
+                                    <option value="<?= $branch->code; ?>"><?= $branch->name; ?></option>
+                                    <?php } } ?>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Contact Number <span class="req">*</span></label>
-                                <input type="text" name="contact_number" placeholder="Rider Contact Number"
+                                <label class="control-label">Contact Number </label>
+                                <input type="text" name="mobile" value="<?= $rider[0]->mobile; ?>"
+                                    placeholder="Rider Contact Number" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Email </label>
+                                <input type="email" value="<?= $rider[0]->email; ?>" name="email" placeholder="Email"
                                     class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Email <span class="req">*</span></label>
-                                <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                <label class="control-label">Username </label>
+                                <input type="text" name="username" value="<?= $rider[0]->username; ?>"
+                                    placeholder="Username" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Password <span class="req">*</span></label>
-                                <input type="password" name="password" placeholder="Password" class="form-control" required>
+                                <label class="control-label">Password </label>
+                                <input type="password" name="password" placeholder="Password" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Image <span class="req">*</span></label>
-                                <input type="file" name="image" placeholder="Image" class="form-control" required>
+                                <label class="control-label">Image </label>
+                                <input type="file" name="image" placeholder="Image" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Status <span class="req">*</span></label>
-                                <select name="status" class="form-control" data-live-search="true" required>
-                                    <option value="active" selected disabled>Active</option>
-                                    <option value="inactive">Inactive</option>
+                                <label class="control-label">Status </label>
+                                <select name="status" class="form-control" required>
+                                    <option value="" selected disabled>Select Status</option>
+                                    <option <?= ($rider[0]->status=='active' ? 'selected' : ''); ?> value="active"
+                                        selected>Active</option>
+                                    <option <?= ($rider[0]->status=='inactive' ? 'selected' : ''); ?> value="inactive">
+                                        Inactive</option>
                                 </select>
                             </div>
                         </div>
@@ -88,7 +115,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" value="Update" class="btn btn-success">
+                            <input type="submit" name="update" value="Update" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

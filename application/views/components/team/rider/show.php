@@ -7,78 +7,87 @@
                 </div>
             </div>
             <div class="panel-body">
+
                 <table class="table table-sm">
                     <tbody>
                         <tr>
                             <th>Status</th>
                             <td>
-                                <span class="badge bg-secondary">Active</span>
+                                <span class="badge bg-secondary"><?= ucfirst($rider[0]->status); ?></span>
                             </td>
                         </tr>
                         <tr>
                             <th width="30%">Name</th>
                             <td width="70%">
-                                Main Branch
+                                <?= ucfirst($rider[0]->name); ?>
                             </td>
                         </tr>
                         <tr>
                             <th width="30%">Rider ID</th>
                             <td width="70%">
-                                012365
+                                <?= ucfirst($rider[0]->rider_code); ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Full Address</th>
                             <td>
-                                68/F, Level-1-2,Green Road,
+                                <?= ucfirst($rider[0]->address); ?>
                             </td>
                         </tr>
                         <tr>
                             <th>District</th>
                             <td>
-                                District Name
+                                <?php 
+                                    $branch = get_row('branch', ['code'=>$rider[0]->branch, 'trash'=>0]);
+                                    $upazila = get_name('upazilas', 'name', ['id'=>$branch->upazila_id, 'trash'=>0]);
+                                    $district = get_name('districts', 'name', ['id'=>$branch->district_id, 'trash'=>0]);
+                                    $area = get_name('area', 'name', ['id'=>$branch->area_id, 'trash'=>0]);
+                                    echo $district;
+                               ?>
+
                             </td>
                         </tr>
                         <tr>
                             <th>Thana/Upazila</th>
                             <td>
-                                Dhanmondi
+                                <?= $upazila; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Area</th>
                             <td>
-                                Jigatala TSO
+                                <?= $area; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Branch</th>
                             <td>
-                                Jigatala TSO
+                                <?= $branch->name; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Contact Number</th>
                             <td>
-                                01834163689
+                                <?= ucfirst($rider[0]->mobile); ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Email</th>
                             <td>
-                                shaokat71@stitbd.com
+                                <?= ucfirst($rider[0]->email); ?>
                             </td>
                         </tr>
                         <tr>
-                            <th>Password</th>
+                            <th>Username</th>
                             <td>
-                                shaokat71@stitbd.com
+                                <?= ucfirst($rider[0]->username); ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Image</th>
                             <td>
-                                shaokat71@stitbd.com
+                                <img style="width: 120px; height: 120px;" src="<?= site_url($rider[0]->image); ?>"
+                                    alt="">
                             </td>
                         </tr>
                     </tbody>
