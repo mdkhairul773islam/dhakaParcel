@@ -28,9 +28,15 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="control-label">Districts <span class="req">*</span></label>
-                                <select name="districts" class="form-control" data-live-search="true" required>
-                                    <option value="" selected disabled>Select Districts</option>
-                                    <option value="0"></option>
+                                <select ui-select2="{allowClear: true}" ng-model="district_id" name="district_id"
+                                    class="form-control" data-placeholder="Select Districts" required>
+                                    <option value="" selected disabled></option>
+                                    <?php
+                                        if(!empty($districtList)){
+                                            foreach($districtList as $row){
+                                    ?>
+                                    <option value="<?= $row->id; ?>"><?= $row->name; ?></option>
+                                    <?php } } ?>
                                 </select>
                             </div>
                         </div>
@@ -38,9 +44,15 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="control-label">Branch <span class="req">*</span></label>
-                                <select name="branch_id" class="form-control" data-live-search="true" required>
-                                    <option value="" selected disabled>Select Branch</option>
-                                    <option value="0"></option>
+                                <select ui-select2="{allowClear: true}" ng-model="branch_id" name="branch"
+                                    class="form-control" data-placeholder="Select Branch" required>
+                                    <option value="" selected disabled></option>
+                                    <?php
+                                        if(!empty($branchList)){
+                                            foreach($branchList as $branch){
+                                    ?>
+                                    <option value="<?= $branch->code; ?>"><?= $branch->name; ?></option>
+                                    <?php } } ?>
                                 </select>
                             </div>
                         </div>
@@ -63,7 +75,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="control-label">Password <span class="req">*</span></label>
-                                <input type="password" name="password" placeholder="Password" class="form-control" required>
+                                <input type="password" name="password" placeholder="Password" class="form-control"
+                                    required>
                             </div>
                         </div>
 

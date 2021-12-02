@@ -11,71 +11,71 @@
                     <tbody>
                         <tr>
                             <td colspan="2" class="text-center">
-                                <img src="#" class="img-fluid img-thumbnail" style="height: 100px" alt="branch User">
+                                <img src="<?= site_url($branch->image); ?>" class="img-fluid img-thumbnail"
+                                    style="height: 100px" alt="branch User">
                             </td>
                         </tr>
 
                         <tr>
                             <th>Status</th>
                             <td>
-                                <span class="bg-success">Active</span>
+                                <span class="bg-success"><?= ucwords($branch->status); ?></span>
                             </td>
                         </tr>
                         <tr>
                             <th width="30%">Name</th>
                             <td width="70%">
-                                Md shaokat hossain
+                                <?= $branch->name; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Branch</th>
                             <td>
-                                Main Branch
+                                <?php
+                                    $get_branch = get_row('branch', ['code'=>$branch->branch, 'trash'=> 0]);
+                                    $district = get_name('districts', 'name', ['id'=>$get_branch->district_id, 'trash'=>0]);
+                                    $upazila = get_name('upazilas', 'name', ['id'=>$get_branch->upazila_id, 'trash'=>0]);
+                                    $area = get_name('area', 'name', ['id'=>$get_branch->area_id, 'trash'=>0]);
+                                    echo $get_branch->name;
+                                ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Full Address</th>
                             <td>
-                                68/F, Level-1-2,Green Road,
+                                <?= $branch->address; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>District</th>
                             <td>
-                                District Name
+                                <?= $district; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Thana/Upazila</th>
                             <td>
-                                Dhanmondi
+                                <?= $upazila; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Area</th>
                             <td>
-                                Jigatala TSO
+                                <?= $area; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Contact Number</th>
                             <td>
-                                01834163689
+                                <?= $branch->mobile; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Email</th>
                             <td>
-                                dhaka@branch.com
+                                <?= $branch->email; ?>
                             </td>
                         </tr>
-                        <tr>
-                            <th>Password</th>
-                            <td>
-                                12345
-                            </td>
-                        </tr>
-
                     </tbody>
                 </table>
             </div>

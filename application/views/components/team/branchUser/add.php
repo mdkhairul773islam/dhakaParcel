@@ -74,8 +74,8 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Image <span class="req">*</span></label>
-                                <input type="file" name="image" placeholder="Image" class="form-control" required>
+                                <label class="control-label">Image </label>
+                                <input type="file" name="image" placeholder="Image" class="form-control">
                             </div>
                         </div>
                     </div>
