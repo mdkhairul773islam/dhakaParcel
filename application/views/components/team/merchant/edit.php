@@ -72,7 +72,7 @@
                             <div class="form-group">
                                 <label class="control-label">Business Address </label>
                                 <textarea name="business_address" class="form-control"
-                                    placeholder="Business Address"><?= $merchant->address; ?></textarea>
+                                    placeholder="Business Address"><?= $merchant->business_address; ?></textarea>
                             </div>
                         </div>
 
@@ -179,7 +179,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label class="control-label">Email <span class="req">*</span></label>
-                                <input type="email" name="email" <?= $merchant->email; ?> placeholder="Email"
+                                <input type="email" name="email" value="<?= $merchant->email; ?>" placeholder="Email"
                                     class="form-control" required>
                             </div>
                         </div>
@@ -363,7 +363,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr>
-                            <input type="submit" name="update" name="update" value="Update" class="btn btn-success">
+                            <input type="submit" name="update" value="Update" class="btn btn-success">
                             <input type="reset" value="Reset" class="btn btn-primary">
                         </div>
                     </div>

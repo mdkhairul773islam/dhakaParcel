@@ -56,10 +56,12 @@
             $this->load->view('admin/includes/footer', $this->data);
         }
 
-        public function show(){
+        public function show($id){
             $this->data['meta_keyword'] = '';
             $this->data['meta_title'] = '';
             $this->data['meta_description'] = '';
+
+            $this->data['branch'] = get_row('branch', ['trash'=> 0]);
 
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);
