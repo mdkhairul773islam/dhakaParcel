@@ -438,6 +438,7 @@ if (!function_exists('file_upload')) {
             } else {
                 $f_type = 'png|jpeg|jpg|gif';
             }
+
             $config                  = [];
             $config['upload_path']   = './public/' . $dir_path;
             $config['allowed_types'] = $f_type;

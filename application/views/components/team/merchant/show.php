@@ -11,85 +11,93 @@
                     <tbody>
                         <tr>
                             <td colspan="2" class="text-center">
-                                <img src="#" class="img-fluid img-thumbnail" style="height: 100px" alt="Merchant User">
+                                <img src="<?= site_url($merchant->image); ?>" class="img-fluid img-thumbnail"
+                                    style="height: 100px" alt="Merchant User">
                             </td>
                         </tr>
                         <tr>
                             <th>Status</th>
                             <td>
-                                <span class="badge bg-secondary">Active</span>
+                                <span class="badge bg-secondary"><?= filter($merchant->status); ?></span>
                             </td>
                         </tr>
                         <tr>
                             <th width="30%">Company </th>
                             <td width="70%">
-                                Janina
+                                <?= $merchant->company_name; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Name</th>
                             <td>
-                                Kazi
+                                <?= $merchant->name; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Merchant ID</th>
                             <td>
-                                M-0004
+                                <?= $merchant->merchant_code; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Full Address</th>
                             <td>
-                                Homna
+                                <?= $merchant->address; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Business Address</th>
                             <td>
-
+                                <?= $merchant->business_address; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>District</th>
                             <td>
-                                Sirajganj
+                                <?php 
+                                    $district = get_name('districts', 'name', ['id'=> $merchant->district_id, 'trash'=> 0]);
+                                    $upazila = get_name('upazilas', 'name', ['id'=> $merchant->upazila_id, 'trash'=> 0]);
+                                    $area   = get_name('area', 'name', ['id'=> $merchant->area_id, 'trash'=> 0]);
+                                    $branch = get_name('branch', 'name', ['code'=> $merchant->branch, 'trash'=> 0]);
+                                    echo $district;
+                                ?>
+
                             </td>
                         </tr>
                         <tr>
                             <th>Thana/Upazila</th>
                             <td>
-                                Sirajganj Sadar
+                                <?= $upazila; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Area</th>
                             <td>
-                                Sirajganj Sadar
+                                <?= $area; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Contact Number</th>
                             <td>
-                                0516553654
+                                <?= $merchant->mobile; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Branch</th>
                             <td>
-                                Main Branch
+                                <?= $branch; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Email</th>
                             <td>
-                                abc@gmail.com
+                                <?= $merchant->email; ?>
                             </td>
                         </tr>
                         <tr>
-                            <th>Password</th>
+                            <th>Username</th>
                             <td>
-                                12345
+                                <?= $merchant->username; ?>
                             </td>
                         </tr>
 
@@ -97,7 +105,7 @@
                         <tr>
                             <th>COD</th>
                             <td>
-                                1 %
+                                <?= number_format($merchant->cod); ?>%
                             </td>
                         </tr>
 
@@ -118,28 +126,30 @@
                                             </td>
                                             <td>Inside Dhaka
                                             </td>
-                                            <td>35 </td>
+                                            <td><?= number_format($merchant->inside_dhaka_charge); ?></td>
                                         </tr>
                                         <tr>
                                             <td>2
                                             </td>
                                             <td>Dhaka Sub
                                             </td>
-                                            <td>100 </td>
+                                            <td><?= number_format($merchant->dhaka_sub_delivery_charge); ?></td>
                                         </tr>
                                         <tr>
                                             <td>3
                                             </td>
                                             <td>Outside Dhaka
                                             </td>
-                                            <td>130 </td>
+                                            <td><?= number_format($merchant->outside_dhaka_delivery_charge); ?></td>
                                         </tr>
                                         <tr>
                                             <td>4
                                             </td>
-                                            <td>test
+                                            <td>Test
                                             </td>
-                                            <td>15 </td>
+                                            <td>
+                                                <?= number_format($merchant->test_delivery_charge); ?>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -148,13 +158,13 @@
                         <tr>
                             <th>FB URL</th>
                             <td>
-
+                                <?= $merchant->facecbook; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Web Site</th>
                             <td>
-
+                                <?= $merchant->website; ?>
                             </td>
                         </tr>
 
@@ -168,9 +178,15 @@
                                             <th width="33%" class="text-center">Bank Name </th>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">NON </td>
-                                            <td class="text-center">NON </td>
-                                            <td class="text-center">NON </td>
+                                            <td class="text-center">
+                                                <?= $merchant->bank_account_name; ?>
+                                            </td>
+                                            <td class="text-center">
+                                                <?= $merchant->bank_account_number; ?>
+                                            </td>
+                                            <td class="text-center">
+                                                <?= $merchant->bank_name; ?>
+                                            </td>
                                         </tr>
 
                                     </tbody>
@@ -188,9 +204,15 @@
                                             <th width="33%" class="text-center">Rocket Number </th>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">NON </td>
-                                            <td class="text-center">NON </td>
-                                            <td class="text-center">NON </td>
+                                            <td class="text-center">
+                                                <?= $merchant->bKash_number; ?>
+                                            </td>
+                                            <td class="text-center">
+                                                <?= $merchant->nagad_number; ?>
+                                            </td>
+                                            <td class="text-center">
+                                                <?= $merchant->rocket_number; ?>
+                                            </td>
                                         </tr>
 
                                     </tbody>

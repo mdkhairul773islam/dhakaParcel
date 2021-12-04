@@ -9,6 +9,8 @@
             <div class="panel-body">
                 <?php msg(); ?>
                 <form action="" method="post" enctype="multipart/form-data">
+                    <img class="mb-4" style="width: 120px; height: 120px;" src="<?= site_url($rider[0]->image); ?>"
+                        alt="">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

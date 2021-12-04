@@ -19,40 +19,38 @@
                             <tr>
                                 <th>SL</th>
                                 <th>Warehouse Name</th>
-                                <th>Warehouse Root</th>
-                                <th>Status</th>
+                                <th>Warehouse Type</th>
                                 <th class="text-center" style="width: 120px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Amin</td>
-                                <td>Shami@gmail.com</td>
-                                <td>
-                                    <a href="#" class="text-success">
-                                        <b>Active/Inactive</b>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <?php
-                                        if($action_menus){
-                                        foreach($action_menus as $action_menu){
-                                            if($user_data['privilege']=='president' xor (!empty($aside_action_menu_array) && in_array($action_menu->id,$aside_action_menu_array) && $user_data['privilege']!=='president')){
-                                            // -----------------------------------------------------------
-                                            if(strtolower($action_menu->name) == "delete" ){?>
-                                    <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        onclick="return confirm('Are your sure to proccess this action ?')"
-                                        href="<?php echo get_url($action_menu->controller_path."/"); ?>"><i
-                                            class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
-                                    <?php }else{ ?>
-                                    <a class="btn btn-<?php echo $action_menu->type;?>"
-                                        href="<?php echo get_url($action_menu->controller_path."/") ;?>"><i
-                                            class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
-                                    <!---------------------------------------->
-                                    <?php }}}} ?>
-                                </td>
-                            </tr>
+                            <?php if(!empty($results)){
+                                foreach($results as $key => $row){ ?>
+                                <tr>
+                                    <td><?php echo ++$key; ?></td>
+                                    <td><?php echo $row->name; ?></td>
+                                    <td><?php echo filter($row->type); ?></td>
+                                    <td class="text-center">
+                                        <?php
+                                            if($action_menus){
+                                            foreach($action_menus as $action_menu){
+                                                if($user_data['privilege']=='president' xor (!empty($aside_action_menu_array) && in_array($action_menu->id,$aside_action_menu_array) && $user_data['privilege']!=='president')){
+                                                // -----------------------------------------------------------
+                                                if(strtolower($action_menu->name) == "delete" ){?>
+                                        <a class="btn btn-<?php echo $action_menu->type;?>"
+                                            onclick="return confirm('Are your sure to proccess this action ?')"
+                                            href="<?php echo get_url($action_menu->controller_path."/". $row->id); ?>"><i
+                                                class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
+                                        <?php }else{ ?>
+                                        <a class="btn btn-<?php echo $action_menu->type;?>"
+                                            href="<?php echo get_url($action_menu->controller_path."/" . $row->id) ;?>"><i
+                                                class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
+                                        <!---------------------------------------->
+                                        <?php }}}} ?>
+                                    </td>
+                                </tr>
+                                <?php }
+                            } ?>
                         </tbody>
                     </table>
                 </div>

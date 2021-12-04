@@ -80,7 +80,7 @@
                         <tr>
                             <th>Username</th>
                             <td>
-                                <?= ucfirst($rider[0]->username); ?>
+                                <?= $rider[0]->username; ?>
                             </td>
                         </tr>
                         <tr>
