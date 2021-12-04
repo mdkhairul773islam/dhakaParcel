@@ -61,7 +61,7 @@
             $this->data['meta_title'] = '';
             $this->data['meta_description'] = '';
 
-            $this->data['branch'] = get_row('branch', ['trash'=> 0]);
+            $this->data['branch'] = get_row('branch', ['id'=>$id, 'trash'=> 0]);
 
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);

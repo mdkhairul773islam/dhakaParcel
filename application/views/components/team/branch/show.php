@@ -65,9 +65,9 @@
                         </tr>
 
                         <?php 
-                            $register_branch_list = get_result('users', ['privilege'=>'branch', 'trash'=>0]);
-                            $merchant_list = get_result('users', ['privilege'=>'merchant', 'trash'=>0]);
-                            $rider_list = get_result('users', ['privilege'=>'rider', 'trash'=>0]);
+                            $register_branch_list = get_result('users', ['privilege'=>'branch', 'branch'=>$branch->code, 'trash'=>0]);
+                            $merchant_list = get_result('users', ['privilege'=>'merchant', 'branch'=>$branch->code, 'trash'=>0]);
+                            $rider_list = get_result('users', ['privilege'=>'rider', 'branch'=>$branch->code, 'trash'=>0]);
                         ?>
 
                         <tr>
